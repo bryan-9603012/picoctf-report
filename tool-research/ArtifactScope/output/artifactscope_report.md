@@ -1,0 +1,3992 @@
+# ArtifactScope Report
+
+## disk.img
+
+- **Path:** `C:\Users\10801\OneDrive\เอกสาร\資料夾\ArtifactScope\disk.img`
+- **Size:** 1.00 GB (1073741824 bytes)
+- **Extension:** `.img`
+- **Created:** 2026-03-26 15:08:51
+- **Modified:** 2025-11-19 16:53:43
+
+### Hashes
+
+- **MD5:** `4a514d755de82c68bbb070da45ba35b6`
+- **SHA1:** `8eb5beab6f19490be6a9591ede0ebde93e6748ce`
+- **SHA256:** `331823da26c2aba14a3fb6414ac50deff74499bb62f3448cca1a79e63a5087ef`
+
+### Type Detection
+
+- **Detected Type:** Unknown binary (`unknown`)
+- **Extension Match:** No
+- **Expected Extensions:** (unknown)
+
+### Entropy
+
+- **Score:** 1.733
+- **Classification:** low
+
+### Risk
+
+- **Risk Level:** Medium
+- **Risk Score:** 45/100
+
+### Findings
+
+- **Suspicious Strings Found** [HIGH | +25]
+  - The file contains strings associated with command execution, secrets, or transfer tooling.
+  - Evidence: Found 5 suspicious strings.
+- **Embedded Artifacts Present** [MEDIUM | +20]
+  - Embedded file signatures were detected within the file body.
+  - Evidence: Found 1968 embedded artifact candidates.
+
+### String Scan Summary
+
+- URLs: 0
+- Emails: 0
+- IPs: 0
+- Base64-like strings: 6
+- Suspicious strings: 5
+
+### Embedded Artifact Candidates
+
+- ELF executable at offset `10221568`
+- ELF executable at offset `10246144`
+- PE executable at offset `10318015`
+- PNG image at offset `10414616`
+- ELF executable at offset `10425344`
+- ELF executable at offset `10451968`
+- ELF executable at offset `10487808`
+- ELF executable at offset `10497820`
+- ELF executable at offset `10497828`
+- PE executable at offset `23989632`
+- PE executable at offset `34604032`
+- PE executable at offset `34762309`
+- PE executable at offset `34784626`
+- PE executable at offset `34805966`
+- PE executable at offset `34829642`
+- PE executable at offset `34867678`
+- PE executable at offset `34945966`
+- PE executable at offset `34957791`
+- PE executable at offset `34996028`
+- PE executable at offset `35147282`
+- PE executable at offset `35197290`
+- PE executable at offset `35202021`
+- PE executable at offset `35213024`
+- PE executable at offset `35245616`
+- PE executable at offset `35260882`
+- PE executable at offset `35495207`
+- PE executable at offset `35567235`
+- PE executable at offset `35679074`
+- PE executable at offset `35762735`
+- PE executable at offset `35764842`
+- PE executable at offset `35837925`
+- PE executable at offset `35840821`
+- PE executable at offset `35863126`
+- PE executable at offset `35942431`
+- PE executable at offset `36010605`
+- PE executable at offset `36020934`
+- PE executable at offset `36186726`
+- JPEG image at offset `36234859`, end `36327152`
+- PE executable at offset `36349344`
+- PE executable at offset `36391193`
+- PE executable at offset `36622364`
+- PE executable at offset `36677564`
+- PE executable at offset `36747549`
+- PE executable at offset `36870515`
+- PE executable at offset `36887004`
+- PE executable at offset `36916850`
+- PE executable at offset `37028802`
+- PE executable at offset `37032520`
+- PE executable at offset `37133088`
+- PE executable at offset `37223456`
+- PE executable at offset `37264394`
+- PE executable at offset `37364818`
+- PE executable at offset `37367629`
+- PE executable at offset `37464655`
+- PE executable at offset `37499666`
+- PE executable at offset `37677203`
+- PE executable at offset `37815922`
+- PE executable at offset `37964748`
+- PE executable at offset `38060882`
+- PE executable at offset `38100114`
+- PE executable at offset `38235224`
+- PE executable at offset `38349342`
+- PE executable at offset `38378573`
+- PE executable at offset `38406321`
+- PE executable at offset `38439687`
+- PE executable at offset `38550484`
+- PE executable at offset `38606544`
+- PE executable at offset `38670523`
+- PE executable at offset `38735326`
+- PE executable at offset `38851310`
+- PE executable at offset `38889683`
+- PE executable at offset `38899213`
+- PE executable at offset `38972538`
+- PE executable at offset `39015749`
+- PE executable at offset `39071385`
+- PE executable at offset `39104542`
+- PE executable at offset `39110133`
+- PE executable at offset `39259979`
+- PE executable at offset `39284744`
+- PE executable at offset `39377362`
+- PE executable at offset `39453163`
+- PE executable at offset `39530392`
+- PE executable at offset `39561121`
+- PE executable at offset `39717936`
+- PE executable at offset `39718472`
+- PE executable at offset `39730922`
+- PE executable at offset `39802960`
+- PE executable at offset `39811488`
+- PE executable at offset `39813790`
+- PE executable at offset `39834911`
+- PE executable at offset `39842537`
+- PE executable at offset `39884675`
+- PE executable at offset `39925174`
+- PE executable at offset `40122687`
+- PE executable at offset `40221164`
+- PE executable at offset `40248143`
+- PE executable at offset `40279833`
+- PE executable at offset `40326134`
+- PE executable at offset `40347281`
+- PE executable at offset `40376650`
+- PE executable at offset `40489934`
+- PE executable at offset `40559687`
+- PE executable at offset `40604586`
+- PE executable at offset `40609820`
+- JPEG image at offset `40676435`, end `40774665`
+- PE executable at offset `40749939`
+- PE executable at offset `40779428`
+- PE executable at offset `41247269`
+- PE executable at offset `41258331`
+- PE executable at offset `41282251`
+- PE executable at offset `41303380`
+- PE executable at offset `41350688`
+- PE executable at offset `41361132`
+- PE executable at offset `41370662`
+- PE executable at offset `41381748`
+- PE executable at offset `41595550`
+- PE executable at offset `41630430`
+- PE executable at offset `41682873`
+- PE executable at offset `41891430`
+- PE executable at offset `41901885`
+- PE executable at offset `41902104`
+- PE executable at offset `41902177`
+- PE executable at offset `41902323`
+- PE executable at offset `41902506`
+- PE executable at offset `41902763`
+- PE executable at offset `41903019`
+- PE executable at offset `41903569`
+- PE executable at offset `41903863`
+- PE executable at offset `41904046`
+- PE executable at offset `41904144`
+- PE executable at offset `41956026`
+- PE executable at offset `42048383`
+- PE executable at offset `42349702`
+- PE executable at offset `42432907`
+- PE executable at offset `42492278`
+- PE executable at offset `42587439`
+- JPEG image at offset `42664265`, end `42676959`
+- JPEG image at offset `42675986`, end `42676959`
+- PE executable at offset `42712068`
+- PE executable at offset `42793791`
+- PE executable at offset `42808111`
+- PE executable at offset `42874629`
+- PE executable at offset `43311112`
+- PE executable at offset `43317806`
+- PE executable at offset `43371919`
+- PE executable at offset `43390705`
+- PE executable at offset `43400932`
+- PE executable at offset `43462003`
+- JPEG image at offset `43468415`, end `43475626`
+- PE executable at offset `43627612`
+- PE executable at offset `43668769`
+- PE executable at offset `43873704`
+- PE executable at offset `43880107`
+- PE executable at offset `43917067`
+- PE executable at offset `43945596`
+- PE executable at offset `44163580`
+- PE executable at offset `44207157`
+- PE executable at offset `44217678`
+- PE executable at offset `44224034`
+- PE executable at offset `44227016`
+- PE executable at offset `44298305`
+- PE executable at offset `44316201`
+- PE executable at offset `44340692`
+- PE executable at offset `44362626`
+- PE executable at offset `44386166`
+- PE executable at offset `44549229`
+- PE executable at offset `44826731`
+- PE executable at offset `44852153`
+- PE executable at offset `45006476`
+- PE executable at offset `45107288`
+- PE executable at offset `45251980`
+- PE executable at offset `45297535`
+- PE executable at offset `45335870`
+- PE executable at offset `45392704`
+- PE executable at offset `45619127`
+- PE executable at offset `45670993`
+- PE executable at offset `45686997`
+- PE executable at offset `45712305`
+- PE executable at offset `45737053`
+- PE executable at offset `45741371`
+- ELF executable at offset `45758977`
+- PE executable at offset `47260028`
+- PE executable at offset `47278485`
+- PE executable at offset `47280835`
+- PE executable at offset `47292842`
+- PE executable at offset `47292952`
+- PE executable at offset `47295293`
+- PE executable at offset `47317221`
+- PE executable at offset `47325832`
+- PE executable at offset `47329656`
+- PE executable at offset `47341545`
+- PE executable at offset `47365940`
+- PE executable at offset `47465757`
+- JPEG image at offset `47488357`, end `47616211`
+- PE executable at offset `47636586`
+- PE executable at offset `47661885`
+- PE executable at offset `47794228`
+- PE executable at offset `47879382`
+- PE executable at offset `48089352`
+- PE executable at offset `48320718`
+- PE executable at offset `48481912`
+- PE executable at offset `48483187`
+- PE executable at offset `48509338`
+- PE executable at offset `48519947`
+- PE executable at offset `48609645`
+- PE executable at offset `48618999`
+- PE executable at offset `48645214`
+- PE executable at offset `48665853`
+- PE executable at offset `48736697`
+- PE executable at offset `48810347`
+- PE executable at offset `48921181`
+- PE executable at offset `48923688`
+- PE executable at offset `48941398`
+- PE executable at offset `49127113`
+- PE executable at offset `49218171`
+- PE executable at offset `49226959`
+- PE executable at offset `49244319`
+- PE executable at offset `49286670`
+- PE executable at offset `49313418`
+- PE executable at offset `49319442`
+- PE executable at offset `49324790`
+- PE executable at offset `49355299`
+- PE executable at offset `49371275`
+- PE executable at offset `49373126`
+- PE executable at offset `49428856`
+- PE executable at offset `49807620`
+- PE executable at offset `49812819`
+- PE executable at offset `49855182`
+- PE executable at offset `49860984`
+- PE executable at offset `49920541`
+- PE executable at offset `49979685`
+- PE executable at offset `50062959`
+- PE executable at offset `50145224`
+- PE executable at offset `50148783`
+- PE executable at offset `50208890`
+- PE executable at offset `50214072`
+- PE executable at offset `50435987`
+- PE executable at offset `50444454`
+- PE executable at offset `50482694`
+- PE executable at offset `50506070`
+- PE executable at offset `50609126`
+- PE executable at offset `50730764`
+- PE executable at offset `50756484`
+- PE executable at offset `50806307`
+- PE executable at offset `50827901`
+- PE executable at offset `51057200`
+- PE executable at offset `51073033`
+- PE executable at offset `51134132`
+- PE executable at offset `51199761`
+- PE executable at offset `51205426`
+- PE executable at offset `51255917`
+- PE executable at offset `51358888`
+- PE executable at offset `51361660`
+- PE executable at offset `51372629`
+- PE executable at offset `51477726`
+- PE executable at offset `51483959`
+- PE executable at offset `51558828`
+- PE executable at offset `51667408`
+- PE executable at offset `51675097`
+- PE executable at offset `51718818`
+- PE executable at offset `51760203`
+- PE executable at offset `51925292`
+- PE executable at offset `51968206`
+- PE executable at offset `51980267`
+- PE executable at offset `52096903`
+- PE executable at offset `52106995`
+- PE executable at offset `52111910`
+- PE executable at offset `52186017`
+- PE executable at offset `52202053`
+- PE executable at offset `52230803`
+- PE executable at offset `52244648`
+- PE executable at offset `52434567`
+- PE executable at offset `52465215`
+- PE executable at offset `52650582`
+- PE executable at offset `52665931`
+- PE executable at offset `52782434`
+- PE executable at offset `52868183`
+- PE executable at offset `52900682`
+- PE executable at offset `52910786`
+- PE executable at offset `52920739`
+- PE executable at offset `53023619`
+- PE executable at offset `53192841`
+- PE executable at offset `53210634`
+- PE executable at offset `53220279`
+- PE executable at offset `53234778`
+- PE executable at offset `53260118`
+- PE executable at offset `53419945`
+- PE executable at offset `53515757`
+- PE executable at offset `53515891`
+- PE executable at offset `53538910`
+- PE executable at offset `53540059`
+- PE executable at offset `53593127`
+- PE executable at offset `53807954`
+- PE executable at offset `53862133`
+- PE executable at offset `53869113`
+- PE executable at offset `53934406`
+- PE executable at offset `54120090`
+- PE executable at offset `54141882`
+- PE executable at offset `54344126`
+- PE executable at offset `54534651`
+- PE executable at offset `54569723`
+- PE executable at offset `54658501`
+- PE executable at offset `54766752`
+- PE executable at offset `54776702`
+- PE executable at offset `54825882`
+- PE executable at offset `54890442`
+- PE executable at offset `54911305`
+- PE executable at offset `54967803`
+- PE executable at offset `55073764`
+- PE executable at offset `55096028`
+- PE executable at offset `55460377`
+- PE executable at offset `55488303`
+- PE executable at offset `55565458`
+- PE executable at offset `55574226`
+- PE executable at offset `55750284`
+- PE executable at offset `55759972`
+- PE executable at offset `55760529`
+- PE executable at offset `55940670`
+- PE executable at offset `55961353`
+- PE executable at offset `56070894`
+- PE executable at offset `56245019`
+- PE executable at offset `56405446`
+- PE executable at offset `56414421`
+- PE executable at offset `56430237`
+- PE executable at offset `56458605`
+- PE executable at offset `56551979`
+- PE executable at offset `56584406`
+- PE executable at offset `56740835`
+- PE executable at offset `56795854`
+- PE executable at offset `56857472`
+- PE executable at offset `56935821`
+- PE executable at offset `57099365`
+- PE executable at offset `57204730`
+- PE executable at offset `57377717`
+- PE executable at offset `57419268`
+- PE executable at offset `57496119`
+- PE executable at offset `57648031`
+- PE executable at offset `57657616`
+- PE executable at offset `57749344`
+- PE executable at offset `57796740`
+- PE executable at offset `57982643`
+- PE executable at offset `58027206`
+- PE executable at offset `58035824`
+- PE executable at offset `58075076`
+- PE executable at offset `58233288`
+- PE executable at offset `58358109`
+- PE executable at offset `58368339`
+- PE executable at offset `58472694`
+- PE executable at offset `58618763`
+- PE executable at offset `58666944`
+- PE executable at offset `58816096`
+- PE executable at offset `59136531`
+- PE executable at offset `59246321`
+- PE executable at offset `59268810`
+- PE executable at offset `59273164`
+- PE executable at offset `59281950`
+- PE executable at offset `59299472`
+- PE executable at offset `59401100`
+- PE executable at offset `59437715`
+- PE executable at offset `59474326`
+- PE executable at offset `59562457`
+- PE executable at offset `59617531`
+- PE executable at offset `59618597`
+- PE executable at offset `59673575`
+- PE executable at offset `59715725`
+- PE executable at offset `59755095`
+- PE executable at offset `60089972`
+- PE executable at offset `60105327`
+- PE executable at offset `60371523`
+- PE executable at offset `60415491`
+- PE executable at offset `60643012`
+- PE executable at offset `60685981`
+- PE executable at offset `60715280`
+- PE executable at offset `60787271`
+- PE executable at offset `60922235`
+- PE executable at offset `60935009`
+- JPEG image at offset `61096515`, end `61132282`
+- PE executable at offset `61234155`
+- JPEG image at offset `61242684`, end `61358179`
+- PE executable at offset `61286568`
+- PE executable at offset `61309861`
+- PE executable at offset `61365704`
+- PE executable at offset `61610042`
+- PE executable at offset `61670596`
+- PE executable at offset `61672432`
+- PE executable at offset `61678644`
+- PE executable at offset `61726948`
+- PE executable at offset `61729505`
+- ELF executable at offset `61783079`
+- ELF executable at offset `61867008`
+- PE executable at offset `584592486`
+- PE executable at offset `584712294`
+- ELF executable at offset `593231872`
+- PE executable at offset `593669692`
+- PE executable at offset `593752948`
+- PE executable at offset `593768404`
+- PE executable at offset `593851227`
+- PE executable at offset `593870024`
+- ELF executable at offset `594268160`
+- ELF executable at offset `594334720`
+- ELF executable at offset `594357248`
+- ELF executable at offset `594383872`
+- ELF executable at offset `594439168`
+- ELF executable at offset `594461696`
+- ELF executable at offset `594480128`
+- ELF executable at offset `594502656`
+- PE executable at offset `594558204`
+- PE executable at offset `594701330`
+- PE executable at offset `594871159`
+- PE executable at offset `595348927`
+- JPEG image at offset `595551214`, end `595604612`
+- PE executable at offset `595597149`
+- PE executable at offset `595733324`
+- PE executable at offset `595832880`
+- PE executable at offset `595865047`
+- PE executable at offset `596146269`
+- PE executable at offset `596197574`
+- ELF executable at offset `596284340`
+- PE executable at offset `596285014`
+- PE executable at offset `596315433`
+- PE executable at offset `596373261`
+- PE executable at offset `596386243`
+- ELF executable at offset `596640768`
+- PE executable at offset `596705751`
+- PE executable at offset `596840599`
+- PE executable at offset `596913441`
+- ZIP archive at offset `597067337`
+- PE executable at offset `597452859`
+- PE executable at offset `597455831`
+- PE executable at offset `597465661`
+- PE executable at offset `597481267`
+- PE executable at offset `597492719`
+- PE executable at offset `597497692`
+- PE executable at offset `597499075`
+- PE executable at offset `597500303`
+- PE executable at offset `597501716`
+- PE executable at offset `597506352`
+- PE executable at offset `597506844`
+- PE executable at offset `597507209`
+- PE executable at offset `597508622`
+- PE executable at offset `597509677`
+- PE executable at offset `597511699`
+- PE executable at offset `597512754`
+- PE executable at offset `597520692`
+- PE executable at offset `597527635`
+- PE executable at offset `597528582`
+- PE executable at offset `597534919`
+- PE executable at offset `597538780`
+- PE executable at offset `597539865`
+- PE executable at offset `597540007`
+- PE executable at offset `597541777`
+- PE executable at offset `597541919`
+- PE executable at offset `597543685`
+- PE executable at offset `597543827`
+- PE executable at offset `597544451`
+- PE executable at offset `597544593`
+- PE executable at offset `597558827`
+- PE executable at offset `597562678`
+- PE executable at offset `597573291`
+- PE executable at offset `597576821`
+- PE executable at offset `597580641`
+- PE executable at offset `597581984`
+- PE executable at offset `597590665`
+- PE executable at offset `597593775`
+- PE executable at offset `597595557`
+- PE executable at offset `597600511`
+- PE executable at offset `597611210`
+- PE executable at offset `597624179`
+- PE executable at offset `597627653`
+- PE executable at offset `597631793`
+- PE executable at offset `597640977`
+- PE executable at offset `597641804`
+- PE executable at offset `597648047`
+- PE executable at offset `597648410`
+- PE executable at offset `597649281`
+- ELF executable at offset `597689344`
+- ELF executable at offset `597703680`
+- ELF executable at offset `597718016`
+- ELF executable at offset `597732352`
+- ELF executable at offset `597746688`
+- ELF executable at offset `597761024`
+- ELF executable at offset `597775360`
+- ELF executable at offset `597789696`
+- ELF executable at offset `597804032`
+- ELF executable at offset `597818368`
+- ELF executable at offset `597832704`
+- ELF executable at offset `597847040`
+- ELF executable at offset `597861376`
+- ELF executable at offset `597875712`
+- ELF executable at offset `597890048`
+- ELF executable at offset `597905408`
+- ELF executable at offset `597920768`
+- ELF executable at offset `597936128`
+- ELF executable at offset `597951488`
+- ELF executable at offset `597966848`
+- ELF executable at offset `597982208`
+- ELF executable at offset `597997568`
+- ELF executable at offset `598011904`
+- ELF executable at offset `598026240`
+- ELF executable at offset `598040576`
+- ELF executable at offset `598054912`
+- ELF executable at offset `598069248`
+- ELF executable at offset `598083584`
+- ELF executable at offset `598097920`
+- ELF executable at offset `598112256`
+- ELF executable at offset `598126592`
+- ELF executable at offset `598140928`
+- ELF executable at offset `598213632`
+- ELF executable at offset `598227968`
+- ELF executable at offset `598256640`
+- ELF executable at offset `598433792`
+- ELF executable at offset `598448128`
+- ELF executable at offset `598479872`
+- PE executable at offset `598605163`
+- PE executable at offset `598649794`
+- ELF executable at offset `598737920`
+- PE executable at offset `598759935`
+- ELF executable at offset `598780928`
+- ELF executable at offset `598799360`
+- ELF executable at offset `598838272`
+- ELF executable at offset `598938624`
+- ELF executable at offset `599038976`
+- ELF executable at offset `599109632`
+- ELF executable at offset `599128064`
+- ELF executable at offset `599164928`
+- ELF executable at offset `599191552`
+- ELF executable at offset `599222272`
+- ELF executable at offset `599327744`
+- ELF executable at offset `599389385`
+- ELF executable at offset `599411712`
+- PE executable at offset `599458970`
+- PE executable at offset `599565144`
+- PE executable at offset `599592654`
+- PE executable at offset `599753942`
+- PE executable at offset `599802270`
+- PE executable at offset `599846915`
+- PE executable at offset `599920260`
+- PE executable at offset `599939446`
+- PE executable at offset `600082263`
+- PE executable at offset `600281486`
+- PE executable at offset `600447730`
+- PE executable at offset `600631912`
+- PE executable at offset `600656357`
+- PE executable at offset `600693695`
+- ELF executable at offset `600835072`
+- JPEG image at offset `601351202`, end `603764663`
+- PE executable at offset `601981986`
+- PE executable at offset `601984493`
+- PE executable at offset `602002198`
+- PE executable at offset `602027487`
+- PE executable at offset `604289016`
+- PE executable at offset `604293757`
+- JPEG image at offset `604472159`, end `604488709`
+- JPEG image at offset `604486823`, end `604488709`
+- JPEG image at offset `604617613`, end `604641953`
+- ELF executable at offset `605314048`
+- PE executable at offset `605334872`
+- ELF executable at offset `606116864`
+- ELF executable at offset `606301184`
+- PE executable at offset `606439352`
+- ELF executable at offset `606496768`
+- PE executable at offset `606754302`
+- ELF executable at offset `606881792`
+- ELF executable at offset `607173632`
+- ELF executable at offset `607400960`
+- ELF executable at offset `608119808`
+- ELF executable at offset `608224842`
+- ELF executable at offset `608253952`
+- ELF executable at offset `608548864`
+- PE executable at offset `609050925`
+- PE executable at offset `609060546`
+- PE executable at offset `609109594`
+- PE executable at offset `609120153`
+- PE executable at offset `609123060`
+- PE executable at offset `609566215`
+- PE executable at offset `609716383`
+- PE executable at offset `609728769`
+- PE executable at offset `609746236`
+- PE executable at offset `610008412`
+- PE executable at offset `610020504`
+- PE executable at offset `610022197`
+- PE executable at offset `610046835`
+- PE executable at offset `610281108`
+- PE executable at offset `610331817`
+- PE executable at offset `610489793`
+- PE executable at offset `610530618`
+- PE executable at offset `610531374`
+- PE executable at offset `610610871`
+- PE executable at offset `610825967`
+- PE executable at offset `610896661`
+- PE executable at offset `610938376`
+- PE executable at offset `610953660`
+- PE executable at offset `610974065`
+- PE executable at offset `610991467`
+- PE executable at offset `611018759`
+- PE executable at offset `611057194`
+- PE executable at offset `611068405`
+- PE executable at offset `611085211`
+- PE executable at offset `611131475`
+- PE executable at offset `611168767`
+- PE executable at offset `611243456`
+- PE executable at offset `611296251`
+- PE executable at offset `611331490`
+- PE executable at offset `611379101`
+- PE executable at offset `611413352`
+- PE executable at offset `611419008`
+- PE executable at offset `611461850`
+- PE executable at offset `611481670`
+- PE executable at offset `611496988`
+- PE executable at offset `611707570`
+- PE executable at offset `611724055`
+- PE executable at offset `611742654`
+- PE executable at offset `611830820`
+- PE executable at offset `611930848`
+- PE executable at offset `611947642`
+- PE executable at offset `612025957`
+- PE executable at offset `612026098`
+- PE executable at offset `612060500`
+- PE executable at offset `612134309`
+- PE executable at offset `612142603`
+- PE executable at offset `612157441`
+- PE executable at offset `612181628`
+- PE executable at offset `612195563`
+- PE executable at offset `612266051`
+- PE executable at offset `612311623`
+- PE executable at offset `612326083`
+- PE executable at offset `612345432`
+- PE executable at offset `612350697`
+- PE executable at offset `612528416`
+- PE executable at offset `612668072`
+- PE executable at offset `612687997`
+- PE executable at offset `612739141`
+- PE executable at offset `612765596`
+- PE executable at offset `612998470`
+- PE executable at offset `613008969`
+- PE executable at offset `613046663`
+- PE executable at offset `613051594`
+- PE executable at offset `613116438`
+- PE executable at offset `613131517`
+- PE executable at offset `613231839`
+- PE executable at offset `613263515`
+- PE executable at offset `613603193`
+- PE executable at offset `613631820`
+- PE executable at offset `615610424`
+- PE executable at offset `615656537`
+- PE executable at offset `615808675`
+- PE executable at offset `615872225`
+- PE executable at offset `616308827`
+- PE executable at offset `616308997`
+- PE executable at offset `616371307`
+- PE executable at offset `616376834`
+- JPEG image at offset `616479754`, end `616594948`
+- PE executable at offset `616955388`
+- PE executable at offset `617103687`
+- PE executable at offset `617123864`
+- PE executable at offset `617186615`
+- PE executable at offset `617215736`
+- PE executable at offset `617240297`
+- PE executable at offset `617358461`
+- PE executable at offset `617469473`
+- PE executable at offset `617661532`
+- PE executable at offset `617787997`
+- PE executable at offset `617788428`
+- PE executable at offset `617801099`
+- PE executable at offset `617851012`
+- PE executable at offset `617893335`
+- PE executable at offset `618138749`
+- PE executable at offset `618185722`
+- PE executable at offset `618223857`
+- PE executable at offset `618293701`
+- PE executable at offset `618357483`
+- PE executable at offset `618424999`
+- PE executable at offset `618517106`
+- PE executable at offset `618606381`
+- PE executable at offset `618808088`
+- PE executable at offset `618938816`
+- PE executable at offset `619492357`
+- PE executable at offset `619551247`
+- PE executable at offset `619709191`
+- PE executable at offset `619844246`
+- PE executable at offset `619852902`
+- PE executable at offset `619862116`
+- PE executable at offset `619877165`
+- PE executable at offset `620065490`
+- PE executable at offset `620347113`
+- PE executable at offset `620438705`
+- PE executable at offset `620659738`
+- PE executable at offset `620754876`
+- PE executable at offset `620759738`
+- PE executable at offset `621028824`
+- PE executable at offset `621233595`
+- PE executable at offset `621347620`
+- PE executable at offset `621398524`
+- PE executable at offset `621436199`
+- PE executable at offset `621513673`
+- PE executable at offset `621564229`
+- PE executable at offset `621702254`
+- PE executable at offset `621740718`
+- PE executable at offset `621757027`
+- PE executable at offset `621760340`
+- PE executable at offset `621839339`
+- PE executable at offset `621858731`
+- PE executable at offset `621972812`
+- PE executable at offset `622010300`
+- PE executable at offset `622039914`
+- PE executable at offset `622181313`
+- PE executable at offset `622212965`
+- PE executable at offset `622232416`
+- PE executable at offset `622260086`
+- PE executable at offset `622311808`
+- PE executable at offset `622482668`
+- PE executable at offset `623002199`
+- PE executable at offset `623002204`
+- PE executable at offset `623113248`
+- PE executable at offset `623175387`
+- PE executable at offset `623181679`
+- PE executable at offset `623206554`
+- PE executable at offset `623224236`
+- PE executable at offset `623365289`
+- PE executable at offset `623412394`
+- PE executable at offset `623436918`
+- PE executable at offset `624056890`
+- PE executable at offset `624393400`
+- PE executable at offset `624394272`
+- PE executable at offset `624548678`
+- PE executable at offset `624582184`
+- PE executable at offset `624752395`
+- PE executable at offset `625001506`
+- PE executable at offset `625071015`
+- PE executable at offset `625382622`
+- PE executable at offset `625456078`
+- PE executable at offset `625467179`
+- PE executable at offset `625689928`
+- PE executable at offset `625809906`
+- PE executable at offset `625812352`
+- PE executable at offset `625850450`
+- PE executable at offset `626298836`
+- PE executable at offset `626400931`
+- PE executable at offset `626405835`
+- PE executable at offset `626824477`
+- PE executable at offset `626851676`
+- PE executable at offset `626857880`
+- PE executable at offset `626988770`
+- PE executable at offset `627523498`
+- PE executable at offset `627576475`
+- PE executable at offset `627604818`
+- PE executable at offset `627887139`
+- PE executable at offset `627936534`
+- PE executable at offset `628016329`
+- PE executable at offset `628099273`
+- PE executable at offset `628235596`
+- PE executable at offset `628531831`
+- PE executable at offset `628709313`
+- PE executable at offset `628717657`
+- PE executable at offset `629103271`
+- PE executable at offset `629136780`
+- PE executable at offset `629359545`
+- PE executable at offset `629362221`
+- PE executable at offset `629555235`
+- PE executable at offset `629609773`
+- PE executable at offset `629629637`
+- PE executable at offset `629656241`
+- PE executable at offset `629683019`
+- PE executable at offset `630009448`
+- PE executable at offset `630023804`
+- PE executable at offset `630044282`
+- JPEG image at offset `630127036`, end `630171112`
+- PE executable at offset `630137224`
+- PE executable at offset `630159581`
+- PE executable at offset `630172690`
+- PE executable at offset `630308925`
+- JPEG image at offset `630460312`, end `630467671`
+- PE executable at offset `630485669`
+- PE executable at offset `630503145`
+- PE executable at offset `630517904`
+- PE executable at offset `630531733`
+- PE executable at offset `630693652`
+- PE executable at offset `631036237`
+- PE executable at offset `631049161`
+- PE executable at offset `631102188`
+- PE executable at offset `631138605`
+- PE executable at offset `631284565`
+- PE executable at offset `631325606`
+- PE executable at offset `631357717`
+- JPEG image at offset `631543611`, end `631584643`
+- PE executable at offset `631726509`
+- PE executable at offset `631730094`
+- PE executable at offset `631730900`
+- PE executable at offset `631773201`
+- PE executable at offset `631950054`
+- PE executable at offset `632053538`
+- PE executable at offset `632524232`
+- PE executable at offset `632713086`
+- PE executable at offset `632736790`
+- PE executable at offset `633039883`
+- PE executable at offset `633083881`
+- PE executable at offset `633084063`
+- PE executable at offset `633144351`
+- PE executable at offset `633614659`
+- PE executable at offset `633677310`
+- PE executable at offset `633718630`
+- PE executable at offset `633757107`
+- PE executable at offset `633835454`
+- PE executable at offset `633860115`
+- JPEG image at offset `633913933`, end `633923222`
+- PE executable at offset `633930366`
+- PE executable at offset `634089897`
+- PE executable at offset `634206226`
+- PE executable at offset `634282246`
+- PE executable at offset `634360840`
+- PE executable at offset `634367718`
+- PE executable at offset `634372060`
+- PE executable at offset `634519025`
+- PE executable at offset `634641009`
+- PE executable at offset `634665797`
+- PE executable at offset `634694944`
+- PE executable at offset `634892236`
+- PE executable at offset `635299190`
+- PE executable at offset `635327111`
+- PE executable at offset `635404251`
+- PE executable at offset `635413019`
+- PE executable at offset `635601104`
+- PE executable at offset `635944285`
+- PE executable at offset `636620711`
+- PE executable at offset `636647527`
+- PE executable at offset `636679083`
+- PE executable at offset `636770047`
+- PE executable at offset `636770981`
+- PE executable at offset `636799652`
+- PE executable at offset `636809702`
+- PE executable at offset `636866979`
+- PE executable at offset `636987694`
+- PE executable at offset `637093385`
+- PE executable at offset `637432347`
+- PE executable at offset `637551405`
+- PE executable at offset `637562422`
+- PE executable at offset `637787105`
+- PE executable at offset `637808011`
+- PE executable at offset `637932579`
+- PE executable at offset `637969189`
+- PE executable at offset `638005795`
+- PE executable at offset `638142535`
+- PE executable at offset `638418158`
+- PE executable at offset `638694258`
+- PE executable at offset `638751172`
+- PE executable at offset `638811183`
+- PE executable at offset `638875049`
+- PE executable at offset `639164010`
+- PE executable at offset `639216302`
+- PE executable at offset `639405703`
+- PE executable at offset `639640085`
+- PE executable at offset `639881405`
+- PE executable at offset `639886797`
+- PE executable at offset `639926748`
+- PE executable at offset `640056894`
+- PE executable at offset `640107996`
+- PE executable at offset `640206524`
+- PE executable at offset `640274089`
+- PE executable at offset `640310297`
+- PE executable at offset `640462615`
+- PE executable at offset `640522906`
+- PE executable at offset `640653496`
+- PE executable at offset `640697301`
+- PE executable at offset `640735828`
+- PE executable at offset `641148863`
+- PE executable at offset `641319112`
+- PE executable at offset `641351024`
+- PE executable at offset `641593859`
+- PE executable at offset `641647059`
+- PE executable at offset `641668123`
+- PE executable at offset `641947427`
+- PE executable at offset `642437899`
+- PE executable at offset `643092581`
+- PE executable at offset `643097086`
+- PE executable at offset `643152944`
+- PE executable at offset `643155504`
+- PE executable at offset `643206264`
+- PE executable at offset `643237211`
+- PE executable at offset `643286680`
+- PE executable at offset `643407028`
+- PE executable at offset `643659870`
+- PE executable at offset `643696662`
+- PE executable at offset `643799204`
+- PE executable at offset `643995931`
+- PE executable at offset `644014116`
+- PE executable at offset `644096474`
+- PE executable at offset `644261136`
+- PE executable at offset `644449604`
+- PE executable at offset `644453767`
+- PE executable at offset `644460466`
+- PE executable at offset `644849707`
+- PE executable at offset `644964841`
+- JPEG image at offset `645143038`, end `645169619`
+- PE executable at offset `645205397`
+- PE executable at offset `645335156`
+- PE executable at offset `645359291`
+- PE executable at offset `645626683`
+- PE executable at offset `645864562`
+- PE executable at offset `646084365`
+- PE executable at offset `646235726`
+- PE executable at offset `646593886`
+- PE executable at offset `646621526`
+- PE executable at offset `646995135`
+- PE executable at offset `647247982`
+- JPEG image at offset `647268027`, end `647319436`
+- PE executable at offset `647691911`
+- PE executable at offset `647714233`
+- PE executable at offset `647946459`
+- PE executable at offset `648005325`
+- PE executable at offset `648013146`
+- PE executable at offset `648016502`
+- PE executable at offset `648021572`
+- PE executable at offset `648161973`
+- PE executable at offset `648176216`
+- PE executable at offset `648190338`
+- PE executable at offset `648233520`
+- PE executable at offset `648283546`
+- PE executable at offset `648297848`
+- PE executable at offset `648353658`
+- PE executable at offset `648438664`
+- PE executable at offset `648582562`
+- JPEG image at offset `648913677`, end `648918277`
+- PE executable at offset `648932132`
+- PE executable at offset `648975605`
+- PE executable at offset `648996538`
+- PE executable at offset `649039740`
+- PE executable at offset `649290813`
+- PE executable at offset `649529700`
+- PE executable at offset `649533682`
+- PE executable at offset `649558978`
+- PE executable at offset `649596056`
+- PE executable at offset `649612208`
+- PE executable at offset `649725754`
+- PE executable at offset `649783177`
+- PE executable at offset `649880716`
+- PE executable at offset `649901955`
+- PE executable at offset `649940197`
+- PE executable at offset `650286752`
+- PE executable at offset `650313987`
+- PE executable at offset `650316794`
+- PE executable at offset `650413274`
+- PE executable at offset `650469663`
+- PE executable at offset `650498335`
+- PE executable at offset `650728397`
+- PE executable at offset `650842100`
+- JPEG image at offset `650905214`, end `650983704`
+- PE executable at offset `650925212`
+- PE executable at offset `650996872`
+- PE executable at offset `651070557`
+- PE executable at offset `652225432`
+- PE executable at offset `652240307`
+- PE executable at offset `652245716`
+- PE executable at offset `652259732`
+- PE executable at offset `652310604`
+- PE executable at offset `652337306`
+- PE executable at offset `652345378`
+- PE executable at offset `652356307`
+- PE executable at offset `652361224`
+- PE executable at offset `652364303`
+- PE executable at offset `652382047`
+- PE executable at offset `652390038`
+- PE executable at offset `652394110`
+- PE executable at offset `652406757`
+- PE executable at offset `652428819`
+- PE executable at offset `652447887`
+- PE executable at offset `652453948`
+- PE executable at offset `652475546`
+- PE executable at offset `652477425`
+- PE executable at offset `652486969`
+- PE executable at offset `652487428`
+- PE executable at offset `652495079`
+- PE executable at offset `652551386`
+- ELF executable at offset `652739584`
+- ELF executable at offset `652946432`
+- ELF executable at offset `653285376`
+- ELF executable at offset `654084096`
+- ELF executable at offset `654271488`
+- ELF executable at offset `654643200`
+- PE executable at offset `655042993`
+- PE executable at offset `655088768`
+- PE executable at offset `655221971`
+- PE executable at offset `655255556`
+- PE executable at offset `655307138`
+- PE executable at offset `656944024`
+- PE executable at offset `656952250`
+- PE executable at offset `657001925`
+- PE executable at offset `657028627`
+- PE executable at offset `657036699`
+- PE executable at offset `657047628`
+- PE executable at offset `657052545`
+- PE executable at offset `657055624`
+- PE executable at offset `657073368`
+- PE executable at offset `657081359`
+- PE executable at offset `657085431`
+- PE executable at offset `657098078`
+- PE executable at offset `657120140`
+- PE executable at offset `657139208`
+- PE executable at offset `657145269`
+- PE executable at offset `657166867`
+- PE executable at offset `657168746`
+- PE executable at offset `657178290`
+- PE executable at offset `657178749`
+- PE executable at offset `657186400`
+- PE executable at offset `657241609`
+- ELF executable at offset `658805760`
+- PE executable at offset `658856667`
+- ELF executable at offset `659288064`
+- ELF executable at offset `659487744`
+- ELF executable at offset `659822592`
+- ELF executable at offset `660268032`
+- ELF executable at offset `660606976`
+- ELF executable at offset `661412864`
+- ELF executable at offset `661545984`
+- ELF executable at offset `661707776`
+- ELF executable at offset `661741184`
+- ELF executable at offset `661903815`
+- ELF executable at offset `661927936`
+- ELF executable at offset `662000359`
+- ELF executable at offset `662021824`
+- ELF executable at offset `662139904`
+- ELF executable at offset `662330368`
+- ELF executable at offset `662470656`
+- PNG image at offset `662651344`
+- PE executable at offset `662672384`
+- ELF executable at offset `662672896`
+- PE executable at offset `662686996`
+- PE executable at offset `662765167`
+- ELF executable at offset `662767827`
+- ELF executable at offset `662874112`
+- ELF executable at offset `663042048`
+- PE executable at offset `663113919`
+- PNG image at offset `663210520`
+- PE executable at offset `663221248`
+- PE executable at offset `663222300`
+- PE executable at offset `663235799`
+- PE executable at offset `663235921`
+- PE executable at offset `663236057`
+- PE executable at offset `663236185`
+- PE executable at offset `663236234`
+- PE executable at offset `663236361`
+- PE executable at offset `663236409`
+- PE executable at offset `663236539`
+- ELF executable at offset `663308519`
+- ELF executable at offset `663329984`
+- PE executable at offset `663465984`
+- PE executable at offset `663467092`
+- PE executable at offset `663481107`
+- PE executable at offset `663481250`
+- PE executable at offset `663481397`
+- PE executable at offset `663481552`
+- PE executable at offset `663481621`
+- PE executable at offset `663481761`
+- PE executable at offset `663481828`
+- PE executable at offset `663481989`
+- ELF executable at offset `663552775`
+- ELF executable at offset `663574240`
+- ELF executable at offset `663749632`
+- ELF executable at offset `664593408`
+- ELF executable at offset `664932352`
+- PE executable at offset `667074050`
+- PE executable at offset `667080483`
+- PE executable at offset `667263624`
+- PE executable at offset `667379510`
+- PE executable at offset `667399483`
+- PE executable at offset `667534229`
+- PE executable at offset `667779759`
+- PE executable at offset `667809853`
+- PE executable at offset `667809860`
+- PE executable at offset `667809867`
+- PE executable at offset `667809874`
+- PE executable at offset `667809881`
+- PE executable at offset `667809888`
+- JPEG image at offset `667818301`, end `667827490`
+- ELF executable at offset `667943936`
+- JPEG image at offset `668195426`, end `668806345`
+- ELF executable at offset `668684288`
+- ELF executable at offset `668841984`
+- PE executable at offset `668972984`
+- PE executable at offset `668973016`
+- ELF executable at offset `668983296`
+- PE executable at offset `669087595`
+- PE executable at offset `669599164`
+- ELF executable at offset `672138240`
+- JPEG image at offset `672465419`, end `672466377`
+- JPEG image at offset `672465423`, end `672466377`
+- JPEG image at offset `672465427`, end `672466377`
+- JPEG image at offset `672465431`, end `672466377`
+- JPEG image at offset `672465435`, end `672466377`
+- JPEG image at offset `672465439`, end `672466377`
+- JPEG image at offset `672465443`, end `672466377`
+- JPEG image at offset `672465447`, end `672466377`
+- JPEG image at offset `672465451`, end `672466377`
+- JPEG image at offset `672465455`, end `672466377`
+- JPEG image at offset `672465459`, end `672466377`
+- JPEG image at offset `672465463`, end `672466377`
+- JPEG image at offset `672465467`, end `672466377`
+- JPEG image at offset `672465471`, end `672466377`
+- JPEG image at offset `672465475`, end `672466377`
+- JPEG image at offset `672465479`, end `672466377`
+- JPEG image at offset `672465483`, end `672466377`
+- JPEG image at offset `672465487`, end `672466377`
+- JPEG image at offset `672465491`, end `672466377`
+- JPEG image at offset `672465495`, end `672466377`
+- JPEG image at offset `672465499`, end `672466377`
+- JPEG image at offset `672465503`, end `672466377`
+- JPEG image at offset `672465507`, end `672466377`
+- JPEG image at offset `672465511`, end `672466377`
+- JPEG image at offset `672465515`, end `672466377`
+- JPEG image at offset `672465519`, end `672466377`
+- JPEG image at offset `672465523`, end `672466377`
+- JPEG image at offset `672465527`, end `672466377`
+- JPEG image at offset `672465531`, end `672466377`
+- JPEG image at offset `672465535`, end `672466377`
+- JPEG image at offset `672465539`, end `672466377`
+- JPEG image at offset `672465543`, end `672466377`
+- JPEG image at offset `672465547`, end `672466377`
+- JPEG image at offset `672465551`, end `672466377`
+- JPEG image at offset `672465555`, end `672466377`
+- JPEG image at offset `672465559`, end `672466377`
+- JPEG image at offset `672465563`, end `672466377`
+- JPEG image at offset `672465567`, end `672466377`
+- JPEG image at offset `672465571`, end `672466377`
+- JPEG image at offset `672466123`, end `672466377`
+- JPEG image at offset `672466127`, end `672466377`
+- JPEG image at offset `672466131`, end `672466377`
+- JPEG image at offset `672466135`, end `672466377`
+- JPEG image at offset `672466139`, end `672466377`
+- JPEG image at offset `672466143`, end `672466377`
+- JPEG image at offset `672466147`, end `672466377`
+- JPEG image at offset `672466151`, end `672466377`
+- JPEG image at offset `672466155`, end `672466377`
+- JPEG image at offset `672466159`, end `672466377`
+- JPEG image at offset `672466163`, end `672466377`
+- JPEG image at offset `672466167`, end `672466377`
+- JPEG image at offset `672466171`, end `672466377`
+- JPEG image at offset `672466175`, end `672466377`
+- JPEG image at offset `672466179`, end `672466377`
+- JPEG image at offset `672466183`, end `672466377`
+- JPEG image at offset `672466187`, end `672466377`
+- JPEG image at offset `672466191`, end `672466377`
+- JPEG image at offset `672466195`, end `672466377`
+- JPEG image at offset `672466199`, end `672466377`
+- JPEG image at offset `672466203`, end `672466377`
+- JPEG image at offset `672466207`, end `672466377`
+- JPEG image at offset `672466211`, end `672466377`
+- JPEG image at offset `672466215`, end `672466377`
+- JPEG image at offset `672466219`, end `672466377`
+- JPEG image at offset `672466223`, end `672466377`
+- JPEG image at offset `672466227`, end `672466377`
+- JPEG image at offset `672466231`, end `672466377`
+- JPEG image at offset `672466235`, end `672466377`
+- JPEG image at offset `672466239`, end `672466377`
+- JPEG image at offset `672466243`, end `672466377`
+- JPEG image at offset `672466247`, end `672466377`
+- JPEG image at offset `672466251`, end `672466377`
+- JPEG image at offset `672466255`, end `672466377`
+- JPEG image at offset `672466259`, end `672466377`
+- JPEG image at offset `672488491`, end `672489449`
+- JPEG image at offset `672488495`, end `672489449`
+- JPEG image at offset `672488499`, end `672489449`
+- JPEG image at offset `672488503`, end `672489449`
+- JPEG image at offset `672488507`, end `672489449`
+- JPEG image at offset `672488511`, end `672489449`
+- JPEG image at offset `672488515`, end `672489449`
+- JPEG image at offset `672488519`, end `672489449`
+- JPEG image at offset `672488523`, end `672489449`
+- JPEG image at offset `672488527`, end `672489449`
+- JPEG image at offset `672488531`, end `672489449`
+- JPEG image at offset `672488535`, end `672489449`
+- JPEG image at offset `672488539`, end `672489449`
+- JPEG image at offset `672488543`, end `672489449`
+- JPEG image at offset `672488547`, end `672489449`
+- JPEG image at offset `672488551`, end `672489449`
+- JPEG image at offset `672488555`, end `672489449`
+- JPEG image at offset `672488559`, end `672489449`
+- JPEG image at offset `672488563`, end `672489449`
+- JPEG image at offset `672488567`, end `672489449`
+- JPEG image at offset `672488571`, end `672489449`
+- JPEG image at offset `672488575`, end `672489449`
+- JPEG image at offset `672488579`, end `672489449`
+- JPEG image at offset `672488583`, end `672489449`
+- JPEG image at offset `672488587`, end `672489449`
+- JPEG image at offset `672488591`, end `672489449`
+- JPEG image at offset `672488595`, end `672489449`
+- JPEG image at offset `672488599`, end `672489449`
+- JPEG image at offset `672488603`, end `672489449`
+- JPEG image at offset `672488607`, end `672489449`
+- JPEG image at offset `672488611`, end `672489449`
+- JPEG image at offset `672488615`, end `672489449`
+- JPEG image at offset `672488619`, end `672489449`
+- JPEG image at offset `672488623`, end `672489449`
+- JPEG image at offset `672488627`, end `672489449`
+- JPEG image at offset `672488631`, end `672489449`
+- JPEG image at offset `672488635`, end `672489449`
+- JPEG image at offset `672488639`, end `672489449`
+- JPEG image at offset `672488643`, end `672489449`
+- JPEG image at offset `672489195`, end `672489449`
+- JPEG image at offset `672489199`, end `672489449`
+- JPEG image at offset `672489203`, end `672489449`
+- JPEG image at offset `672489207`, end `672489449`
+- JPEG image at offset `672489211`, end `672489449`
+- JPEG image at offset `672489215`, end `672489449`
+- JPEG image at offset `672489219`, end `672489449`
+- JPEG image at offset `672489223`, end `672489449`
+- JPEG image at offset `672489227`, end `672489449`
+- JPEG image at offset `672489231`, end `672489449`
+- JPEG image at offset `672489235`, end `672489449`
+- JPEG image at offset `672489239`, end `672489449`
+- JPEG image at offset `672489243`, end `672489449`
+- JPEG image at offset `672489247`, end `672489449`
+- JPEG image at offset `672489251`, end `672489449`
+- JPEG image at offset `672489255`, end `672489449`
+- JPEG image at offset `672489259`, end `672489449`
+- JPEG image at offset `672489263`, end `672489449`
+- JPEG image at offset `672489267`, end `672489449`
+- JPEG image at offset `672489271`, end `672489449`
+- JPEG image at offset `672489275`, end `672489449`
+- JPEG image at offset `672489279`, end `672489449`
+- JPEG image at offset `672489283`, end `672489449`
+- JPEG image at offset `672489287`, end `672489449`
+- JPEG image at offset `672489291`, end `672489449`
+- JPEG image at offset `672489295`, end `672489449`
+- JPEG image at offset `672489299`, end `672489449`
+- JPEG image at offset `672489303`, end `672489449`
+- JPEG image at offset `672489307`, end `672489449`
+- JPEG image at offset `672489311`, end `672489449`
+- JPEG image at offset `672489315`, end `672489449`
+- JPEG image at offset `672489319`, end `672489449`
+- JPEG image at offset `672489323`, end `672489449`
+- JPEG image at offset `672489327`, end `672489449`
+- JPEG image at offset `672489331`, end `672489449`
+- JPEG image at offset `672521137`, end `672741957`
+- JPEG image at offset `672530545`, end `672741957`
+- JPEG image at offset `672856361`, end `673738209`
+- PE executable at offset `673106410`
+- PE executable at offset `673122849`
+- PE executable at offset `673275560`
+- PE executable at offset `673287714`
+- PE executable at offset `673427151`
+- PE executable at offset `673433537`
+- PE executable at offset `673608726`
+- PE executable at offset `673613929`
+- PE executable at offset `673633300`
+- ELF executable at offset `673856512`
+- ELF executable at offset `674055168`
+- ELF executable at offset `674192384`
+- ELF executable at offset `676332544`
+- ZIP archive at offset `678229129`
+- ELF executable at offset `679254016`
+- ELF executable at offset `679837696`
+- ELF executable at offset `680501248`
+- ELF executable at offset `682624000`
+- ELF executable at offset `683544576`
+- PE executable at offset `718394726`
+- PE executable at offset `727395430`
+- PE executable at offset `727606374`
+- PE executable at offset `728593510`
+- PE executable at offset `728722534`
+- PE executable at offset `731999353`
+- PE executable at offset `732015718`
+- PE executable at offset `732142694`
+- PE executable at offset `733190246`
+- PE executable at offset `733370470`
+- PE executable at offset `734346598`
+- PE executable at offset `734763366`
+- ELF executable at offset `735285248`
+- ELF executable at offset `735300608`
+- ELF executable at offset `735315968`
+- ELF executable at offset `735331328`
+- ELF executable at offset `735346688`
+- ELF executable at offset `735362048`
+- ELF executable at offset `735377408`
+- ELF executable at offset `735392768`
+- ELF executable at offset `735408128`
+- ELF executable at offset `735423488`
+- ELF executable at offset `735438848`
+- ELF executable at offset `735454208`
+- ELF executable at offset `735469568`
+- ELF executable at offset `735484928`
+- ELF executable at offset `735500288`
+- ELF executable at offset `735514624`
+- ELF executable at offset `735528960`
+- ELF executable at offset `735543296`
+- ELF executable at offset `735557632`
+- PE executable at offset `735647245`
+- PE executable at offset `735677619`
+- PE executable at offset `735701914`
+- PE executable at offset `735856277`
+- PE executable at offset `736046040`
+- PE executable at offset `736115096`
+- PE executable at offset `736221237`
+- PE executable at offset `736268152`
+- PE executable at offset `736359186`
+- PE executable at offset `736497063`
+- PE executable at offset `736563029`
+- PE executable at offset `736627014`
+- PE executable at offset `736666835`
+- PE executable at offset `736758797`
+- PE executable at offset `736939372`
+- PE executable at offset `737091367`
+- PE executable at offset `737165256`
+- PE executable at offset `737168459`
+- JPEG image at offset `737386886`, end `737395801`
+- PE executable at offset `737697937`
+- JPEG image at offset `737712465`, end `737818208`
+- PE executable at offset `737751552`
+- PE executable at offset `737918494`
+- PE executable at offset `737986681`
+- PE executable at offset `737991042`
+- PE executable at offset `738154783`
+- PE executable at offset `738889478`
+- PE executable at offset `738935934`
+- JPEG image at offset `739013393`, end `739019444`
+- PE executable at offset `739110114`
+- PE executable at offset `739110929`
+- PE executable at offset `739201395`
+- PE executable at offset `739281182`
+- PE executable at offset `739304431`
+- PE executable at offset `739398007`
+- PE executable at offset `739403232`
+- PE executable at offset `739511594`
+- PE executable at offset `739623204`
+- PE executable at offset `739864708`
+- JPEG image at offset `739999834`, end `740018472`
+- PE executable at offset `740086488`
+- JPEG image at offset `740183934`, end `740189907`
+- PE executable at offset `740273528`
+- PE executable at offset `740546977`
+- JPEG image at offset `740932072`, end `740954705`
+- PE executable at offset `740977757`
+- PE executable at offset `741137487`
+- PE executable at offset `741289559`
+- PE executable at offset `741307696`
+- PE executable at offset `742718132`
+- PE executable at offset `742725206`
+- PE executable at offset `742924105`
+- PE executable at offset `742987303`
+- PE executable at offset `742991568`
+- PE executable at offset `743185027`
+- PE executable at offset `743203931`
+- PE executable at offset `743216491`
+- PE executable at offset `743380694`
+- ELF executable at offset `743456768`
+- ELF executable at offset `743472128`
+- PE executable at offset `743489894`
+- PE executable at offset `743493060`
+- PE executable at offset `743506977`
+- PE executable at offset `743526750`
+- PE executable at offset `743540417`
+- PE executable at offset `743547202`
+- PE executable at offset `743549278`
+- PE executable at offset `743550506`
+- PE executable at offset `743552912`
+- PE executable at offset `743559024`
+- PE executable at offset `743559624`
+- PE executable at offset `743559989`
+- PE executable at offset `743561510`
+- PE executable at offset `743563562`
+- PE executable at offset `743565606`
+- PE executable at offset `743567658`
+- PE executable at offset `743578096`
+- PE executable at offset `743587770`
+- PE executable at offset `743588717`
+- PE executable at offset `743597104`
+- PE executable at offset `743601135`
+- PE executable at offset `743602295`
+- PE executable at offset `743602437`
+- PE executable at offset `743604343`
+- PE executable at offset `743604485`
+- PE executable at offset `743606387`
+- PE executable at offset `743606529`
+- PE executable at offset `743607411`
+- PE executable at offset `743607553`
+- PE executable at offset `743624744`
+- PE executable at offset `743629619`
+- PE executable at offset `743642759`
+- PE executable at offset `743647024`
+- PE executable at offset `743651475`
+- PE executable at offset `743653519`
+- PE executable at offset `743662582`
+- PE executable at offset `743666533`
+- PE executable at offset `743668382`
+- PE executable at offset `743675538`
+- PE executable at offset `743688460`
+- PE executable at offset `743705806`
+- PE executable at offset `743710425`
+- PE executable at offset `743715570`
+- PE executable at offset `743725398`
+- PE executable at offset `743726426`
+- PE executable at offset `743733923`
+- PE executable at offset `743734286`
+- PE executable at offset `743735157`
+- ELF executable at offset `743759872`
+- PE executable at offset `744069179`
+- PE executable at offset `744072151`
+- PE executable at offset `744081981`
+- PE executable at offset `744097587`
+- PE executable at offset `744109039`
+- PE executable at offset `744114012`
+- PE executable at offset `744115395`
+- PE executable at offset `744116623`
+- PE executable at offset `744118036`
+- PE executable at offset `744122672`
+- PE executable at offset `744123164`
+- PE executable at offset `744123529`
+- PE executable at offset `744124942`
+- PE executable at offset `744125997`
+- PE executable at offset `744128019`
+- PE executable at offset `744129074`
+- PE executable at offset `744137012`
+- PE executable at offset `744143955`
+- PE executable at offset `744144902`
+- PE executable at offset `744151239`
+- PE executable at offset `744155100`
+- PE executable at offset `744156185`
+- PE executable at offset `744156327`
+- PE executable at offset `744158097`
+- PE executable at offset `744158239`
+- PE executable at offset `744160005`
+- PE executable at offset `744160147`
+- PE executable at offset `744160771`
+- PE executable at offset `744160913`
+- PE executable at offset `744175147`
+- PE executable at offset `744178998`
+- PE executable at offset `744189611`
+- PE executable at offset `744193141`
+- PE executable at offset `744196961`
+- PE executable at offset `744198304`
+- PE executable at offset `744206985`
+- PE executable at offset `744210095`
+- PE executable at offset `744211877`
+- PE executable at offset `744216831`
+- PE executable at offset `744227530`
+- PE executable at offset `744240499`
+- PE executable at offset `744243973`
+- PE executable at offset `744248113`
+- PE executable at offset `744257297`
+- PE executable at offset `744258124`
+- PE executable at offset `744264367`
+- PE executable at offset `744264730`
+- PE executable at offset `744265601`
+- PE executable at offset `860941563`
+- PE executable at offset `860996813`
+- PE executable at offset `861085955`
+- PE executable at offset `861106607`
+- PE executable at offset `861123871`
+- ELF executable at offset `861144064`
+- ELF executable at offset `861275136`
+- ELF executable at offset `861356032`
+- ELF executable at offset `861390848`
+- ELF executable at offset `861409280`
+- ELF executable at offset `861428736`
+- ELF executable at offset `861476864`
+- ELF executable at offset `861499392`
+- ELF executable at offset `861595648`
+- ELF executable at offset `861663232`
+- ELF executable at offset `861699072`
+- ELF executable at offset `861744128`
+- ELF executable at offset `861768704`
+- ELF executable at offset `861804544`
+- ELF executable at offset `861840384`
+- ELF executable at offset `861879296`
+- PE executable at offset `861986029`
+- PE executable at offset `862112750`
+- PE executable at offset `862120755`
+- PE executable at offset `862208697`
+- PE executable at offset `862311063`
+- PE executable at offset `862482529`
+- PE executable at offset `862590741`
+- PE executable at offset `862677210`
+- PE executable at offset `862687212`
+- PE executable at offset `862777266`
+- PE executable at offset `862875471`
+- PE executable at offset `862977489`
+- PE executable at offset `862979612`
+- JPEG image at offset `863004402`, end `863041842`
+- PE executable at offset `863007123`
+- PE executable at offset `863024601`
+- PE executable at offset `863025259`
+- PE executable at offset `863079628`
+- PE executable at offset `863201483`
+- PE executable at offset `863262242`
+- PE executable at offset `863355434`
+- PE executable at offset `863429711`
+- PE executable at offset `863438507`
+- PE executable at offset `863454228`
+- PE executable at offset `863460212`
+- PE executable at offset `863737865`
+- PE executable at offset `863760466`
+- PE executable at offset `863801134`
+- PE executable at offset `863812845`
+- PE executable at offset `864040569`
+- PE executable at offset `864050723`
+- PE executable at offset `864095478`
+- PE executable at offset `864156994`
+- PE executable at offset `864249348`
+- PE executable at offset `864314657`
+- PE executable at offset `864729146`
+- PE executable at offset `864748791`
+- PE executable at offset `864750749`
+- PE executable at offset `865045170`
+- PE executable at offset `865138320`
+- PE executable at offset `865207670`
+- PE executable at offset `865219305`
+- PE executable at offset `865284844`
+- PE executable at offset `865329757`
+- PE executable at offset `865336046`
+- PE executable at offset `865423546`
+- PE executable at offset `865465302`
+- PE executable at offset `865511632`
+- PE executable at offset `865582843`
+- PE executable at offset `865633553`
+- PE executable at offset `865800640`
+- PE executable at offset `866003526`
+- PE executable at offset `866048503`
+- PE executable at offset `866115428`
+- PE executable at offset `866158214`
+- PE executable at offset `866168202`
+- PE executable at offset `866382379`
+- PE executable at offset `866398116`
+- PE executable at offset `866560504`
+- PE executable at offset `866759260`
+- PE executable at offset `866873910`
+- PE executable at offset `867008609`
+- PE executable at offset `867077977`
+- PE executable at offset `867237672`
+- PE executable at offset `867321012`
+- PE executable at offset `867337527`
+- PE executable at offset `867395953`
+- PE executable at offset `867454181`
+- PE executable at offset `867488998`
+- PE executable at offset `867555027`
+- PE executable at offset `867560459`
+- PE executable at offset `867582099`
+- PE executable at offset `867655841`
+- PE executable at offset `867705394`
+- PE executable at offset `867705507`
+- JPEG image at offset `867820450`, end `867844982`
+- PE executable at offset `867895307`
+- PE executable at offset `867955322`
+- PE executable at offset `868471782`
+- PE executable at offset `868501709`
+- PE executable at offset `868561239`
+- PE executable at offset `868652864`
+- JPEG image at offset `868731488`, end `868769817`
+- PE executable at offset `868975525`
+- PE executable at offset `869017914`
+- PE executable at offset `869155526`
+- PE executable at offset `869260190`
+- ELF executable at offset `869295104`
+- ELF executable at offset `869326848`
+- JPEG image at offset `869340989`, end `869393352`
+- ELF executable at offset `869352448`
+- ELF executable at offset `869421056`
+- ELF executable at offset `869450752`
+- ELF executable at offset `869541888`
+- PE executable at offset `869546960`
+- ELF executable at offset `869663744`
+- ELF executable at offset `869691392`
+- ELF executable at offset `869729280`
+- ELF executable at offset `869762048`
+- ELF executable at offset `869794816`
+- ELF executable at offset `869830656`
+- ELF executable at offset `869881856`
+- ELF executable at offset `869883904`
+- ELF executable at offset `869885952`
+- ELF executable at offset `869894144`
+- ELF executable at offset `869896192`
+- ELF executable at offset `869901312`
+- ELF executable at offset `869906432`
+- ELF executable at offset `869908480`
+- ELF executable at offset `869911552`
+- ELF executable at offset `869913600`
+- PE executable at offset `869927821`
+- ELF executable at offset `869942272`
+- ELF executable at offset `869945344`
+- ELF executable at offset `869947392`
+- ELF executable at offset `869956608`
+- ELF executable at offset `869980160`
+- ELF executable at offset `869983232`
+- ELF executable at offset `869985280`
+- ELF executable at offset `869991424`
+- ELF executable at offset `869994496`
+- ELF executable at offset `870000640`
+- ELF executable at offset `870006784`
+- ELF executable at offset `870009856`
+- ELF executable at offset `870013952`
+- ELF executable at offset `870017024`
+- ELF executable at offset `870023168`
+- ELF executable at offset `870027264`
+- ELF executable at offset `870037504`
+- ELF executable at offset `870051840`
+- ELF executable at offset `870066176`
+- ELF executable at offset `870071296`
+- ELF executable at offset `870074368`
+- ELF executable at offset `870079488`
+- ELF executable at offset `870082560`
+- ELF executable at offset `870089728`
+- ELF executable at offset `870095872`
+- ELF executable at offset `870099968`
+- ELF executable at offset `870109184`
+- ELF executable at offset `870120204`
+- ELF executable at offset `870120212`
+- ELF executable at offset `870123520`
+- ELF executable at offset `870127616`
+- ELF executable at offset `870132736`
+- ELF executable at offset `870135808`
+- ELF executable at offset `870137856`
+- ELF executable at offset `870150144`
+- ELF executable at offset `870155264`
+- ELF executable at offset `870158336`
+- ELF executable at offset `870162432`
+- ELF executable at offset `870168576`
+- ELF executable at offset `870171228`
+- ELF executable at offset `870172672`
+- ELF executable at offset `870175744`
+- ELF executable at offset `870190080`
+- ELF executable at offset `870192128`
+- ELF executable at offset `870196224`
+- ELF executable at offset `870198272`
+- ELF executable at offset `870203392`
+- ELF executable at offset `870205440`
+- ELF executable at offset `870210560`
+- ELF executable at offset `870218752`
+- ELF executable at offset `870220800`
+- ELF executable at offset `870225920`
+- ELF executable at offset `870231040`
+- ELF executable at offset `870236160`
+- ELF executable at offset `870239232`
+- ELF executable at offset `870246400`
+- ELF executable at offset `870256412`
+- ELF executable at offset `870256420`
+- ELF executable at offset `870261760`
+- ELF executable at offset `870264832`
+- ELF executable at offset `870268928`
+- ELF executable at offset `870273024`
+- ELF executable at offset `870277120`
+- ELF executable at offset `870279168`
+- ELF executable at offset `870283264`
+- ELF executable at offset `870285312`
+- ELF executable at offset `870298624`
+- ELF executable at offset `870300672`
+- ELF executable at offset `870315008`
+- ELF executable at offset `870317056`
+- ELF executable at offset `870319104`
+- ELF executable at offset `870337536`
+- ELF executable at offset `870397671`
+- ELF executable at offset `870440696`
+- ELF executable at offset `870457344`
+- ELF executable at offset `870573056`
+- ELF executable at offset `870641664`
+- ELF executable at offset `870744064`
+- ELF executable at offset `870768640`
+- ELF executable at offset `870815406`
+- ZIP archive at offset `870898528`
+- ELF executable at offset `870910976`
+- ELF executable at offset `870959565`
+- PE executable at offset `870984308`
+- PE executable at offset `870984704`
+- PE executable at offset `871020984`
+- ELF executable at offset `871111680`
+- ELF executable at offset `871367680`
+- ELF executable at offset `871383040`
+- ELF executable at offset `871392256`
+- ELF executable at offset `871395328`
+- ELF executable at offset `871398400`
+- ELF executable at offset `871401472`
+- PE executable at offset `871492659`
+- PE executable at offset `871634340`
+- PE executable at offset `871682454`
+- PE executable at offset `871774997`
+- PE executable at offset `871799554`
+- JPEG image at offset `953325888`, end `953336829`
+- PE executable at offset `953368228`
+- PE executable at offset `953377510`
+- PE executable at offset `953568079`
+- PE executable at offset `953722623`
+- PE executable at offset `953744198`
+- PE executable at offset `953801785`
+- PE executable at offset `953883800`
+- PE executable at offset `953943291`
+- PE executable at offset `953950795`
+- PE executable at offset `953969603`
+- PE executable at offset `954041895`
+- PE executable at offset `954076461`
+- PE executable at offset `954190115`
+- PE executable at offset `954266322`
+- PE executable at offset `954285600`
+- PE executable at offset `954343984`
+- PE executable at offset `954478000`
+- PE executable at offset `954666179`
+- PE executable at offset `954667379`
+- PE executable at offset `954962485`
+- JPEG image at offset `954974407`, end `954986588`
+- PE executable at offset `954988943`
+- PE executable at offset `955044026`
+- PE executable at offset `955264083`
+- PE executable at offset `955370775`
+- JPEG image at offset `955397243`, end `955416565`
+- PE executable at offset `955611400`
+- PE executable at offset `955777743`
+- PE executable at offset `955974546`
+- PE executable at offset `955980318`
+- PE executable at offset `956009673`
+- PE executable at offset `956033974`
+- PE executable at offset `956035727`
+- PE executable at offset `956109894`
+- PE executable at offset `956280384`
+- PE executable at offset `956418119`
+- PE executable at offset `956587463`
+- PE executable at offset `956622254`
+- PE executable at offset `956631030`
+- PE executable at offset `956738652`
+- PE executable at offset `956793280`
+- PE executable at offset `957123998`
+- PE executable at offset `957137355`
+- PE executable at offset `957274784`
+- PE executable at offset `957277640`
+- PE executable at offset `957373026`
+- PE executable at offset `957387895`
+- PE executable at offset `957576255`
+- PE executable at offset `957665341`
+- PE executable at offset `957735022`
+- PE executable at offset `957867562`
+- PE executable at offset `957894560`
+- JPEG image at offset `958028659`, end `958042535`
+- PE executable at offset `958173378`
+- PE executable at offset `958180948`
+- PE executable at offset `958217407`
+- PE executable at offset `958539205`
+- PE executable at offset `958545651`
+- PE executable at offset `958706436`
+- PE executable at offset `958716534`
+- PE executable at offset `958753812`
+- PE executable at offset `958935452`
+- PE executable at offset `959015688`
+- PE executable at offset `959149928`
+- PE executable at offset `959217606`
+- PE executable at offset `959361911`
+- PE executable at offset `959392726`
+- PE executable at offset `959686444`
+- PE executable at offset `959754866`
+- PE executable at offset `960014593`
+- PE executable at offset `960235462`
+- PE executable at offset `960255015`
+- PE executable at offset `960543761`
+- PE executable at offset `960553841`
+- PE executable at offset `960850562`
+- PE executable at offset `960895224`
+- PE executable at offset `960927980`
+- PE executable at offset `960951486`
+- PE executable at offset `961106097`
+- PE executable at offset `961143473`
+- PE executable at offset `961261474`
+- PE executable at offset `961426553`
+- PE executable at offset `961477133`
+- PE executable at offset `961689006`
+- PE executable at offset `961846069`
+- PE executable at offset `961856107`
+- PE executable at offset `962146642`
+- PE executable at offset `962279954`
+- PE executable at offset `962407620`
+- PE executable at offset `962438233`
+- PE executable at offset `962515423`
+- PE executable at offset `962741667`
+- PE executable at offset `962741688`
+- PE executable at offset `962780415`
+- PE executable at offset `962846268`
+- PE executable at offset `963197748`
+- PE executable at offset `963211672`
+- PE executable at offset `963307867`
+- ELF executable at offset `963604480`
+- ELF executable at offset `963633152`
+- PE executable at offset `963849937`
+- PE executable at offset `970188600`
+- PE executable at offset `970354106`
+- PE executable at offset `970366562`
+- PE executable at offset `970422894`
+- PE executable at offset `970628706`
+- PE executable at offset `970685310`
+- PE executable at offset `970888066`
+- PE executable at offset `971281272`
+- PE executable at offset `971293886`
+- PE executable at offset `971379573`
+- PE executable at offset `972051306`
+- PE executable at offset `972723511`
+- PE executable at offset `972836748`
+- PE executable at offset `972851024`
+- PE executable at offset `972931016`
+- JPEG image at offset `973167921`, end `973208860`
+- PE executable at offset `973220448`
+- PE executable at offset `973241870`
+- PE executable at offset `973422100`
+- PE executable at offset `973455082`
+- PE executable at offset `973692217`
+- PE executable at offset `973785712`
+- PE executable at offset `973947905`
+- PE executable at offset `974078087`
+- PE executable at offset `975678020`
+- PE executable at offset `975899242`
+- PE executable at offset `976001958`
+- PE executable at offset `976080278`
+- PE executable at offset `976138261`
+- PE executable at offset `976370985`
+- PE executable at offset `976535284`
+- PE executable at offset `976542112`
+- PE executable at offset `976718499`
+- PE executable at offset `976762007`
+- PE executable at offset `976855183`
+- PE executable at offset `977248141`
+- PE executable at offset `977363921`
+- PE executable at offset `977369151`
+- PE executable at offset `977388883`
+- PE executable at offset `977549383`
+- JPEG image at offset `977568241`, end `977571421`
+- PE executable at offset `977705850`
+- PE executable at offset `977713034`
+- PE executable at offset `977737892`
+- PE executable at offset `977823291`
+- PE executable at offset `977936433`
+- PE executable at offset `978161035`
+- PE executable at offset `978363693`
+- PE executable at offset `978563214`
+- PE executable at offset `978884433`
+- PE executable at offset `978921986`
+- PE executable at offset `978939060`
+- PE executable at offset `979033731`
+- PE executable at offset `979492298`
+- PE executable at offset `979498004`
+- PE executable at offset `979551572`
+- PE executable at offset `979706046`
+- PE executable at offset `979915375`
+- PE executable at offset `979923533`
+- PE executable at offset `980024832`
+- PE executable at offset `980040942`
+- PE executable at offset `980171520`
+- PE executable at offset `980477901`
+- PE executable at offset `980599827`
+- PE executable at offset `980866912`
+- PE executable at offset `980897754`
+- PE executable at offset `981122851`
+- PE executable at offset `981172947`
+- PE executable at offset `981214053`
+- PE executable at offset `981250631`
+- PE executable at offset `981331405`
+- PE executable at offset `981577071`
+- PE executable at offset `981834784`
+- PE executable at offset `981870839`
+- PE executable at offset `982101574`
+- PE executable at offset `982160243`
+- PE executable at offset `982343699`
+- PE executable at offset `982462652`
+- PE executable at offset `982482245`
+- PE executable at offset `982492829`
+- JPEG image at offset `982583804`, end `982597212`
+- PE executable at offset `982599315`
+- PE executable at offset `982625587`
+- PE executable at offset `983161646`
+- PE executable at offset `983252733`
+- PE executable at offset `983265838`
+- PE executable at offset `983367257`
+- PE executable at offset `983454677`
+- PE executable at offset `983571189`
+- PE executable at offset `983938720`
+- PE executable at offset `984053378`
+- PE executable at offset `984180273`
+- PE executable at offset `984185729`
+- PE executable at offset `984219546`
+- PE executable at offset `984398239`
+- PE executable at offset `984800247`
+- PE executable at offset `984891068`
+- PE executable at offset `984916820`
+- PE executable at offset `985043439`
+- JPEG image at offset `985267938`, end `985294638`
+- PE executable at offset `985268732`
+- PE executable at offset `985291427`
+- PE executable at offset `985320726`
+- PE executable at offset `985351742`
+- PE executable at offset `985451916`
+- PE executable at offset `985545047`
+- PE executable at offset `985619917`
+- PE executable at offset `985633901`
+- PE executable at offset `985724780`
+- PE executable at offset `985775639`
+- PE executable at offset `985870852`
+- PE executable at offset `985915424`
+- PE executable at offset `986172934`
+- PE executable at offset `986199455`
+- PE executable at offset `986292338`
+- PE executable at offset `986299118`
+- PE executable at offset `986427246`
+- PE executable at offset `986551332`
+- PE executable at offset `986574568`
+- PE executable at offset `986595204`
+- PE executable at offset `986617271`
+- PE executable at offset `992545992`
+- PE executable at offset `992558138`
+- PE executable at offset `992569088`
+- PE executable at offset `992606545`
+- PE executable at offset `992639267`
+- PE executable at offset `992701446`
+- JPEG image at offset `992719319`, end `992783102`
+- PE executable at offset `992719598`
+- PE executable at offset `992860593`
+- PE executable at offset `992894054`
+- PE executable at offset `992960542`
+- PE executable at offset `992990360`
+- PE executable at offset `993066274`
+- PE executable at offset `993080984`
+- JPEG image at offset `993162042`, end `993183287`
+- PE executable at offset `993166350`
+- PE executable at offset `993231356`
+- PE executable at offset `993278739`
+- PE executable at offset `993302819`
+- PE executable at offset `993347258`
+- PE executable at offset `993369030`
+- PE executable at offset `993498416`
+- PE executable at offset `993655480`
+- PE executable at offset `993721871`
+- PE executable at offset `993724684`
+- PE executable at offset `993825441`
+- PE executable at offset `993911991`
+- PE executable at offset `994142504`
+- PE executable at offset `994195505`
+- PE executable at offset `994298694`
+- PE executable at offset `994306826`
+- PE executable at offset `994421050`
+- PE executable at offset `994441133`
+- PE executable at offset `994498971`
+- PE executable at offset `994538617`
+- PE executable at offset `994621053`
+- PE executable at offset `994756846`
+- PE executable at offset `1070639271`
+- PE executable at offset `1070694823`
+- PE executable at offset `1070747838`
+- PE executable at offset `1070764307`
+- PE executable at offset `1070884042`
+- PE executable at offset `1070885345`
+- PE executable at offset `1070906956`
+- PE executable at offset `1071038183`
+- PE executable at offset `1071287241`
+- PE executable at offset `1071449291`
+- PE executable at offset `1071532172`
+- PE executable at offset `1071566268`
+- PE executable at offset `1071586403`
+- PE executable at offset `1071759041`
+- PE executable at offset `1071884901`
+- PE executable at offset `1072002331`
+- PE executable at offset `1072072690`
+- PE executable at offset `1072073271`
+- PE executable at offset `1072435252`
+- PE executable at offset `1072452811`
+- PE executable at offset `1072519986`
+- PE executable at offset `1072666638`
+- PE executable at offset `1072706527`
+- PE executable at offset `1072763963`
+- PE executable at offset `1072792176`
+- PE executable at offset `1072823516`
+- PE executable at offset `1073174635`
+- JPEG image at offset `1073183404`, end `1073252121`
+- PE executable at offset `1073382120`
+- PE executable at offset `1073384455`
+- PE executable at offset `1073399667`
+- PE executable at offset `1073429463`
+- PE executable at offset `1073450680`
+- PE executable at offset `1073450782`
+- PE executable at offset `1073516728`
+- PE executable at offset `1073691711`
+
+### Carved Files
+
+- `output\carved\disk_carved_001.elf` (1048576 bytes)
+- `output\carved\disk_carved_002.elf` (1048576 bytes)
+- `output\carved\disk_carved_003.exe` (1048576 bytes)
+- `output\carved\disk_carved_004.png` (1048576 bytes)
+- `output\carved\disk_carved_005.elf` (1048576 bytes)
+- `output\carved\disk_carved_006.elf` (1048576 bytes)
+- `output\carved\disk_carved_007.elf` (1048576 bytes)
+- `output\carved\disk_carved_008.elf` (1048576 bytes)
+- `output\carved\disk_carved_009.elf` (1048576 bytes)
+- `output\carved\disk_carved_010.exe` (1048576 bytes)
+- `output\carved\disk_carved_011.exe` (1048576 bytes)
+- `output\carved\disk_carved_012.exe` (1048576 bytes)
+- `output\carved\disk_carved_013.exe` (1048576 bytes)
+- `output\carved\disk_carved_014.exe` (1048576 bytes)
+- `output\carved\disk_carved_015.exe` (1048576 bytes)
+- `output\carved\disk_carved_016.exe` (1048576 bytes)
+- `output\carved\disk_carved_017.exe` (1048576 bytes)
+- `output\carved\disk_carved_018.exe` (1048576 bytes)
+- `output\carved\disk_carved_019.exe` (1048576 bytes)
+- `output\carved\disk_carved_020.exe` (1048576 bytes)
+- `output\carved\disk_carved_021.exe` (1048576 bytes)
+- `output\carved\disk_carved_022.exe` (1048576 bytes)
+- `output\carved\disk_carved_023.exe` (1048576 bytes)
+- `output\carved\disk_carved_024.exe` (1048576 bytes)
+- `output\carved\disk_carved_025.exe` (1048576 bytes)
+- `output\carved\disk_carved_026.exe` (1048576 bytes)
+- `output\carved\disk_carved_027.exe` (1048576 bytes)
+- `output\carved\disk_carved_028.exe` (1048576 bytes)
+- `output\carved\disk_carved_029.exe` (1048576 bytes)
+- `output\carved\disk_carved_030.exe` (1048576 bytes)
+- `output\carved\disk_carved_031.exe` (1048576 bytes)
+- `output\carved\disk_carved_032.exe` (1048576 bytes)
+- `output\carved\disk_carved_033.exe` (1048576 bytes)
+- `output\carved\disk_carved_034.exe` (1048576 bytes)
+- `output\carved\disk_carved_035.exe` (1048576 bytes)
+- `output\carved\disk_carved_036.exe` (1048576 bytes)
+- `output\carved\disk_carved_037.exe` (1048576 bytes)
+- `output\carved\disk_carved_038.jpg` (92293 bytes)
+- `output\carved\disk_carved_039.exe` (1048576 bytes)
+- `output\carved\disk_carved_040.exe` (1048576 bytes)
+- `output\carved\disk_carved_041.exe` (1048576 bytes)
+- `output\carved\disk_carved_042.exe` (1048576 bytes)
+- `output\carved\disk_carved_043.exe` (1048576 bytes)
+- `output\carved\disk_carved_044.exe` (1048576 bytes)
+- `output\carved\disk_carved_045.exe` (1048576 bytes)
+- `output\carved\disk_carved_046.exe` (1048576 bytes)
+- `output\carved\disk_carved_047.exe` (1048576 bytes)
+- `output\carved\disk_carved_048.exe` (1048576 bytes)
+- `output\carved\disk_carved_049.exe` (1048576 bytes)
+- `output\carved\disk_carved_050.exe` (1048576 bytes)
+- `output\carved\disk_carved_051.exe` (1048576 bytes)
+- `output\carved\disk_carved_052.exe` (1048576 bytes)
+- `output\carved\disk_carved_053.exe` (1048576 bytes)
+- `output\carved\disk_carved_054.exe` (1048576 bytes)
+- `output\carved\disk_carved_055.exe` (1048576 bytes)
+- `output\carved\disk_carved_056.exe` (1048576 bytes)
+- `output\carved\disk_carved_057.exe` (1048576 bytes)
+- `output\carved\disk_carved_058.exe` (1048576 bytes)
+- `output\carved\disk_carved_059.exe` (1048576 bytes)
+- `output\carved\disk_carved_060.exe` (1048576 bytes)
+- `output\carved\disk_carved_061.exe` (1048576 bytes)
+- `output\carved\disk_carved_062.exe` (1048576 bytes)
+- `output\carved\disk_carved_063.exe` (1048576 bytes)
+- `output\carved\disk_carved_064.exe` (1048576 bytes)
+- `output\carved\disk_carved_065.exe` (1048576 bytes)
+- `output\carved\disk_carved_066.exe` (1048576 bytes)
+- `output\carved\disk_carved_067.exe` (1048576 bytes)
+- `output\carved\disk_carved_068.exe` (1048576 bytes)
+- `output\carved\disk_carved_069.exe` (1048576 bytes)
+- `output\carved\disk_carved_070.exe` (1048576 bytes)
+- `output\carved\disk_carved_071.exe` (1048576 bytes)
+- `output\carved\disk_carved_072.exe` (1048576 bytes)
+- `output\carved\disk_carved_073.exe` (1048576 bytes)
+- `output\carved\disk_carved_074.exe` (1048576 bytes)
+- `output\carved\disk_carved_075.exe` (1048576 bytes)
+- `output\carved\disk_carved_076.exe` (1048576 bytes)
+- `output\carved\disk_carved_077.exe` (1048576 bytes)
+- `output\carved\disk_carved_078.exe` (1048576 bytes)
+- `output\carved\disk_carved_079.exe` (1048576 bytes)
+- `output\carved\disk_carved_080.exe` (1048576 bytes)
+- `output\carved\disk_carved_081.exe` (1048576 bytes)
+- `output\carved\disk_carved_082.exe` (1048576 bytes)
+- `output\carved\disk_carved_083.exe` (1048576 bytes)
+- `output\carved\disk_carved_084.exe` (1048576 bytes)
+- `output\carved\disk_carved_085.exe` (1048576 bytes)
+- `output\carved\disk_carved_086.exe` (1048576 bytes)
+- `output\carved\disk_carved_087.exe` (1048576 bytes)
+- `output\carved\disk_carved_088.exe` (1048576 bytes)
+- `output\carved\disk_carved_089.exe` (1048576 bytes)
+- `output\carved\disk_carved_090.exe` (1048576 bytes)
+- `output\carved\disk_carved_091.exe` (1048576 bytes)
+- `output\carved\disk_carved_092.exe` (1048576 bytes)
+- `output\carved\disk_carved_093.exe` (1048576 bytes)
+- `output\carved\disk_carved_094.exe` (1048576 bytes)
+- `output\carved\disk_carved_095.exe` (1048576 bytes)
+- `output\carved\disk_carved_096.exe` (1048576 bytes)
+- `output\carved\disk_carved_097.exe` (1048576 bytes)
+- `output\carved\disk_carved_098.exe` (1048576 bytes)
+- `output\carved\disk_carved_099.exe` (1048576 bytes)
+- `output\carved\disk_carved_100.exe` (1048576 bytes)
+- `output\carved\disk_carved_101.exe` (1048576 bytes)
+- `output\carved\disk_carved_102.exe` (1048576 bytes)
+- `output\carved\disk_carved_103.exe` (1048576 bytes)
+- `output\carved\disk_carved_104.exe` (1048576 bytes)
+- `output\carved\disk_carved_105.jpg` (98230 bytes)
+- `output\carved\disk_carved_106.exe` (1048576 bytes)
+- `output\carved\disk_carved_107.exe` (1048576 bytes)
+- `output\carved\disk_carved_108.exe` (1048576 bytes)
+- `output\carved\disk_carved_109.exe` (1048576 bytes)
+- `output\carved\disk_carved_110.exe` (1048576 bytes)
+- `output\carved\disk_carved_111.exe` (1048576 bytes)
+- `output\carved\disk_carved_112.exe` (1048576 bytes)
+- `output\carved\disk_carved_113.exe` (1048576 bytes)
+- `output\carved\disk_carved_114.exe` (1048576 bytes)
+- `output\carved\disk_carved_115.exe` (1048576 bytes)
+- `output\carved\disk_carved_116.exe` (1048576 bytes)
+- `output\carved\disk_carved_117.exe` (1048576 bytes)
+- `output\carved\disk_carved_118.exe` (1048576 bytes)
+- `output\carved\disk_carved_119.exe` (1048576 bytes)
+- `output\carved\disk_carved_120.exe` (1048576 bytes)
+- `output\carved\disk_carved_121.exe` (1048576 bytes)
+- `output\carved\disk_carved_122.exe` (1048576 bytes)
+- `output\carved\disk_carved_123.exe` (1048576 bytes)
+- `output\carved\disk_carved_124.exe` (1048576 bytes)
+- `output\carved\disk_carved_125.exe` (1048576 bytes)
+- `output\carved\disk_carved_126.exe` (1048576 bytes)
+- `output\carved\disk_carved_127.exe` (1048576 bytes)
+- `output\carved\disk_carved_128.exe` (1048576 bytes)
+- `output\carved\disk_carved_129.exe` (1048576 bytes)
+- `output\carved\disk_carved_130.exe` (1048576 bytes)
+- `output\carved\disk_carved_131.exe` (1048576 bytes)
+- `output\carved\disk_carved_132.exe` (1048576 bytes)
+- `output\carved\disk_carved_133.exe` (1048576 bytes)
+- `output\carved\disk_carved_134.exe` (1048576 bytes)
+- `output\carved\disk_carved_135.exe` (1048576 bytes)
+- `output\carved\disk_carved_136.exe` (1048576 bytes)
+- `output\carved\disk_carved_137.jpg` (12694 bytes)
+- `output\carved\disk_carved_138.jpg` (973 bytes)
+- `output\carved\disk_carved_139.exe` (1048576 bytes)
+- `output\carved\disk_carved_140.exe` (1048576 bytes)
+- `output\carved\disk_carved_141.exe` (1048576 bytes)
+- `output\carved\disk_carved_142.exe` (1048576 bytes)
+- `output\carved\disk_carved_143.exe` (1048576 bytes)
+- `output\carved\disk_carved_144.exe` (1048576 bytes)
+- `output\carved\disk_carved_145.exe` (1048576 bytes)
+- `output\carved\disk_carved_146.exe` (1048576 bytes)
+- `output\carved\disk_carved_147.exe` (1048576 bytes)
+- `output\carved\disk_carved_148.exe` (1048576 bytes)
+- `output\carved\disk_carved_149.jpg` (7211 bytes)
+- `output\carved\disk_carved_150.exe` (1048576 bytes)
+- `output\carved\disk_carved_151.exe` (1048576 bytes)
+- `output\carved\disk_carved_152.exe` (1048576 bytes)
+- `output\carved\disk_carved_153.exe` (1048576 bytes)
+- `output\carved\disk_carved_154.exe` (1048576 bytes)
+- `output\carved\disk_carved_155.exe` (1048576 bytes)
+- `output\carved\disk_carved_156.exe` (1048576 bytes)
+- `output\carved\disk_carved_157.exe` (1048576 bytes)
+- `output\carved\disk_carved_158.exe` (1048576 bytes)
+- `output\carved\disk_carved_159.exe` (1048576 bytes)
+- `output\carved\disk_carved_160.exe` (1048576 bytes)
+- `output\carved\disk_carved_161.exe` (1048576 bytes)
+- `output\carved\disk_carved_162.exe` (1048576 bytes)
+- `output\carved\disk_carved_163.exe` (1048576 bytes)
+- `output\carved\disk_carved_164.exe` (1048576 bytes)
+- `output\carved\disk_carved_165.exe` (1048576 bytes)
+- `output\carved\disk_carved_166.exe` (1048576 bytes)
+- `output\carved\disk_carved_167.exe` (1048576 bytes)
+- `output\carved\disk_carved_168.exe` (1048576 bytes)
+- `output\carved\disk_carved_169.exe` (1048576 bytes)
+- `output\carved\disk_carved_170.exe` (1048576 bytes)
+- `output\carved\disk_carved_171.exe` (1048576 bytes)
+- `output\carved\disk_carved_172.exe` (1048576 bytes)
+- `output\carved\disk_carved_173.exe` (1048576 bytes)
+- `output\carved\disk_carved_174.exe` (1048576 bytes)
+- `output\carved\disk_carved_175.exe` (1048576 bytes)
+- `output\carved\disk_carved_176.exe` (1048576 bytes)
+- `output\carved\disk_carved_177.exe` (1048576 bytes)
+- `output\carved\disk_carved_178.exe` (1048576 bytes)
+- `output\carved\disk_carved_179.exe` (1048576 bytes)
+- `output\carved\disk_carved_180.exe` (1048576 bytes)
+- `output\carved\disk_carved_181.elf` (1048576 bytes)
+- `output\carved\disk_carved_182.exe` (1048576 bytes)
+- `output\carved\disk_carved_183.exe` (1048576 bytes)
+- `output\carved\disk_carved_184.exe` (1048576 bytes)
+- `output\carved\disk_carved_185.exe` (1048576 bytes)
+- `output\carved\disk_carved_186.exe` (1048576 bytes)
+- `output\carved\disk_carved_187.exe` (1048576 bytes)
+- `output\carved\disk_carved_188.exe` (1048576 bytes)
+- `output\carved\disk_carved_189.exe` (1048576 bytes)
+- `output\carved\disk_carved_190.exe` (1048576 bytes)
+- `output\carved\disk_carved_191.exe` (1048576 bytes)
+- `output\carved\disk_carved_192.exe` (1048576 bytes)
+- `output\carved\disk_carved_193.exe` (1048576 bytes)
+- `output\carved\disk_carved_194.jpg` (127854 bytes)
+- `output\carved\disk_carved_195.exe` (1048576 bytes)
+- `output\carved\disk_carved_196.exe` (1048576 bytes)
+- `output\carved\disk_carved_197.exe` (1048576 bytes)
+- `output\carved\disk_carved_198.exe` (1048576 bytes)
+- `output\carved\disk_carved_199.exe` (1048576 bytes)
+- `output\carved\disk_carved_200.exe` (1048576 bytes)
+- `output\carved\disk_carved_201.exe` (1048576 bytes)
+- `output\carved\disk_carved_202.exe` (1048576 bytes)
+- `output\carved\disk_carved_203.exe` (1048576 bytes)
+- `output\carved\disk_carved_204.exe` (1048576 bytes)
+- `output\carved\disk_carved_205.exe` (1048576 bytes)
+- `output\carved\disk_carved_206.exe` (1048576 bytes)
+- `output\carved\disk_carved_207.exe` (1048576 bytes)
+- `output\carved\disk_carved_208.exe` (1048576 bytes)
+- `output\carved\disk_carved_209.exe` (1048576 bytes)
+- `output\carved\disk_carved_210.exe` (1048576 bytes)
+- `output\carved\disk_carved_211.exe` (1048576 bytes)
+- `output\carved\disk_carved_212.exe` (1048576 bytes)
+- `output\carved\disk_carved_213.exe` (1048576 bytes)
+- `output\carved\disk_carved_214.exe` (1048576 bytes)
+- `output\carved\disk_carved_215.exe` (1048576 bytes)
+- `output\carved\disk_carved_216.exe` (1048576 bytes)
+- `output\carved\disk_carved_217.exe` (1048576 bytes)
+- `output\carved\disk_carved_218.exe` (1048576 bytes)
+- `output\carved\disk_carved_219.exe` (1048576 bytes)
+- `output\carved\disk_carved_220.exe` (1048576 bytes)
+- `output\carved\disk_carved_221.exe` (1048576 bytes)
+- `output\carved\disk_carved_222.exe` (1048576 bytes)
+- `output\carved\disk_carved_223.exe` (1048576 bytes)
+- `output\carved\disk_carved_224.exe` (1048576 bytes)
+- `output\carved\disk_carved_225.exe` (1048576 bytes)
+- `output\carved\disk_carved_226.exe` (1048576 bytes)
+- `output\carved\disk_carved_227.exe` (1048576 bytes)
+- `output\carved\disk_carved_228.exe` (1048576 bytes)
+- `output\carved\disk_carved_229.exe` (1048576 bytes)
+- `output\carved\disk_carved_230.exe` (1048576 bytes)
+- `output\carved\disk_carved_231.exe` (1048576 bytes)
+- `output\carved\disk_carved_232.exe` (1048576 bytes)
+- `output\carved\disk_carved_233.exe` (1048576 bytes)
+- `output\carved\disk_carved_234.exe` (1048576 bytes)
+- `output\carved\disk_carved_235.exe` (1048576 bytes)
+- `output\carved\disk_carved_236.exe` (1048576 bytes)
+- `output\carved\disk_carved_237.exe` (1048576 bytes)
+- `output\carved\disk_carved_238.exe` (1048576 bytes)
+- `output\carved\disk_carved_239.exe` (1048576 bytes)
+- `output\carved\disk_carved_240.exe` (1048576 bytes)
+- `output\carved\disk_carved_241.exe` (1048576 bytes)
+- `output\carved\disk_carved_242.exe` (1048576 bytes)
+- `output\carved\disk_carved_243.exe` (1048576 bytes)
+- `output\carved\disk_carved_244.exe` (1048576 bytes)
+- `output\carved\disk_carved_245.exe` (1048576 bytes)
+- `output\carved\disk_carved_246.exe` (1048576 bytes)
+- `output\carved\disk_carved_247.exe` (1048576 bytes)
+- `output\carved\disk_carved_248.exe` (1048576 bytes)
+- `output\carved\disk_carved_249.exe` (1048576 bytes)
+- `output\carved\disk_carved_250.exe` (1048576 bytes)
+- `output\carved\disk_carved_251.exe` (1048576 bytes)
+- `output\carved\disk_carved_252.exe` (1048576 bytes)
+- `output\carved\disk_carved_253.exe` (1048576 bytes)
+- `output\carved\disk_carved_254.exe` (1048576 bytes)
+- `output\carved\disk_carved_255.exe` (1048576 bytes)
+- `output\carved\disk_carved_256.exe` (1048576 bytes)
+- `output\carved\disk_carved_257.exe` (1048576 bytes)
+- `output\carved\disk_carved_258.exe` (1048576 bytes)
+- `output\carved\disk_carved_259.exe` (1048576 bytes)
+- `output\carved\disk_carved_260.exe` (1048576 bytes)
+- `output\carved\disk_carved_261.exe` (1048576 bytes)
+- `output\carved\disk_carved_262.exe` (1048576 bytes)
+- `output\carved\disk_carved_263.exe` (1048576 bytes)
+- `output\carved\disk_carved_264.exe` (1048576 bytes)
+- `output\carved\disk_carved_265.exe` (1048576 bytes)
+- `output\carved\disk_carved_266.exe` (1048576 bytes)
+- `output\carved\disk_carved_267.exe` (1048576 bytes)
+- `output\carved\disk_carved_268.exe` (1048576 bytes)
+- `output\carved\disk_carved_269.exe` (1048576 bytes)
+- `output\carved\disk_carved_270.exe` (1048576 bytes)
+- `output\carved\disk_carved_271.exe` (1048576 bytes)
+- `output\carved\disk_carved_272.exe` (1048576 bytes)
+- `output\carved\disk_carved_273.exe` (1048576 bytes)
+- `output\carved\disk_carved_274.exe` (1048576 bytes)
+- `output\carved\disk_carved_275.exe` (1048576 bytes)
+- `output\carved\disk_carved_276.exe` (1048576 bytes)
+- `output\carved\disk_carved_277.exe` (1048576 bytes)
+- `output\carved\disk_carved_278.exe` (1048576 bytes)
+- `output\carved\disk_carved_279.exe` (1048576 bytes)
+- `output\carved\disk_carved_280.exe` (1048576 bytes)
+- `output\carved\disk_carved_281.exe` (1048576 bytes)
+- `output\carved\disk_carved_282.exe` (1048576 bytes)
+- `output\carved\disk_carved_283.exe` (1048576 bytes)
+- `output\carved\disk_carved_284.exe` (1048576 bytes)
+- `output\carved\disk_carved_285.exe` (1048576 bytes)
+- `output\carved\disk_carved_286.exe` (1048576 bytes)
+- `output\carved\disk_carved_287.exe` (1048576 bytes)
+- `output\carved\disk_carved_288.exe` (1048576 bytes)
+- `output\carved\disk_carved_289.exe` (1048576 bytes)
+- `output\carved\disk_carved_290.exe` (1048576 bytes)
+- `output\carved\disk_carved_291.exe` (1048576 bytes)
+- `output\carved\disk_carved_292.exe` (1048576 bytes)
+- `output\carved\disk_carved_293.exe` (1048576 bytes)
+- `output\carved\disk_carved_294.exe` (1048576 bytes)
+- `output\carved\disk_carved_295.exe` (1048576 bytes)
+- `output\carved\disk_carved_296.exe` (1048576 bytes)
+- `output\carved\disk_carved_297.exe` (1048576 bytes)
+- `output\carved\disk_carved_298.exe` (1048576 bytes)
+- `output\carved\disk_carved_299.exe` (1048576 bytes)
+- `output\carved\disk_carved_300.exe` (1048576 bytes)
+- `output\carved\disk_carved_301.exe` (1048576 bytes)
+- `output\carved\disk_carved_302.exe` (1048576 bytes)
+- `output\carved\disk_carved_303.exe` (1048576 bytes)
+- `output\carved\disk_carved_304.exe` (1048576 bytes)
+- `output\carved\disk_carved_305.exe` (1048576 bytes)
+- `output\carved\disk_carved_306.exe` (1048576 bytes)
+- `output\carved\disk_carved_307.exe` (1048576 bytes)
+- `output\carved\disk_carved_308.exe` (1048576 bytes)
+- `output\carved\disk_carved_309.exe` (1048576 bytes)
+- `output\carved\disk_carved_310.exe` (1048576 bytes)
+- `output\carved\disk_carved_311.exe` (1048576 bytes)
+- `output\carved\disk_carved_312.exe` (1048576 bytes)
+- `output\carved\disk_carved_313.exe` (1048576 bytes)
+- `output\carved\disk_carved_314.exe` (1048576 bytes)
+- `output\carved\disk_carved_315.exe` (1048576 bytes)
+- `output\carved\disk_carved_316.exe` (1048576 bytes)
+- `output\carved\disk_carved_317.exe` (1048576 bytes)
+- `output\carved\disk_carved_318.exe` (1048576 bytes)
+- `output\carved\disk_carved_319.exe` (1048576 bytes)
+- `output\carved\disk_carved_320.exe` (1048576 bytes)
+- `output\carved\disk_carved_321.exe` (1048576 bytes)
+- `output\carved\disk_carved_322.exe` (1048576 bytes)
+- `output\carved\disk_carved_323.exe` (1048576 bytes)
+- `output\carved\disk_carved_324.exe` (1048576 bytes)
+- `output\carved\disk_carved_325.exe` (1048576 bytes)
+- `output\carved\disk_carved_326.exe` (1048576 bytes)
+- `output\carved\disk_carved_327.exe` (1048576 bytes)
+- `output\carved\disk_carved_328.exe` (1048576 bytes)
+- `output\carved\disk_carved_329.exe` (1048576 bytes)
+- `output\carved\disk_carved_330.exe` (1048576 bytes)
+- `output\carved\disk_carved_331.exe` (1048576 bytes)
+- `output\carved\disk_carved_332.exe` (1048576 bytes)
+- `output\carved\disk_carved_333.exe` (1048576 bytes)
+- `output\carved\disk_carved_334.exe` (1048576 bytes)
+- `output\carved\disk_carved_335.exe` (1048576 bytes)
+- `output\carved\disk_carved_336.exe` (1048576 bytes)
+- `output\carved\disk_carved_337.exe` (1048576 bytes)
+- `output\carved\disk_carved_338.exe` (1048576 bytes)
+- `output\carved\disk_carved_339.exe` (1048576 bytes)
+- `output\carved\disk_carved_340.exe` (1048576 bytes)
+- `output\carved\disk_carved_341.exe` (1048576 bytes)
+- `output\carved\disk_carved_342.exe` (1048576 bytes)
+- `output\carved\disk_carved_343.exe` (1048576 bytes)
+- `output\carved\disk_carved_344.exe` (1048576 bytes)
+- `output\carved\disk_carved_345.exe` (1048576 bytes)
+- `output\carved\disk_carved_346.exe` (1048576 bytes)
+- `output\carved\disk_carved_347.exe` (1048576 bytes)
+- `output\carved\disk_carved_348.exe` (1048576 bytes)
+- `output\carved\disk_carved_349.exe` (1048576 bytes)
+- `output\carved\disk_carved_350.exe` (1048576 bytes)
+- `output\carved\disk_carved_351.exe` (1048576 bytes)
+- `output\carved\disk_carved_352.exe` (1048576 bytes)
+- `output\carved\disk_carved_353.exe` (1048576 bytes)
+- `output\carved\disk_carved_354.exe` (1048576 bytes)
+- `output\carved\disk_carved_355.exe` (1048576 bytes)
+- `output\carved\disk_carved_356.exe` (1048576 bytes)
+- `output\carved\disk_carved_357.exe` (1048576 bytes)
+- `output\carved\disk_carved_358.exe` (1048576 bytes)
+- `output\carved\disk_carved_359.exe` (1048576 bytes)
+- `output\carved\disk_carved_360.exe` (1048576 bytes)
+- `output\carved\disk_carved_361.exe` (1048576 bytes)
+- `output\carved\disk_carved_362.exe` (1048576 bytes)
+- `output\carved\disk_carved_363.exe` (1048576 bytes)
+- `output\carved\disk_carved_364.exe` (1048576 bytes)
+- `output\carved\disk_carved_365.exe` (1048576 bytes)
+- `output\carved\disk_carved_366.exe` (1048576 bytes)
+- `output\carved\disk_carved_367.exe` (1048576 bytes)
+- `output\carved\disk_carved_368.exe` (1048576 bytes)
+- `output\carved\disk_carved_369.exe` (1048576 bytes)
+- `output\carved\disk_carved_370.exe` (1048576 bytes)
+- `output\carved\disk_carved_371.exe` (1048576 bytes)
+- `output\carved\disk_carved_372.exe` (1048576 bytes)
+- `output\carved\disk_carved_373.exe` (1048576 bytes)
+- `output\carved\disk_carved_374.exe` (1048576 bytes)
+- `output\carved\disk_carved_375.exe` (1048576 bytes)
+- `output\carved\disk_carved_376.exe` (1048576 bytes)
+- `output\carved\disk_carved_377.jpg` (35767 bytes)
+- `output\carved\disk_carved_378.exe` (1048576 bytes)
+- `output\carved\disk_carved_379.jpg` (115495 bytes)
+- `output\carved\disk_carved_380.exe` (1048576 bytes)
+- `output\carved\disk_carved_381.exe` (1048576 bytes)
+- `output\carved\disk_carved_382.exe` (1048576 bytes)
+- `output\carved\disk_carved_383.exe` (1048576 bytes)
+- `output\carved\disk_carved_384.exe` (1048576 bytes)
+- `output\carved\disk_carved_385.exe` (1048576 bytes)
+- `output\carved\disk_carved_386.exe` (1048576 bytes)
+- `output\carved\disk_carved_387.exe` (1048576 bytes)
+- `output\carved\disk_carved_388.exe` (1048576 bytes)
+- `output\carved\disk_carved_389.elf` (1048576 bytes)
+- `output\carved\disk_carved_390.elf` (1048576 bytes)
+- `output\carved\disk_carved_391.exe` (1048576 bytes)
+- `output\carved\disk_carved_392.exe` (1048576 bytes)
+- `output\carved\disk_carved_393.elf` (1048576 bytes)
+- `output\carved\disk_carved_394.exe` (1048576 bytes)
+- `output\carved\disk_carved_395.exe` (1048576 bytes)
+- `output\carved\disk_carved_396.exe` (1048576 bytes)
+- `output\carved\disk_carved_397.exe` (1048576 bytes)
+- `output\carved\disk_carved_398.exe` (1048576 bytes)
+- `output\carved\disk_carved_399.elf` (1048576 bytes)
+- `output\carved\disk_carved_400.elf` (1048576 bytes)
+- `output\carved\disk_carved_401.elf` (1048576 bytes)
+- `output\carved\disk_carved_402.elf` (1048576 bytes)
+- `output\carved\disk_carved_403.elf` (1048576 bytes)
+- `output\carved\disk_carved_404.elf` (1048576 bytes)
+- `output\carved\disk_carved_405.elf` (1048576 bytes)
+- `output\carved\disk_carved_406.elf` (1048576 bytes)
+- `output\carved\disk_carved_407.exe` (1048576 bytes)
+- `output\carved\disk_carved_408.exe` (1048576 bytes)
+- `output\carved\disk_carved_409.exe` (1048576 bytes)
+- `output\carved\disk_carved_410.exe` (1048576 bytes)
+- `output\carved\disk_carved_411.jpg` (53398 bytes)
+- `output\carved\disk_carved_412.exe` (1048576 bytes)
+- `output\carved\disk_carved_413.exe` (1048576 bytes)
+- `output\carved\disk_carved_414.exe` (1048576 bytes)
+- `output\carved\disk_carved_415.exe` (1048576 bytes)
+- `output\carved\disk_carved_416.exe` (1048576 bytes)
+- `output\carved\disk_carved_417.exe` (1048576 bytes)
+- `output\carved\disk_carved_418.elf` (1048576 bytes)
+- `output\carved\disk_carved_419.exe` (1048576 bytes)
+- `output\carved\disk_carved_420.exe` (1048576 bytes)
+- `output\carved\disk_carved_421.exe` (1048576 bytes)
+- `output\carved\disk_carved_422.exe` (1048576 bytes)
+- `output\carved\disk_carved_423.elf` (1048576 bytes)
+- `output\carved\disk_carved_424.exe` (1048576 bytes)
+- `output\carved\disk_carved_425.exe` (1048576 bytes)
+- `output\carved\disk_carved_426.exe` (1048576 bytes)
+- `output\carved\disk_carved_427.zip` (1048576 bytes)
+- `output\carved\disk_carved_428.exe` (1048576 bytes)
+- `output\carved\disk_carved_429.exe` (1048576 bytes)
+- `output\carved\disk_carved_430.exe` (1048576 bytes)
+- `output\carved\disk_carved_431.exe` (1048576 bytes)
+- `output\carved\disk_carved_432.exe` (1048576 bytes)
+- `output\carved\disk_carved_433.exe` (1048576 bytes)
+- `output\carved\disk_carved_434.exe` (1048576 bytes)
+- `output\carved\disk_carved_435.exe` (1048576 bytes)
+- `output\carved\disk_carved_436.exe` (1048576 bytes)
+- `output\carved\disk_carved_437.exe` (1048576 bytes)
+- `output\carved\disk_carved_438.exe` (1048576 bytes)
+- `output\carved\disk_carved_439.exe` (1048576 bytes)
+- `output\carved\disk_carved_440.exe` (1048576 bytes)
+- `output\carved\disk_carved_441.exe` (1048576 bytes)
+- `output\carved\disk_carved_442.exe` (1048576 bytes)
+- `output\carved\disk_carved_443.exe` (1048576 bytes)
+- `output\carved\disk_carved_444.exe` (1048576 bytes)
+- `output\carved\disk_carved_445.exe` (1048576 bytes)
+- `output\carved\disk_carved_446.exe` (1048576 bytes)
+- `output\carved\disk_carved_447.exe` (1048576 bytes)
+- `output\carved\disk_carved_448.exe` (1048576 bytes)
+- `output\carved\disk_carved_449.exe` (1048576 bytes)
+- `output\carved\disk_carved_450.exe` (1048576 bytes)
+- `output\carved\disk_carved_451.exe` (1048576 bytes)
+- `output\carved\disk_carved_452.exe` (1048576 bytes)
+- `output\carved\disk_carved_453.exe` (1048576 bytes)
+- `output\carved\disk_carved_454.exe` (1048576 bytes)
+- `output\carved\disk_carved_455.exe` (1048576 bytes)
+- `output\carved\disk_carved_456.exe` (1048576 bytes)
+- `output\carved\disk_carved_457.exe` (1048576 bytes)
+- `output\carved\disk_carved_458.exe` (1048576 bytes)
+- `output\carved\disk_carved_459.exe` (1048576 bytes)
+- `output\carved\disk_carved_460.exe` (1048576 bytes)
+- `output\carved\disk_carved_461.exe` (1048576 bytes)
+- `output\carved\disk_carved_462.exe` (1048576 bytes)
+- `output\carved\disk_carved_463.exe` (1048576 bytes)
+- `output\carved\disk_carved_464.exe` (1048576 bytes)
+- `output\carved\disk_carved_465.exe` (1048576 bytes)
+- `output\carved\disk_carved_466.exe` (1048576 bytes)
+- `output\carved\disk_carved_467.exe` (1048576 bytes)
+- `output\carved\disk_carved_468.exe` (1048576 bytes)
+- `output\carved\disk_carved_469.exe` (1048576 bytes)
+- `output\carved\disk_carved_470.exe` (1048576 bytes)
+- `output\carved\disk_carved_471.exe` (1048576 bytes)
+- `output\carved\disk_carved_472.exe` (1048576 bytes)
+- `output\carved\disk_carved_473.exe` (1048576 bytes)
+- `output\carved\disk_carved_474.exe` (1048576 bytes)
+- `output\carved\disk_carved_475.exe` (1048576 bytes)
+- `output\carved\disk_carved_476.elf` (1048576 bytes)
+- `output\carved\disk_carved_477.elf` (1048576 bytes)
+- `output\carved\disk_carved_478.elf` (1048576 bytes)
+- `output\carved\disk_carved_479.elf` (1048576 bytes)
+- `output\carved\disk_carved_480.elf` (1048576 bytes)
+- `output\carved\disk_carved_481.elf` (1048576 bytes)
+- `output\carved\disk_carved_482.elf` (1048576 bytes)
+- `output\carved\disk_carved_483.elf` (1048576 bytes)
+- `output\carved\disk_carved_484.elf` (1048576 bytes)
+- `output\carved\disk_carved_485.elf` (1048576 bytes)
+- `output\carved\disk_carved_486.elf` (1048576 bytes)
+- `output\carved\disk_carved_487.elf` (1048576 bytes)
+- `output\carved\disk_carved_488.elf` (1048576 bytes)
+- `output\carved\disk_carved_489.elf` (1048576 bytes)
+- `output\carved\disk_carved_490.elf` (1048576 bytes)
+- `output\carved\disk_carved_491.elf` (1048576 bytes)
+- `output\carved\disk_carved_492.elf` (1048576 bytes)
+- `output\carved\disk_carved_493.elf` (1048576 bytes)
+- `output\carved\disk_carved_494.elf` (1048576 bytes)
+- `output\carved\disk_carved_495.elf` (1048576 bytes)
+- `output\carved\disk_carved_496.elf` (1048576 bytes)
+- `output\carved\disk_carved_497.elf` (1048576 bytes)
+- `output\carved\disk_carved_498.elf` (1048576 bytes)
+- `output\carved\disk_carved_499.elf` (1048576 bytes)
+- `output\carved\disk_carved_500.elf` (1048576 bytes)
+- `output\carved\disk_carved_501.elf` (1048576 bytes)
+- `output\carved\disk_carved_502.elf` (1048576 bytes)
+- `output\carved\disk_carved_503.elf` (1048576 bytes)
+- `output\carved\disk_carved_504.elf` (1048576 bytes)
+- `output\carved\disk_carved_505.elf` (1048576 bytes)
+- `output\carved\disk_carved_506.elf` (1048576 bytes)
+- `output\carved\disk_carved_507.elf` (1048576 bytes)
+- `output\carved\disk_carved_508.elf` (1048576 bytes)
+- `output\carved\disk_carved_509.elf` (1048576 bytes)
+- `output\carved\disk_carved_510.elf` (1048576 bytes)
+- `output\carved\disk_carved_511.elf` (1048576 bytes)
+- `output\carved\disk_carved_512.elf` (1048576 bytes)
+- `output\carved\disk_carved_513.elf` (1048576 bytes)
+- `output\carved\disk_carved_514.exe` (1048576 bytes)
+- `output\carved\disk_carved_515.exe` (1048576 bytes)
+- `output\carved\disk_carved_516.elf` (1048576 bytes)
+- `output\carved\disk_carved_517.exe` (1048576 bytes)
+- `output\carved\disk_carved_518.elf` (1048576 bytes)
+- `output\carved\disk_carved_519.elf` (1048576 bytes)
+- `output\carved\disk_carved_520.elf` (1048576 bytes)
+- `output\carved\disk_carved_521.elf` (1048576 bytes)
+- `output\carved\disk_carved_522.elf` (1048576 bytes)
+- `output\carved\disk_carved_523.elf` (1048576 bytes)
+- `output\carved\disk_carved_524.elf` (1048576 bytes)
+- `output\carved\disk_carved_525.elf` (1048576 bytes)
+- `output\carved\disk_carved_526.elf` (1048576 bytes)
+- `output\carved\disk_carved_527.elf` (1048576 bytes)
+- `output\carved\disk_carved_528.elf` (1048576 bytes)
+- `output\carved\disk_carved_529.elf` (1048576 bytes)
+- `output\carved\disk_carved_530.elf` (1048576 bytes)
+- `output\carved\disk_carved_531.exe` (1048576 bytes)
+- `output\carved\disk_carved_532.exe` (1048576 bytes)
+- `output\carved\disk_carved_533.exe` (1048576 bytes)
+- `output\carved\disk_carved_534.exe` (1048576 bytes)
+- `output\carved\disk_carved_535.exe` (1048576 bytes)
+- `output\carved\disk_carved_536.exe` (1048576 bytes)
+- `output\carved\disk_carved_537.exe` (1048576 bytes)
+- `output\carved\disk_carved_538.exe` (1048576 bytes)
+- `output\carved\disk_carved_539.exe` (1048576 bytes)
+- `output\carved\disk_carved_540.exe` (1048576 bytes)
+- `output\carved\disk_carved_541.exe` (1048576 bytes)
+- `output\carved\disk_carved_542.exe` (1048576 bytes)
+- `output\carved\disk_carved_543.exe` (1048576 bytes)
+- `output\carved\disk_carved_544.exe` (1048576 bytes)
+- `output\carved\disk_carved_545.elf` (1048576 bytes)
+- `output\carved\disk_carved_546.jpg` (2413461 bytes)
+- `output\carved\disk_carved_547.exe` (1048576 bytes)
+- `output\carved\disk_carved_548.exe` (1048576 bytes)
+- `output\carved\disk_carved_549.exe` (1048576 bytes)
+- `output\carved\disk_carved_550.exe` (1048576 bytes)
+- `output\carved\disk_carved_551.exe` (1048576 bytes)
+- `output\carved\disk_carved_552.exe` (1048576 bytes)
+- `output\carved\disk_carved_553.jpg` (16550 bytes)
+- `output\carved\disk_carved_554.jpg` (1886 bytes)
+- `output\carved\disk_carved_555.jpg` (24340 bytes)
+- `output\carved\disk_carved_556.elf` (1048576 bytes)
+- `output\carved\disk_carved_557.exe` (1048576 bytes)
+- `output\carved\disk_carved_558.elf` (1048576 bytes)
+- `output\carved\disk_carved_559.elf` (1048576 bytes)
+- `output\carved\disk_carved_560.exe` (1048576 bytes)
+- `output\carved\disk_carved_561.elf` (1048576 bytes)
+- `output\carved\disk_carved_562.exe` (1048576 bytes)
+- `output\carved\disk_carved_563.elf` (1048576 bytes)
+- `output\carved\disk_carved_564.elf` (1048576 bytes)
+- `output\carved\disk_carved_565.elf` (1048576 bytes)
+- `output\carved\disk_carved_566.elf` (1048576 bytes)
+- `output\carved\disk_carved_567.elf` (1048576 bytes)
+- `output\carved\disk_carved_568.elf` (1048576 bytes)
+- `output\carved\disk_carved_569.elf` (1048576 bytes)
+- `output\carved\disk_carved_570.exe` (1048576 bytes)
+- `output\carved\disk_carved_571.exe` (1048576 bytes)
+- `output\carved\disk_carved_572.exe` (1048576 bytes)
+- `output\carved\disk_carved_573.exe` (1048576 bytes)
+- `output\carved\disk_carved_574.exe` (1048576 bytes)
+- `output\carved\disk_carved_575.exe` (1048576 bytes)
+- `output\carved\disk_carved_576.exe` (1048576 bytes)
+- `output\carved\disk_carved_577.exe` (1048576 bytes)
+- `output\carved\disk_carved_578.exe` (1048576 bytes)
+- `output\carved\disk_carved_579.exe` (1048576 bytes)
+- `output\carved\disk_carved_580.exe` (1048576 bytes)
+- `output\carved\disk_carved_581.exe` (1048576 bytes)
+- `output\carved\disk_carved_582.exe` (1048576 bytes)
+- `output\carved\disk_carved_583.exe` (1048576 bytes)
+- `output\carved\disk_carved_584.exe` (1048576 bytes)
+- `output\carved\disk_carved_585.exe` (1048576 bytes)
+- `output\carved\disk_carved_586.exe` (1048576 bytes)
+- `output\carved\disk_carved_587.exe` (1048576 bytes)
+- `output\carved\disk_carved_588.exe` (1048576 bytes)
+- `output\carved\disk_carved_589.exe` (1048576 bytes)
+- `output\carved\disk_carved_590.exe` (1048576 bytes)
+- `output\carved\disk_carved_591.exe` (1048576 bytes)
+- `output\carved\disk_carved_592.exe` (1048576 bytes)
+- `output\carved\disk_carved_593.exe` (1048576 bytes)
+- `output\carved\disk_carved_594.exe` (1048576 bytes)
+- `output\carved\disk_carved_595.exe` (1048576 bytes)
+- `output\carved\disk_carved_596.exe` (1048576 bytes)
+- `output\carved\disk_carved_597.exe` (1048576 bytes)
+- `output\carved\disk_carved_598.exe` (1048576 bytes)
+- `output\carved\disk_carved_599.exe` (1048576 bytes)
+- `output\carved\disk_carved_600.exe` (1048576 bytes)
+- `output\carved\disk_carved_601.exe` (1048576 bytes)
+- `output\carved\disk_carved_602.exe` (1048576 bytes)
+- `output\carved\disk_carved_603.exe` (1048576 bytes)
+- `output\carved\disk_carved_604.exe` (1048576 bytes)
+- `output\carved\disk_carved_605.exe` (1048576 bytes)
+- `output\carved\disk_carved_606.exe` (1048576 bytes)
+- `output\carved\disk_carved_607.exe` (1048576 bytes)
+- `output\carved\disk_carved_608.exe` (1048576 bytes)
+- `output\carved\disk_carved_609.exe` (1048576 bytes)
+- `output\carved\disk_carved_610.exe` (1048576 bytes)
+- `output\carved\disk_carved_611.exe` (1048576 bytes)
+- `output\carved\disk_carved_612.exe` (1048576 bytes)
+- `output\carved\disk_carved_613.exe` (1048576 bytes)
+- `output\carved\disk_carved_614.exe` (1048576 bytes)
+- `output\carved\disk_carved_615.exe` (1048576 bytes)
+- `output\carved\disk_carved_616.exe` (1048576 bytes)
+- `output\carved\disk_carved_617.exe` (1048576 bytes)
+- `output\carved\disk_carved_618.exe` (1048576 bytes)
+- `output\carved\disk_carved_619.exe` (1048576 bytes)
+- `output\carved\disk_carved_620.exe` (1048576 bytes)
+- `output\carved\disk_carved_621.exe` (1048576 bytes)
+- `output\carved\disk_carved_622.exe` (1048576 bytes)
+- `output\carved\disk_carved_623.exe` (1048576 bytes)
+- `output\carved\disk_carved_624.exe` (1048576 bytes)
+- `output\carved\disk_carved_625.exe` (1048576 bytes)
+- `output\carved\disk_carved_626.exe` (1048576 bytes)
+- `output\carved\disk_carved_627.exe` (1048576 bytes)
+- `output\carved\disk_carved_628.exe` (1048576 bytes)
+- `output\carved\disk_carved_629.exe` (1048576 bytes)
+- `output\carved\disk_carved_630.exe` (1048576 bytes)
+- `output\carved\disk_carved_631.exe` (1048576 bytes)
+- `output\carved\disk_carved_632.exe` (1048576 bytes)
+- `output\carved\disk_carved_633.exe` (1048576 bytes)
+- `output\carved\disk_carved_634.exe` (1048576 bytes)
+- `output\carved\disk_carved_635.exe` (1048576 bytes)
+- `output\carved\disk_carved_636.exe` (1048576 bytes)
+- `output\carved\disk_carved_637.exe` (1048576 bytes)
+- `output\carved\disk_carved_638.exe` (1048576 bytes)
+- `output\carved\disk_carved_639.exe` (1048576 bytes)
+- `output\carved\disk_carved_640.exe` (1048576 bytes)
+- `output\carved\disk_carved_641.exe` (1048576 bytes)
+- `output\carved\disk_carved_642.exe` (1048576 bytes)
+- `output\carved\disk_carved_643.exe` (1048576 bytes)
+- `output\carved\disk_carved_644.exe` (1048576 bytes)
+- `output\carved\disk_carved_645.exe` (1048576 bytes)
+- `output\carved\disk_carved_646.exe` (1048576 bytes)
+- `output\carved\disk_carved_647.exe` (1048576 bytes)
+- `output\carved\disk_carved_648.exe` (1048576 bytes)
+- `output\carved\disk_carved_649.exe` (1048576 bytes)
+- `output\carved\disk_carved_650.exe` (1048576 bytes)
+- `output\carved\disk_carved_651.exe` (1048576 bytes)
+- `output\carved\disk_carved_652.jpg` (115194 bytes)
+- `output\carved\disk_carved_653.exe` (1048576 bytes)
+- `output\carved\disk_carved_654.exe` (1048576 bytes)
+- `output\carved\disk_carved_655.exe` (1048576 bytes)
+- `output\carved\disk_carved_656.exe` (1048576 bytes)
+- `output\carved\disk_carved_657.exe` (1048576 bytes)
+- `output\carved\disk_carved_658.exe` (1048576 bytes)
+- `output\carved\disk_carved_659.exe` (1048576 bytes)
+- `output\carved\disk_carved_660.exe` (1048576 bytes)
+- `output\carved\disk_carved_661.exe` (1048576 bytes)
+- `output\carved\disk_carved_662.exe` (1048576 bytes)
+- `output\carved\disk_carved_663.exe` (1048576 bytes)
+- `output\carved\disk_carved_664.exe` (1048576 bytes)
+- `output\carved\disk_carved_665.exe` (1048576 bytes)
+- `output\carved\disk_carved_666.exe` (1048576 bytes)
+- `output\carved\disk_carved_667.exe` (1048576 bytes)
+- `output\carved\disk_carved_668.exe` (1048576 bytes)
+- `output\carved\disk_carved_669.exe` (1048576 bytes)
+- `output\carved\disk_carved_670.exe` (1048576 bytes)
+- `output\carved\disk_carved_671.exe` (1048576 bytes)
+- `output\carved\disk_carved_672.exe` (1048576 bytes)
+- `output\carved\disk_carved_673.exe` (1048576 bytes)
+- `output\carved\disk_carved_674.exe` (1048576 bytes)
+- `output\carved\disk_carved_675.exe` (1048576 bytes)
+- `output\carved\disk_carved_676.exe` (1048576 bytes)
+- `output\carved\disk_carved_677.exe` (1048576 bytes)
+- `output\carved\disk_carved_678.exe` (1048576 bytes)
+- `output\carved\disk_carved_679.exe` (1048576 bytes)
+- `output\carved\disk_carved_680.exe` (1048576 bytes)
+- `output\carved\disk_carved_681.exe` (1048576 bytes)
+- `output\carved\disk_carved_682.exe` (1048576 bytes)
+- `output\carved\disk_carved_683.exe` (1048576 bytes)
+- `output\carved\disk_carved_684.exe` (1048576 bytes)
+- `output\carved\disk_carved_685.exe` (1048576 bytes)
+- `output\carved\disk_carved_686.exe` (1048576 bytes)
+- `output\carved\disk_carved_687.exe` (1048576 bytes)
+- `output\carved\disk_carved_688.exe` (1048576 bytes)
+- `output\carved\disk_carved_689.exe` (1048576 bytes)
+- `output\carved\disk_carved_690.exe` (1048576 bytes)
+- `output\carved\disk_carved_691.exe` (1048576 bytes)
+- `output\carved\disk_carved_692.exe` (1048576 bytes)
+- `output\carved\disk_carved_693.exe` (1048576 bytes)
+- `output\carved\disk_carved_694.exe` (1048576 bytes)
+- `output\carved\disk_carved_695.exe` (1048576 bytes)
+- `output\carved\disk_carved_696.exe` (1048576 bytes)
+- `output\carved\disk_carved_697.exe` (1048576 bytes)
+- `output\carved\disk_carved_698.exe` (1048576 bytes)
+- `output\carved\disk_carved_699.exe` (1048576 bytes)
+- `output\carved\disk_carved_700.exe` (1048576 bytes)
+- `output\carved\disk_carved_701.exe` (1048576 bytes)
+- `output\carved\disk_carved_702.exe` (1048576 bytes)
+- `output\carved\disk_carved_703.exe` (1048576 bytes)
+- `output\carved\disk_carved_704.exe` (1048576 bytes)
+- `output\carved\disk_carved_705.exe` (1048576 bytes)
+- `output\carved\disk_carved_706.exe` (1048576 bytes)
+- `output\carved\disk_carved_707.exe` (1048576 bytes)
+- `output\carved\disk_carved_708.exe` (1048576 bytes)
+- `output\carved\disk_carved_709.exe` (1048576 bytes)
+- `output\carved\disk_carved_710.exe` (1048576 bytes)
+- `output\carved\disk_carved_711.exe` (1048576 bytes)
+- `output\carved\disk_carved_712.exe` (1048576 bytes)
+- `output\carved\disk_carved_713.exe` (1048576 bytes)
+- `output\carved\disk_carved_714.exe` (1048576 bytes)
+- `output\carved\disk_carved_715.exe` (1048576 bytes)
+- `output\carved\disk_carved_716.exe` (1048576 bytes)
+- `output\carved\disk_carved_717.exe` (1048576 bytes)
+- `output\carved\disk_carved_718.exe` (1048576 bytes)
+- `output\carved\disk_carved_719.exe` (1048576 bytes)
+- `output\carved\disk_carved_720.exe` (1048576 bytes)
+- `output\carved\disk_carved_721.exe` (1048576 bytes)
+- `output\carved\disk_carved_722.exe` (1048576 bytes)
+- `output\carved\disk_carved_723.exe` (1048576 bytes)
+- `output\carved\disk_carved_724.exe` (1048576 bytes)
+- `output\carved\disk_carved_725.exe` (1048576 bytes)
+- `output\carved\disk_carved_726.exe` (1048576 bytes)
+- `output\carved\disk_carved_727.exe` (1048576 bytes)
+- `output\carved\disk_carved_728.exe` (1048576 bytes)
+- `output\carved\disk_carved_729.exe` (1048576 bytes)
+- `output\carved\disk_carved_730.exe` (1048576 bytes)
+- `output\carved\disk_carved_731.exe` (1048576 bytes)
+- `output\carved\disk_carved_732.exe` (1048576 bytes)
+- `output\carved\disk_carved_733.exe` (1048576 bytes)
+- `output\carved\disk_carved_734.exe` (1048576 bytes)
+- `output\carved\disk_carved_735.exe` (1048576 bytes)
+- `output\carved\disk_carved_736.exe` (1048576 bytes)
+- `output\carved\disk_carved_737.exe` (1048576 bytes)
+- `output\carved\disk_carved_738.exe` (1048576 bytes)
+- `output\carved\disk_carved_739.exe` (1048576 bytes)
+- `output\carved\disk_carved_740.exe` (1048576 bytes)
+- `output\carved\disk_carved_741.exe` (1048576 bytes)
+- `output\carved\disk_carved_742.exe` (1048576 bytes)
+- `output\carved\disk_carved_743.exe` (1048576 bytes)
+- `output\carved\disk_carved_744.exe` (1048576 bytes)
+- `output\carved\disk_carved_745.exe` (1048576 bytes)
+- `output\carved\disk_carved_746.exe` (1048576 bytes)
+- `output\carved\disk_carved_747.exe` (1048576 bytes)
+- `output\carved\disk_carved_748.exe` (1048576 bytes)
+- `output\carved\disk_carved_749.exe` (1048576 bytes)
+- `output\carved\disk_carved_750.exe` (1048576 bytes)
+- `output\carved\disk_carved_751.exe` (1048576 bytes)
+- `output\carved\disk_carved_752.exe` (1048576 bytes)
+- `output\carved\disk_carved_753.exe` (1048576 bytes)
+- `output\carved\disk_carved_754.exe` (1048576 bytes)
+- `output\carved\disk_carved_755.exe` (1048576 bytes)
+- `output\carved\disk_carved_756.exe` (1048576 bytes)
+- `output\carved\disk_carved_757.exe` (1048576 bytes)
+- `output\carved\disk_carved_758.exe` (1048576 bytes)
+- `output\carved\disk_carved_759.exe` (1048576 bytes)
+- `output\carved\disk_carved_760.exe` (1048576 bytes)
+- `output\carved\disk_carved_761.exe` (1048576 bytes)
+- `output\carved\disk_carved_762.exe` (1048576 bytes)
+- `output\carved\disk_carved_763.exe` (1048576 bytes)
+- `output\carved\disk_carved_764.exe` (1048576 bytes)
+- `output\carved\disk_carved_765.exe` (1048576 bytes)
+- `output\carved\disk_carved_766.exe` (1048576 bytes)
+- `output\carved\disk_carved_767.jpg` (44076 bytes)
+- `output\carved\disk_carved_768.exe` (1048576 bytes)
+- `output\carved\disk_carved_769.exe` (1048576 bytes)
+- `output\carved\disk_carved_770.exe` (1048576 bytes)
+- `output\carved\disk_carved_771.exe` (1048576 bytes)
+- `output\carved\disk_carved_772.jpg` (7359 bytes)
+- `output\carved\disk_carved_773.exe` (1048576 bytes)
+- `output\carved\disk_carved_774.exe` (1048576 bytes)
+- `output\carved\disk_carved_775.exe` (1048576 bytes)
+- `output\carved\disk_carved_776.exe` (1048576 bytes)
+- `output\carved\disk_carved_777.exe` (1048576 bytes)
+- `output\carved\disk_carved_778.exe` (1048576 bytes)
+- `output\carved\disk_carved_779.exe` (1048576 bytes)
+- `output\carved\disk_carved_780.exe` (1048576 bytes)
+- `output\carved\disk_carved_781.exe` (1048576 bytes)
+- `output\carved\disk_carved_782.exe` (1048576 bytes)
+- `output\carved\disk_carved_783.exe` (1048576 bytes)
+- `output\carved\disk_carved_784.exe` (1048576 bytes)
+- `output\carved\disk_carved_785.jpg` (41032 bytes)
+- `output\carved\disk_carved_786.exe` (1048576 bytes)
+- `output\carved\disk_carved_787.exe` (1048576 bytes)
+- `output\carved\disk_carved_788.exe` (1048576 bytes)
+- `output\carved\disk_carved_789.exe` (1048576 bytes)
+- `output\carved\disk_carved_790.exe` (1048576 bytes)
+- `output\carved\disk_carved_791.exe` (1048576 bytes)
+- `output\carved\disk_carved_792.exe` (1048576 bytes)
+- `output\carved\disk_carved_793.exe` (1048576 bytes)
+- `output\carved\disk_carved_794.exe` (1048576 bytes)
+- `output\carved\disk_carved_795.exe` (1048576 bytes)
+- `output\carved\disk_carved_796.exe` (1048576 bytes)
+- `output\carved\disk_carved_797.exe` (1048576 bytes)
+- `output\carved\disk_carved_798.exe` (1048576 bytes)
+- `output\carved\disk_carved_799.exe` (1048576 bytes)
+- `output\carved\disk_carved_800.exe` (1048576 bytes)
+- `output\carved\disk_carved_801.exe` (1048576 bytes)
+- `output\carved\disk_carved_802.exe` (1048576 bytes)
+- `output\carved\disk_carved_803.exe` (1048576 bytes)
+- `output\carved\disk_carved_804.exe` (1048576 bytes)
+- `output\carved\disk_carved_805.jpg` (9289 bytes)
+- `output\carved\disk_carved_806.exe` (1048576 bytes)
+- `output\carved\disk_carved_807.exe` (1048576 bytes)
+- `output\carved\disk_carved_808.exe` (1048576 bytes)
+- `output\carved\disk_carved_809.exe` (1048576 bytes)
+- `output\carved\disk_carved_810.exe` (1048576 bytes)
+- `output\carved\disk_carved_811.exe` (1048576 bytes)
+- `output\carved\disk_carved_812.exe` (1048576 bytes)
+- `output\carved\disk_carved_813.exe` (1048576 bytes)
+- `output\carved\disk_carved_814.exe` (1048576 bytes)
+- `output\carved\disk_carved_815.exe` (1048576 bytes)
+- `output\carved\disk_carved_816.exe` (1048576 bytes)
+- `output\carved\disk_carved_817.exe` (1048576 bytes)
+- `output\carved\disk_carved_818.exe` (1048576 bytes)
+- `output\carved\disk_carved_819.exe` (1048576 bytes)
+- `output\carved\disk_carved_820.exe` (1048576 bytes)
+- `output\carved\disk_carved_821.exe` (1048576 bytes)
+- `output\carved\disk_carved_822.exe` (1048576 bytes)
+- `output\carved\disk_carved_823.exe` (1048576 bytes)
+- `output\carved\disk_carved_824.exe` (1048576 bytes)
+- `output\carved\disk_carved_825.exe` (1048576 bytes)
+- `output\carved\disk_carved_826.exe` (1048576 bytes)
+- `output\carved\disk_carved_827.exe` (1048576 bytes)
+- `output\carved\disk_carved_828.exe` (1048576 bytes)
+- `output\carved\disk_carved_829.exe` (1048576 bytes)
+- `output\carved\disk_carved_830.exe` (1048576 bytes)
+- `output\carved\disk_carved_831.exe` (1048576 bytes)
+- `output\carved\disk_carved_832.exe` (1048576 bytes)
+- `output\carved\disk_carved_833.exe` (1048576 bytes)
+- `output\carved\disk_carved_834.exe` (1048576 bytes)
+- `output\carved\disk_carved_835.exe` (1048576 bytes)
+- `output\carved\disk_carved_836.exe` (1048576 bytes)
+- `output\carved\disk_carved_837.exe` (1048576 bytes)
+- `output\carved\disk_carved_838.exe` (1048576 bytes)
+- `output\carved\disk_carved_839.exe` (1048576 bytes)
+- `output\carved\disk_carved_840.exe` (1048576 bytes)
+- `output\carved\disk_carved_841.exe` (1048576 bytes)
+- `output\carved\disk_carved_842.exe` (1048576 bytes)
+- `output\carved\disk_carved_843.exe` (1048576 bytes)
+- `output\carved\disk_carved_844.exe` (1048576 bytes)
+- `output\carved\disk_carved_845.exe` (1048576 bytes)
+- `output\carved\disk_carved_846.exe` (1048576 bytes)
+- `output\carved\disk_carved_847.exe` (1048576 bytes)
+- `output\carved\disk_carved_848.exe` (1048576 bytes)
+- `output\carved\disk_carved_849.exe` (1048576 bytes)
+- `output\carved\disk_carved_850.exe` (1048576 bytes)
+- `output\carved\disk_carved_851.exe` (1048576 bytes)
+- `output\carved\disk_carved_852.exe` (1048576 bytes)
+- `output\carved\disk_carved_853.exe` (1048576 bytes)
+- `output\carved\disk_carved_854.exe` (1048576 bytes)
+- `output\carved\disk_carved_855.exe` (1048576 bytes)
+- `output\carved\disk_carved_856.exe` (1048576 bytes)
+- `output\carved\disk_carved_857.exe` (1048576 bytes)
+- `output\carved\disk_carved_858.exe` (1048576 bytes)
+- `output\carved\disk_carved_859.exe` (1048576 bytes)
+- `output\carved\disk_carved_860.exe` (1048576 bytes)
+- `output\carved\disk_carved_861.exe` (1048576 bytes)
+- `output\carved\disk_carved_862.exe` (1048576 bytes)
+- `output\carved\disk_carved_863.exe` (1048576 bytes)
+- `output\carved\disk_carved_864.exe` (1048576 bytes)
+- `output\carved\disk_carved_865.exe` (1048576 bytes)
+- `output\carved\disk_carved_866.exe` (1048576 bytes)
+- `output\carved\disk_carved_867.exe` (1048576 bytes)
+- `output\carved\disk_carved_868.exe` (1048576 bytes)
+- `output\carved\disk_carved_869.exe` (1048576 bytes)
+- `output\carved\disk_carved_870.exe` (1048576 bytes)
+- `output\carved\disk_carved_871.exe` (1048576 bytes)
+- `output\carved\disk_carved_872.exe` (1048576 bytes)
+- `output\carved\disk_carved_873.exe` (1048576 bytes)
+- `output\carved\disk_carved_874.exe` (1048576 bytes)
+- `output\carved\disk_carved_875.exe` (1048576 bytes)
+- `output\carved\disk_carved_876.exe` (1048576 bytes)
+- `output\carved\disk_carved_877.exe` (1048576 bytes)
+- `output\carved\disk_carved_878.exe` (1048576 bytes)
+- `output\carved\disk_carved_879.exe` (1048576 bytes)
+- `output\carved\disk_carved_880.exe` (1048576 bytes)
+- `output\carved\disk_carved_881.exe` (1048576 bytes)
+- `output\carved\disk_carved_882.exe` (1048576 bytes)
+- `output\carved\disk_carved_883.exe` (1048576 bytes)
+- `output\carved\disk_carved_884.exe` (1048576 bytes)
+- `output\carved\disk_carved_885.exe` (1048576 bytes)
+- `output\carved\disk_carved_886.exe` (1048576 bytes)
+- `output\carved\disk_carved_887.exe` (1048576 bytes)
+- `output\carved\disk_carved_888.exe` (1048576 bytes)
+- `output\carved\disk_carved_889.exe` (1048576 bytes)
+- `output\carved\disk_carved_890.exe` (1048576 bytes)
+- `output\carved\disk_carved_891.exe` (1048576 bytes)
+- `output\carved\disk_carved_892.exe` (1048576 bytes)
+- `output\carved\disk_carved_893.jpg` (26581 bytes)
+- `output\carved\disk_carved_894.exe` (1048576 bytes)
+- `output\carved\disk_carved_895.exe` (1048576 bytes)
+- `output\carved\disk_carved_896.exe` (1048576 bytes)
+- `output\carved\disk_carved_897.exe` (1048576 bytes)
+- `output\carved\disk_carved_898.exe` (1048576 bytes)
+- `output\carved\disk_carved_899.exe` (1048576 bytes)
+- `output\carved\disk_carved_900.exe` (1048576 bytes)
+- `output\carved\disk_carved_901.exe` (1048576 bytes)
+- `output\carved\disk_carved_902.exe` (1048576 bytes)
+- `output\carved\disk_carved_903.exe` (1048576 bytes)
+- `output\carved\disk_carved_904.exe` (1048576 bytes)
+- `output\carved\disk_carved_905.jpg` (51409 bytes)
+- `output\carved\disk_carved_906.exe` (1048576 bytes)
+- `output\carved\disk_carved_907.exe` (1048576 bytes)
+- `output\carved\disk_carved_908.exe` (1048576 bytes)
+- `output\carved\disk_carved_909.exe` (1048576 bytes)
+- `output\carved\disk_carved_910.exe` (1048576 bytes)
+- `output\carved\disk_carved_911.exe` (1048576 bytes)
+- `output\carved\disk_carved_912.exe` (1048576 bytes)
+- `output\carved\disk_carved_913.exe` (1048576 bytes)
+- `output\carved\disk_carved_914.exe` (1048576 bytes)
+- `output\carved\disk_carved_915.exe` (1048576 bytes)
+- `output\carved\disk_carved_916.exe` (1048576 bytes)
+- `output\carved\disk_carved_917.exe` (1048576 bytes)
+- `output\carved\disk_carved_918.exe` (1048576 bytes)
+- `output\carved\disk_carved_919.exe` (1048576 bytes)
+- `output\carved\disk_carved_920.exe` (1048576 bytes)
+- `output\carved\disk_carved_921.exe` (1048576 bytes)
+- `output\carved\disk_carved_922.jpg` (4600 bytes)
+- `output\carved\disk_carved_923.exe` (1048576 bytes)
+- `output\carved\disk_carved_924.exe` (1048576 bytes)
+- `output\carved\disk_carved_925.exe` (1048576 bytes)
+- `output\carved\disk_carved_926.exe` (1048576 bytes)
+- `output\carved\disk_carved_927.exe` (1048576 bytes)
+- `output\carved\disk_carved_928.exe` (1048576 bytes)
+- `output\carved\disk_carved_929.exe` (1048576 bytes)
+- `output\carved\disk_carved_930.exe` (1048576 bytes)
+- `output\carved\disk_carved_931.exe` (1048576 bytes)
+- `output\carved\disk_carved_932.exe` (1048576 bytes)
+- `output\carved\disk_carved_933.exe` (1048576 bytes)
+- `output\carved\disk_carved_934.exe` (1048576 bytes)
+- `output\carved\disk_carved_935.exe` (1048576 bytes)
+- `output\carved\disk_carved_936.exe` (1048576 bytes)
+- `output\carved\disk_carved_937.exe` (1048576 bytes)
+- `output\carved\disk_carved_938.exe` (1048576 bytes)
+- `output\carved\disk_carved_939.exe` (1048576 bytes)
+- `output\carved\disk_carved_940.exe` (1048576 bytes)
+- `output\carved\disk_carved_941.exe` (1048576 bytes)
+- `output\carved\disk_carved_942.exe` (1048576 bytes)
+- `output\carved\disk_carved_943.exe` (1048576 bytes)
+- `output\carved\disk_carved_944.exe` (1048576 bytes)
+- `output\carved\disk_carved_945.exe` (1048576 bytes)
+- `output\carved\disk_carved_946.jpg` (78490 bytes)
+- `output\carved\disk_carved_947.exe` (1048576 bytes)
+- `output\carved\disk_carved_948.exe` (1048576 bytes)
+- `output\carved\disk_carved_949.exe` (1048576 bytes)
+- `output\carved\disk_carved_950.exe` (1048576 bytes)
+- `output\carved\disk_carved_951.exe` (1048576 bytes)
+- `output\carved\disk_carved_952.exe` (1048576 bytes)
+- `output\carved\disk_carved_953.exe` (1048576 bytes)
+- `output\carved\disk_carved_954.exe` (1048576 bytes)
+- `output\carved\disk_carved_955.exe` (1048576 bytes)
+- `output\carved\disk_carved_956.exe` (1048576 bytes)
+- `output\carved\disk_carved_957.exe` (1048576 bytes)
+- `output\carved\disk_carved_958.exe` (1048576 bytes)
+- `output\carved\disk_carved_959.exe` (1048576 bytes)
+- `output\carved\disk_carved_960.exe` (1048576 bytes)
+- `output\carved\disk_carved_961.exe` (1048576 bytes)
+- `output\carved\disk_carved_962.exe` (1048576 bytes)
+- `output\carved\disk_carved_963.exe` (1048576 bytes)
+- `output\carved\disk_carved_964.exe` (1048576 bytes)
+- `output\carved\disk_carved_965.exe` (1048576 bytes)
+- `output\carved\disk_carved_966.exe` (1048576 bytes)
+- `output\carved\disk_carved_967.exe` (1048576 bytes)
+- `output\carved\disk_carved_968.exe` (1048576 bytes)
+- `output\carved\disk_carved_969.exe` (1048576 bytes)
+- `output\carved\disk_carved_970.exe` (1048576 bytes)
+- `output\carved\disk_carved_971.exe` (1048576 bytes)
+- `output\carved\disk_carved_972.exe` (1048576 bytes)
+- `output\carved\disk_carved_973.elf` (1048576 bytes)
+- `output\carved\disk_carved_974.elf` (1048576 bytes)
+- `output\carved\disk_carved_975.elf` (1048576 bytes)
+- `output\carved\disk_carved_976.elf` (1048576 bytes)
+- `output\carved\disk_carved_977.elf` (1048576 bytes)
+- `output\carved\disk_carved_978.elf` (1048576 bytes)
+- `output\carved\disk_carved_979.exe` (1048576 bytes)
+- `output\carved\disk_carved_980.exe` (1048576 bytes)
+- `output\carved\disk_carved_981.exe` (1048576 bytes)
+- `output\carved\disk_carved_982.exe` (1048576 bytes)
+- `output\carved\disk_carved_983.exe` (1048576 bytes)
+- `output\carved\disk_carved_984.exe` (1048576 bytes)
+- `output\carved\disk_carved_985.exe` (1048576 bytes)
+- `output\carved\disk_carved_986.exe` (1048576 bytes)
+- `output\carved\disk_carved_987.exe` (1048576 bytes)
+- `output\carved\disk_carved_988.exe` (1048576 bytes)
+- `output\carved\disk_carved_989.exe` (1048576 bytes)
+- `output\carved\disk_carved_990.exe` (1048576 bytes)
+- `output\carved\disk_carved_991.exe` (1048576 bytes)
+- `output\carved\disk_carved_992.exe` (1048576 bytes)
+- `output\carved\disk_carved_993.exe` (1048576 bytes)
+- `output\carved\disk_carved_994.exe` (1048576 bytes)
+- `output\carved\disk_carved_995.exe` (1048576 bytes)
+- `output\carved\disk_carved_996.exe` (1048576 bytes)
+- `output\carved\disk_carved_997.exe` (1048576 bytes)
+- `output\carved\disk_carved_998.exe` (1048576 bytes)
+- `output\carved\disk_carved_999.exe` (1048576 bytes)
+- `output\carved\disk_carved_1000.exe` (1048576 bytes)
+- `output\carved\disk_carved_1001.exe` (1048576 bytes)
+- `output\carved\disk_carved_1002.exe` (1048576 bytes)
+- `output\carved\disk_carved_1003.exe` (1048576 bytes)
+- `output\carved\disk_carved_1004.exe` (1048576 bytes)
+- `output\carved\disk_carved_1005.elf` (1048576 bytes)
+- `output\carved\disk_carved_1006.exe` (1048576 bytes)
+- `output\carved\disk_carved_1007.elf` (1048576 bytes)
+- `output\carved\disk_carved_1008.elf` (1048576 bytes)
+- `output\carved\disk_carved_1009.elf` (1048576 bytes)
+- `output\carved\disk_carved_1010.elf` (1048576 bytes)
+- `output\carved\disk_carved_1011.elf` (1048576 bytes)
+- `output\carved\disk_carved_1012.elf` (1048576 bytes)
+- `output\carved\disk_carved_1013.elf` (1048576 bytes)
+- `output\carved\disk_carved_1014.elf` (1048576 bytes)
+- `output\carved\disk_carved_1015.elf` (1048576 bytes)
+- `output\carved\disk_carved_1016.elf` (1048576 bytes)
+- `output\carved\disk_carved_1017.elf` (1048576 bytes)
+- `output\carved\disk_carved_1018.elf` (1048576 bytes)
+- `output\carved\disk_carved_1019.elf` (1048576 bytes)
+- `output\carved\disk_carved_1020.elf` (1048576 bytes)
+- `output\carved\disk_carved_1021.elf` (1048576 bytes)
+- `output\carved\disk_carved_1022.elf` (1048576 bytes)
+- `output\carved\disk_carved_1023.png` (1048576 bytes)
+- `output\carved\disk_carved_1024.exe` (1048576 bytes)
+- `output\carved\disk_carved_1025.elf` (1048576 bytes)
+- `output\carved\disk_carved_1026.exe` (1048576 bytes)
+- `output\carved\disk_carved_1027.exe` (1048576 bytes)
+- `output\carved\disk_carved_1028.elf` (1048576 bytes)
+- `output\carved\disk_carved_1029.elf` (1048576 bytes)
+- `output\carved\disk_carved_1030.elf` (1048576 bytes)
+- `output\carved\disk_carved_1031.exe` (1048576 bytes)
+- `output\carved\disk_carved_1032.png` (1048576 bytes)
+- `output\carved\disk_carved_1033.exe` (1048576 bytes)
+- `output\carved\disk_carved_1034.exe` (1048576 bytes)
+- `output\carved\disk_carved_1035.exe` (1048576 bytes)
+- `output\carved\disk_carved_1036.exe` (1048576 bytes)
+- `output\carved\disk_carved_1037.exe` (1048576 bytes)
+- `output\carved\disk_carved_1038.exe` (1048576 bytes)
+- `output\carved\disk_carved_1039.exe` (1048576 bytes)
+- `output\carved\disk_carved_1040.exe` (1048576 bytes)
+- `output\carved\disk_carved_1041.exe` (1048576 bytes)
+- `output\carved\disk_carved_1042.exe` (1048576 bytes)
+- `output\carved\disk_carved_1043.elf` (1048576 bytes)
+- `output\carved\disk_carved_1044.elf` (1048576 bytes)
+- `output\carved\disk_carved_1045.exe` (1048576 bytes)
+- `output\carved\disk_carved_1046.exe` (1048576 bytes)
+- `output\carved\disk_carved_1047.exe` (1048576 bytes)
+- `output\carved\disk_carved_1048.exe` (1048576 bytes)
+- `output\carved\disk_carved_1049.exe` (1048576 bytes)
+- `output\carved\disk_carved_1050.exe` (1048576 bytes)
+- `output\carved\disk_carved_1051.exe` (1048576 bytes)
+- `output\carved\disk_carved_1052.exe` (1048576 bytes)
+- `output\carved\disk_carved_1053.exe` (1048576 bytes)
+- `output\carved\disk_carved_1054.exe` (1048576 bytes)
+- `output\carved\disk_carved_1055.elf` (1048576 bytes)
+- `output\carved\disk_carved_1056.elf` (1048576 bytes)
+- `output\carved\disk_carved_1057.elf` (1048576 bytes)
+- `output\carved\disk_carved_1058.elf` (1048576 bytes)
+- `output\carved\disk_carved_1059.elf` (1048576 bytes)
+- `output\carved\disk_carved_1060.exe` (1048576 bytes)
+- `output\carved\disk_carved_1061.exe` (1048576 bytes)
+- `output\carved\disk_carved_1062.exe` (1048576 bytes)
+- `output\carved\disk_carved_1063.exe` (1048576 bytes)
+- `output\carved\disk_carved_1064.exe` (1048576 bytes)
+- `output\carved\disk_carved_1065.exe` (1048576 bytes)
+- `output\carved\disk_carved_1066.exe` (1048576 bytes)
+- `output\carved\disk_carved_1067.exe` (1048576 bytes)
+- `output\carved\disk_carved_1068.exe` (1048576 bytes)
+- `output\carved\disk_carved_1069.exe` (1048576 bytes)
+- `output\carved\disk_carved_1070.exe` (1048576 bytes)
+- `output\carved\disk_carved_1071.exe` (1048576 bytes)
+- `output\carved\disk_carved_1072.exe` (1048576 bytes)
+- `output\carved\disk_carved_1073.jpg` (9189 bytes)
+- `output\carved\disk_carved_1074.elf` (1048576 bytes)
+- `output\carved\disk_carved_1075.jpg` (610919 bytes)
+- `output\carved\disk_carved_1076.elf` (1048576 bytes)
+- `output\carved\disk_carved_1077.elf` (1048576 bytes)
+- `output\carved\disk_carved_1078.exe` (1048576 bytes)
+- `output\carved\disk_carved_1079.exe` (1048576 bytes)
+- `output\carved\disk_carved_1080.elf` (1048576 bytes)
+- `output\carved\disk_carved_1081.exe` (1048576 bytes)
+- `output\carved\disk_carved_1082.exe` (1048576 bytes)
+- `output\carved\disk_carved_1083.elf` (1048576 bytes)
+- `output\carved\disk_carved_1084.jpg` (958 bytes)
+- `output\carved\disk_carved_1085.jpg` (954 bytes)
+- `output\carved\disk_carved_1086.jpg` (950 bytes)
+- `output\carved\disk_carved_1087.jpg` (946 bytes)
+- `output\carved\disk_carved_1088.jpg` (942 bytes)
+- `output\carved\disk_carved_1089.jpg` (938 bytes)
+- `output\carved\disk_carved_1090.jpg` (934 bytes)
+- `output\carved\disk_carved_1091.jpg` (930 bytes)
+- `output\carved\disk_carved_1092.jpg` (926 bytes)
+- `output\carved\disk_carved_1093.jpg` (922 bytes)
+- `output\carved\disk_carved_1094.jpg` (918 bytes)
+- `output\carved\disk_carved_1095.jpg` (914 bytes)
+- `output\carved\disk_carved_1096.jpg` (910 bytes)
+- `output\carved\disk_carved_1097.jpg` (906 bytes)
+- `output\carved\disk_carved_1098.jpg` (902 bytes)
+- `output\carved\disk_carved_1099.jpg` (898 bytes)
+- `output\carved\disk_carved_1100.jpg` (894 bytes)
+- `output\carved\disk_carved_1101.jpg` (890 bytes)
+- `output\carved\disk_carved_1102.jpg` (886 bytes)
+- `output\carved\disk_carved_1103.jpg` (882 bytes)
+- `output\carved\disk_carved_1104.jpg` (878 bytes)
+- `output\carved\disk_carved_1105.jpg` (874 bytes)
+- `output\carved\disk_carved_1106.jpg` (870 bytes)
+- `output\carved\disk_carved_1107.jpg` (866 bytes)
+- `output\carved\disk_carved_1108.jpg` (862 bytes)
+- `output\carved\disk_carved_1109.jpg` (858 bytes)
+- `output\carved\disk_carved_1110.jpg` (854 bytes)
+- `output\carved\disk_carved_1111.jpg` (850 bytes)
+- `output\carved\disk_carved_1112.jpg` (846 bytes)
+- `output\carved\disk_carved_1113.jpg` (842 bytes)
+- `output\carved\disk_carved_1114.jpg` (838 bytes)
+- `output\carved\disk_carved_1115.jpg` (834 bytes)
+- `output\carved\disk_carved_1116.jpg` (830 bytes)
+- `output\carved\disk_carved_1117.jpg` (826 bytes)
+- `output\carved\disk_carved_1118.jpg` (822 bytes)
+- `output\carved\disk_carved_1119.jpg` (818 bytes)
+- `output\carved\disk_carved_1120.jpg` (814 bytes)
+- `output\carved\disk_carved_1121.jpg` (810 bytes)
+- `output\carved\disk_carved_1122.jpg` (806 bytes)
+- `output\carved\disk_carved_1123.jpg` (254 bytes)
+- `output\carved\disk_carved_1124.jpg` (250 bytes)
+- `output\carved\disk_carved_1125.jpg` (246 bytes)
+- `output\carved\disk_carved_1126.jpg` (242 bytes)
+- `output\carved\disk_carved_1127.jpg` (238 bytes)
+- `output\carved\disk_carved_1128.jpg` (234 bytes)
+- `output\carved\disk_carved_1129.jpg` (230 bytes)
+- `output\carved\disk_carved_1130.jpg` (226 bytes)
+- `output\carved\disk_carved_1131.jpg` (222 bytes)
+- `output\carved\disk_carved_1132.jpg` (218 bytes)
+- `output\carved\disk_carved_1133.jpg` (214 bytes)
+- `output\carved\disk_carved_1134.jpg` (210 bytes)
+- `output\carved\disk_carved_1135.jpg` (206 bytes)
+- `output\carved\disk_carved_1136.jpg` (202 bytes)
+- `output\carved\disk_carved_1137.jpg` (198 bytes)
+- `output\carved\disk_carved_1138.jpg` (194 bytes)
+- `output\carved\disk_carved_1139.jpg` (190 bytes)
+- `output\carved\disk_carved_1140.jpg` (186 bytes)
+- `output\carved\disk_carved_1141.jpg` (182 bytes)
+- `output\carved\disk_carved_1142.jpg` (178 bytes)
+- `output\carved\disk_carved_1143.jpg` (174 bytes)
+- `output\carved\disk_carved_1144.jpg` (170 bytes)
+- `output\carved\disk_carved_1145.jpg` (166 bytes)
+- `output\carved\disk_carved_1146.jpg` (162 bytes)
+- `output\carved\disk_carved_1147.jpg` (158 bytes)
+- `output\carved\disk_carved_1148.jpg` (154 bytes)
+- `output\carved\disk_carved_1149.jpg` (150 bytes)
+- `output\carved\disk_carved_1150.jpg` (146 bytes)
+- `output\carved\disk_carved_1151.jpg` (142 bytes)
+- `output\carved\disk_carved_1152.jpg` (138 bytes)
+- `output\carved\disk_carved_1153.jpg` (134 bytes)
+- `output\carved\disk_carved_1154.jpg` (130 bytes)
+- `output\carved\disk_carved_1155.jpg` (126 bytes)
+- `output\carved\disk_carved_1156.jpg` (122 bytes)
+- `output\carved\disk_carved_1157.jpg` (118 bytes)
+- `output\carved\disk_carved_1158.jpg` (958 bytes)
+- `output\carved\disk_carved_1159.jpg` (954 bytes)
+- `output\carved\disk_carved_1160.jpg` (950 bytes)
+- `output\carved\disk_carved_1161.jpg` (946 bytes)
+- `output\carved\disk_carved_1162.jpg` (942 bytes)
+- `output\carved\disk_carved_1163.jpg` (938 bytes)
+- `output\carved\disk_carved_1164.jpg` (934 bytes)
+- `output\carved\disk_carved_1165.jpg` (930 bytes)
+- `output\carved\disk_carved_1166.jpg` (926 bytes)
+- `output\carved\disk_carved_1167.jpg` (922 bytes)
+- `output\carved\disk_carved_1168.jpg` (918 bytes)
+- `output\carved\disk_carved_1169.jpg` (914 bytes)
+- `output\carved\disk_carved_1170.jpg` (910 bytes)
+- `output\carved\disk_carved_1171.jpg` (906 bytes)
+- `output\carved\disk_carved_1172.jpg` (902 bytes)
+- `output\carved\disk_carved_1173.jpg` (898 bytes)
+- `output\carved\disk_carved_1174.jpg` (894 bytes)
+- `output\carved\disk_carved_1175.jpg` (890 bytes)
+- `output\carved\disk_carved_1176.jpg` (886 bytes)
+- `output\carved\disk_carved_1177.jpg` (882 bytes)
+- `output\carved\disk_carved_1178.jpg` (878 bytes)
+- `output\carved\disk_carved_1179.jpg` (874 bytes)
+- `output\carved\disk_carved_1180.jpg` (870 bytes)
+- `output\carved\disk_carved_1181.jpg` (866 bytes)
+- `output\carved\disk_carved_1182.jpg` (862 bytes)
+- `output\carved\disk_carved_1183.jpg` (858 bytes)
+- `output\carved\disk_carved_1184.jpg` (854 bytes)
+- `output\carved\disk_carved_1185.jpg` (850 bytes)
+- `output\carved\disk_carved_1186.jpg` (846 bytes)
+- `output\carved\disk_carved_1187.jpg` (842 bytes)
+- `output\carved\disk_carved_1188.jpg` (838 bytes)
+- `output\carved\disk_carved_1189.jpg` (834 bytes)
+- `output\carved\disk_carved_1190.jpg` (830 bytes)
+- `output\carved\disk_carved_1191.jpg` (826 bytes)
+- `output\carved\disk_carved_1192.jpg` (822 bytes)
+- `output\carved\disk_carved_1193.jpg` (818 bytes)
+- `output\carved\disk_carved_1194.jpg` (814 bytes)
+- `output\carved\disk_carved_1195.jpg` (810 bytes)
+- `output\carved\disk_carved_1196.jpg` (806 bytes)
+- `output\carved\disk_carved_1197.jpg` (254 bytes)
+- `output\carved\disk_carved_1198.jpg` (250 bytes)
+- `output\carved\disk_carved_1199.jpg` (246 bytes)
+- `output\carved\disk_carved_1200.jpg` (242 bytes)
+- `output\carved\disk_carved_1201.jpg` (238 bytes)
+- `output\carved\disk_carved_1202.jpg` (234 bytes)
+- `output\carved\disk_carved_1203.jpg` (230 bytes)
+- `output\carved\disk_carved_1204.jpg` (226 bytes)
+- `output\carved\disk_carved_1205.jpg` (222 bytes)
+- `output\carved\disk_carved_1206.jpg` (218 bytes)
+- `output\carved\disk_carved_1207.jpg` (214 bytes)
+- `output\carved\disk_carved_1208.jpg` (210 bytes)
+- `output\carved\disk_carved_1209.jpg` (206 bytes)
+- `output\carved\disk_carved_1210.jpg` (202 bytes)
+- `output\carved\disk_carved_1211.jpg` (198 bytes)
+- `output\carved\disk_carved_1212.jpg` (194 bytes)
+- `output\carved\disk_carved_1213.jpg` (190 bytes)
+- `output\carved\disk_carved_1214.jpg` (186 bytes)
+- `output\carved\disk_carved_1215.jpg` (182 bytes)
+- `output\carved\disk_carved_1216.jpg` (178 bytes)
+- `output\carved\disk_carved_1217.jpg` (174 bytes)
+- `output\carved\disk_carved_1218.jpg` (170 bytes)
+- `output\carved\disk_carved_1219.jpg` (166 bytes)
+- `output\carved\disk_carved_1220.jpg` (162 bytes)
+- `output\carved\disk_carved_1221.jpg` (158 bytes)
+- `output\carved\disk_carved_1222.jpg` (154 bytes)
+- `output\carved\disk_carved_1223.jpg` (150 bytes)
+- `output\carved\disk_carved_1224.jpg` (146 bytes)
+- `output\carved\disk_carved_1225.jpg` (142 bytes)
+- `output\carved\disk_carved_1226.jpg` (138 bytes)
+- `output\carved\disk_carved_1227.jpg` (134 bytes)
+- `output\carved\disk_carved_1228.jpg` (130 bytes)
+- `output\carved\disk_carved_1229.jpg` (126 bytes)
+- `output\carved\disk_carved_1230.jpg` (122 bytes)
+- `output\carved\disk_carved_1231.jpg` (118 bytes)
+- `output\carved\disk_carved_1232.jpg` (220820 bytes)
+- `output\carved\disk_carved_1233.jpg` (211412 bytes)
+- `output\carved\disk_carved_1234.jpg` (881848 bytes)
+- `output\carved\disk_carved_1235.exe` (1048576 bytes)
+- `output\carved\disk_carved_1236.exe` (1048576 bytes)
+- `output\carved\disk_carved_1237.exe` (1048576 bytes)
+- `output\carved\disk_carved_1238.exe` (1048576 bytes)
+- `output\carved\disk_carved_1239.exe` (1048576 bytes)
+- `output\carved\disk_carved_1240.exe` (1048576 bytes)
+- `output\carved\disk_carved_1241.exe` (1048576 bytes)
+- `output\carved\disk_carved_1242.exe` (1048576 bytes)
+- `output\carved\disk_carved_1243.exe` (1048576 bytes)
+- `output\carved\disk_carved_1244.elf` (1048576 bytes)
+- `output\carved\disk_carved_1245.elf` (1048576 bytes)
+- `output\carved\disk_carved_1246.elf` (1048576 bytes)
+- `output\carved\disk_carved_1247.elf` (1048576 bytes)
+- `output\carved\disk_carved_1248.zip` (1048576 bytes)
+- `output\carved\disk_carved_1249.elf` (1048576 bytes)
+- `output\carved\disk_carved_1250.elf` (1048576 bytes)
+- `output\carved\disk_carved_1251.elf` (1048576 bytes)
+- `output\carved\disk_carved_1252.elf` (1048576 bytes)
+- `output\carved\disk_carved_1253.elf` (1048576 bytes)
+- `output\carved\disk_carved_1254.exe` (1048576 bytes)
+- `output\carved\disk_carved_1255.exe` (1048576 bytes)
+- `output\carved\disk_carved_1256.exe` (1048576 bytes)
+- `output\carved\disk_carved_1257.exe` (1048576 bytes)
+- `output\carved\disk_carved_1258.exe` (1048576 bytes)
+- `output\carved\disk_carved_1259.exe` (1048576 bytes)
+- `output\carved\disk_carved_1260.exe` (1048576 bytes)
+- `output\carved\disk_carved_1261.exe` (1048576 bytes)
+- `output\carved\disk_carved_1262.exe` (1048576 bytes)
+- `output\carved\disk_carved_1263.exe` (1048576 bytes)
+- `output\carved\disk_carved_1264.exe` (1048576 bytes)
+- `output\carved\disk_carved_1265.exe` (1048576 bytes)
+- `output\carved\disk_carved_1266.elf` (1048576 bytes)
+- `output\carved\disk_carved_1267.elf` (1048576 bytes)
+- `output\carved\disk_carved_1268.elf` (1048576 bytes)
+- `output\carved\disk_carved_1269.elf` (1048576 bytes)
+- `output\carved\disk_carved_1270.elf` (1048576 bytes)
+- `output\carved\disk_carved_1271.elf` (1048576 bytes)
+- `output\carved\disk_carved_1272.elf` (1048576 bytes)
+- `output\carved\disk_carved_1273.elf` (1048576 bytes)
+- `output\carved\disk_carved_1274.elf` (1048576 bytes)
+- `output\carved\disk_carved_1275.elf` (1048576 bytes)
+- `output\carved\disk_carved_1276.elf` (1048576 bytes)
+- `output\carved\disk_carved_1277.elf` (1048576 bytes)
+- `output\carved\disk_carved_1278.elf` (1048576 bytes)
+- `output\carved\disk_carved_1279.elf` (1048576 bytes)
+- `output\carved\disk_carved_1280.elf` (1048576 bytes)
+- `output\carved\disk_carved_1281.elf` (1048576 bytes)
+- `output\carved\disk_carved_1282.elf` (1048576 bytes)
+- `output\carved\disk_carved_1283.elf` (1048576 bytes)
+- `output\carved\disk_carved_1284.elf` (1048576 bytes)
+- `output\carved\disk_carved_1285.exe` (1048576 bytes)
+- `output\carved\disk_carved_1286.exe` (1048576 bytes)
+- `output\carved\disk_carved_1287.exe` (1048576 bytes)
+- `output\carved\disk_carved_1288.exe` (1048576 bytes)
+- `output\carved\disk_carved_1289.exe` (1048576 bytes)
+- `output\carved\disk_carved_1290.exe` (1048576 bytes)
+- `output\carved\disk_carved_1291.exe` (1048576 bytes)
+- `output\carved\disk_carved_1292.exe` (1048576 bytes)
+- `output\carved\disk_carved_1293.exe` (1048576 bytes)
+- `output\carved\disk_carved_1294.exe` (1048576 bytes)
+- `output\carved\disk_carved_1295.exe` (1048576 bytes)
+- `output\carved\disk_carved_1296.exe` (1048576 bytes)
+- `output\carved\disk_carved_1297.exe` (1048576 bytes)
+- `output\carved\disk_carved_1298.exe` (1048576 bytes)
+- `output\carved\disk_carved_1299.exe` (1048576 bytes)
+- `output\carved\disk_carved_1300.exe` (1048576 bytes)
+- `output\carved\disk_carved_1301.exe` (1048576 bytes)
+- `output\carved\disk_carved_1302.exe` (1048576 bytes)
+- `output\carved\disk_carved_1303.jpg` (8915 bytes)
+- `output\carved\disk_carved_1304.exe` (1048576 bytes)
+- `output\carved\disk_carved_1305.jpg` (105743 bytes)
+- `output\carved\disk_carved_1306.exe` (1048576 bytes)
+- `output\carved\disk_carved_1307.exe` (1048576 bytes)
+- `output\carved\disk_carved_1308.exe` (1048576 bytes)
+- `output\carved\disk_carved_1309.exe` (1048576 bytes)
+- `output\carved\disk_carved_1310.exe` (1048576 bytes)
+- `output\carved\disk_carved_1311.exe` (1048576 bytes)
+- `output\carved\disk_carved_1312.exe` (1048576 bytes)
+- `output\carved\disk_carved_1313.jpg` (6051 bytes)
+- `output\carved\disk_carved_1314.exe` (1048576 bytes)
+- `output\carved\disk_carved_1315.exe` (1048576 bytes)
+- `output\carved\disk_carved_1316.exe` (1048576 bytes)
+- `output\carved\disk_carved_1317.exe` (1048576 bytes)
+- `output\carved\disk_carved_1318.exe` (1048576 bytes)
+- `output\carved\disk_carved_1319.exe` (1048576 bytes)
+- `output\carved\disk_carved_1320.exe` (1048576 bytes)
+- `output\carved\disk_carved_1321.exe` (1048576 bytes)
+- `output\carved\disk_carved_1322.exe` (1048576 bytes)
+- `output\carved\disk_carved_1323.exe` (1048576 bytes)
+- `output\carved\disk_carved_1324.jpg` (18638 bytes)
+- `output\carved\disk_carved_1325.exe` (1048576 bytes)
+- `output\carved\disk_carved_1326.jpg` (5973 bytes)
+- `output\carved\disk_carved_1327.exe` (1048576 bytes)
+- `output\carved\disk_carved_1328.exe` (1048576 bytes)
+- `output\carved\disk_carved_1329.jpg` (22633 bytes)
+- `output\carved\disk_carved_1330.exe` (1048576 bytes)
+- `output\carved\disk_carved_1331.exe` (1048576 bytes)
+- `output\carved\disk_carved_1332.exe` (1048576 bytes)
+- `output\carved\disk_carved_1333.exe` (1048576 bytes)
+- `output\carved\disk_carved_1334.exe` (1048576 bytes)
+- `output\carved\disk_carved_1335.exe` (1048576 bytes)
+- `output\carved\disk_carved_1336.exe` (1048576 bytes)
+- `output\carved\disk_carved_1337.exe` (1048576 bytes)
+- `output\carved\disk_carved_1338.exe` (1048576 bytes)
+- `output\carved\disk_carved_1339.exe` (1048576 bytes)
+- `output\carved\disk_carved_1340.exe` (1048576 bytes)
+- `output\carved\disk_carved_1341.exe` (1048576 bytes)
+- `output\carved\disk_carved_1342.exe` (1048576 bytes)
+- `output\carved\disk_carved_1343.elf` (1048576 bytes)
+- `output\carved\disk_carved_1344.elf` (1048576 bytes)
+- `output\carved\disk_carved_1345.exe` (1048576 bytes)
+- `output\carved\disk_carved_1346.exe` (1048576 bytes)
+- `output\carved\disk_carved_1347.exe` (1048576 bytes)
+- `output\carved\disk_carved_1348.exe` (1048576 bytes)
+- `output\carved\disk_carved_1349.exe` (1048576 bytes)
+- `output\carved\disk_carved_1350.exe` (1048576 bytes)
+- `output\carved\disk_carved_1351.exe` (1048576 bytes)
+- `output\carved\disk_carved_1352.exe` (1048576 bytes)
+- `output\carved\disk_carved_1353.exe` (1048576 bytes)
+- `output\carved\disk_carved_1354.exe` (1048576 bytes)
+- `output\carved\disk_carved_1355.exe` (1048576 bytes)
+- `output\carved\disk_carved_1356.exe` (1048576 bytes)
+- `output\carved\disk_carved_1357.exe` (1048576 bytes)
+- `output\carved\disk_carved_1358.exe` (1048576 bytes)
+- `output\carved\disk_carved_1359.exe` (1048576 bytes)
+- `output\carved\disk_carved_1360.exe` (1048576 bytes)
+- `output\carved\disk_carved_1361.exe` (1048576 bytes)
+- `output\carved\disk_carved_1362.exe` (1048576 bytes)
+- `output\carved\disk_carved_1363.exe` (1048576 bytes)
+- `output\carved\disk_carved_1364.exe` (1048576 bytes)
+- `output\carved\disk_carved_1365.exe` (1048576 bytes)
+- `output\carved\disk_carved_1366.exe` (1048576 bytes)
+- `output\carved\disk_carved_1367.exe` (1048576 bytes)
+- `output\carved\disk_carved_1368.exe` (1048576 bytes)
+- `output\carved\disk_carved_1369.exe` (1048576 bytes)
+- `output\carved\disk_carved_1370.exe` (1048576 bytes)
+- `output\carved\disk_carved_1371.exe` (1048576 bytes)
+- `output\carved\disk_carved_1372.exe` (1048576 bytes)
+- `output\carved\disk_carved_1373.exe` (1048576 bytes)
+- `output\carved\disk_carved_1374.exe` (1048576 bytes)
+- `output\carved\disk_carved_1375.exe` (1048576 bytes)
+- `output\carved\disk_carved_1376.exe` (1048576 bytes)
+- `output\carved\disk_carved_1377.exe` (1048576 bytes)
+- `output\carved\disk_carved_1378.exe` (1048576 bytes)
+- `output\carved\disk_carved_1379.exe` (1048576 bytes)
+- `output\carved\disk_carved_1380.exe` (1048576 bytes)
+- `output\carved\disk_carved_1381.exe` (1048576 bytes)
+- `output\carved\disk_carved_1382.exe` (1048576 bytes)
+- `output\carved\disk_carved_1383.exe` (1048576 bytes)
+- `output\carved\disk_carved_1384.exe` (1048576 bytes)
+- `output\carved\disk_carved_1385.exe` (1048576 bytes)
+- `output\carved\disk_carved_1386.exe` (1048576 bytes)
+- `output\carved\disk_carved_1387.exe` (1048576 bytes)
+- `output\carved\disk_carved_1388.exe` (1048576 bytes)
+- `output\carved\disk_carved_1389.exe` (1048576 bytes)
+- `output\carved\disk_carved_1390.exe` (1048576 bytes)
+- `output\carved\disk_carved_1391.exe` (1048576 bytes)
+- `output\carved\disk_carved_1392.exe` (1048576 bytes)
+- `output\carved\disk_carved_1393.elf` (1048576 bytes)
+- `output\carved\disk_carved_1394.exe` (1048576 bytes)
+- `output\carved\disk_carved_1395.exe` (1048576 bytes)
+- `output\carved\disk_carved_1396.exe` (1048576 bytes)
+- `output\carved\disk_carved_1397.exe` (1048576 bytes)
+- `output\carved\disk_carved_1398.exe` (1048576 bytes)
+- `output\carved\disk_carved_1399.exe` (1048576 bytes)
+- `output\carved\disk_carved_1400.exe` (1048576 bytes)
+- `output\carved\disk_carved_1401.exe` (1048576 bytes)
+- `output\carved\disk_carved_1402.exe` (1048576 bytes)
+- `output\carved\disk_carved_1403.exe` (1048576 bytes)
+- `output\carved\disk_carved_1404.exe` (1048576 bytes)
+- `output\carved\disk_carved_1405.exe` (1048576 bytes)
+- `output\carved\disk_carved_1406.exe` (1048576 bytes)
+- `output\carved\disk_carved_1407.exe` (1048576 bytes)
+- `output\carved\disk_carved_1408.exe` (1048576 bytes)
+- `output\carved\disk_carved_1409.exe` (1048576 bytes)
+- `output\carved\disk_carved_1410.exe` (1048576 bytes)
+- `output\carved\disk_carved_1411.exe` (1048576 bytes)
+- `output\carved\disk_carved_1412.exe` (1048576 bytes)
+- `output\carved\disk_carved_1413.exe` (1048576 bytes)
+- `output\carved\disk_carved_1414.exe` (1048576 bytes)
+- `output\carved\disk_carved_1415.exe` (1048576 bytes)
+- `output\carved\disk_carved_1416.exe` (1048576 bytes)
+- `output\carved\disk_carved_1417.exe` (1048576 bytes)
+- `output\carved\disk_carved_1418.exe` (1048576 bytes)
+- `output\carved\disk_carved_1419.exe` (1048576 bytes)
+- `output\carved\disk_carved_1420.exe` (1048576 bytes)
+- `output\carved\disk_carved_1421.exe` (1048576 bytes)
+- `output\carved\disk_carved_1422.exe` (1048576 bytes)
+- `output\carved\disk_carved_1423.exe` (1048576 bytes)
+- `output\carved\disk_carved_1424.exe` (1048576 bytes)
+- `output\carved\disk_carved_1425.exe` (1048576 bytes)
+- `output\carved\disk_carved_1426.exe` (1048576 bytes)
+- `output\carved\disk_carved_1427.exe` (1048576 bytes)
+- `output\carved\disk_carved_1428.exe` (1048576 bytes)
+- `output\carved\disk_carved_1429.exe` (1048576 bytes)
+- `output\carved\disk_carved_1430.exe` (1048576 bytes)
+- `output\carved\disk_carved_1431.exe` (1048576 bytes)
+- `output\carved\disk_carved_1432.exe` (1048576 bytes)
+- `output\carved\disk_carved_1433.exe` (1048576 bytes)
+- `output\carved\disk_carved_1434.exe` (1048576 bytes)
+- `output\carved\disk_carved_1435.exe` (1048576 bytes)
+- `output\carved\disk_carved_1436.exe` (1048576 bytes)
+- `output\carved\disk_carved_1437.exe` (1048576 bytes)
+- `output\carved\disk_carved_1438.exe` (1048576 bytes)
+- `output\carved\disk_carved_1439.exe` (1048576 bytes)
+- `output\carved\disk_carved_1440.exe` (1048576 bytes)
+- `output\carved\disk_carved_1441.exe` (1048576 bytes)
+- `output\carved\disk_carved_1442.exe` (1048576 bytes)
+- `output\carved\disk_carved_1443.exe` (1048576 bytes)
+- `output\carved\disk_carved_1444.exe` (1048576 bytes)
+- `output\carved\disk_carved_1445.exe` (1048576 bytes)
+- `output\carved\disk_carved_1446.exe` (1048576 bytes)
+- `output\carved\disk_carved_1447.elf` (1048576 bytes)
+- `output\carved\disk_carved_1448.elf` (1048576 bytes)
+- `output\carved\disk_carved_1449.elf` (1048576 bytes)
+- `output\carved\disk_carved_1450.elf` (1048576 bytes)
+- `output\carved\disk_carved_1451.elf` (1048576 bytes)
+- `output\carved\disk_carved_1452.elf` (1048576 bytes)
+- `output\carved\disk_carved_1453.elf` (1048576 bytes)
+- `output\carved\disk_carved_1454.elf` (1048576 bytes)
+- `output\carved\disk_carved_1455.elf` (1048576 bytes)
+- `output\carved\disk_carved_1456.elf` (1048576 bytes)
+- `output\carved\disk_carved_1457.elf` (1048576 bytes)
+- `output\carved\disk_carved_1458.elf` (1048576 bytes)
+- `output\carved\disk_carved_1459.elf` (1048576 bytes)
+- `output\carved\disk_carved_1460.elf` (1048576 bytes)
+- `output\carved\disk_carved_1461.elf` (1048576 bytes)
+- `output\carved\disk_carved_1462.elf` (1048576 bytes)
+- `output\carved\disk_carved_1463.exe` (1048576 bytes)
+- `output\carved\disk_carved_1464.exe` (1048576 bytes)
+- `output\carved\disk_carved_1465.exe` (1048576 bytes)
+- `output\carved\disk_carved_1466.exe` (1048576 bytes)
+- `output\carved\disk_carved_1467.exe` (1048576 bytes)
+- `output\carved\disk_carved_1468.exe` (1048576 bytes)
+- `output\carved\disk_carved_1469.exe` (1048576 bytes)
+- `output\carved\disk_carved_1470.exe` (1048576 bytes)
+- `output\carved\disk_carved_1471.exe` (1048576 bytes)
+- `output\carved\disk_carved_1472.exe` (1048576 bytes)
+- `output\carved\disk_carved_1473.exe` (1048576 bytes)
+- `output\carved\disk_carved_1474.exe` (1048576 bytes)
+- `output\carved\disk_carved_1475.exe` (1048576 bytes)
+- `output\carved\disk_carved_1476.jpg` (37440 bytes)
+- `output\carved\disk_carved_1477.exe` (1048576 bytes)
+- `output\carved\disk_carved_1478.exe` (1048576 bytes)
+- `output\carved\disk_carved_1479.exe` (1048576 bytes)
+- `output\carved\disk_carved_1480.exe` (1048576 bytes)
+- `output\carved\disk_carved_1481.exe` (1048576 bytes)
+- `output\carved\disk_carved_1482.exe` (1048576 bytes)
+- `output\carved\disk_carved_1483.exe` (1048576 bytes)
+- `output\carved\disk_carved_1484.exe` (1048576 bytes)
+- `output\carved\disk_carved_1485.exe` (1048576 bytes)
+- `output\carved\disk_carved_1486.exe` (1048576 bytes)
+- `output\carved\disk_carved_1487.exe` (1048576 bytes)
+- `output\carved\disk_carved_1488.exe` (1048576 bytes)
+- `output\carved\disk_carved_1489.exe` (1048576 bytes)
+- `output\carved\disk_carved_1490.exe` (1048576 bytes)
+- `output\carved\disk_carved_1491.exe` (1048576 bytes)
+- `output\carved\disk_carved_1492.exe` (1048576 bytes)
+- `output\carved\disk_carved_1493.exe` (1048576 bytes)
+- `output\carved\disk_carved_1494.exe` (1048576 bytes)
+- `output\carved\disk_carved_1495.exe` (1048576 bytes)
+- `output\carved\disk_carved_1496.exe` (1048576 bytes)
+- `output\carved\disk_carved_1497.exe` (1048576 bytes)
+- `output\carved\disk_carved_1498.exe` (1048576 bytes)
+- `output\carved\disk_carved_1499.exe` (1048576 bytes)
+- `output\carved\disk_carved_1500.exe` (1048576 bytes)
+- `output\carved\disk_carved_1501.exe` (1048576 bytes)
+- `output\carved\disk_carved_1502.exe` (1048576 bytes)
+- `output\carved\disk_carved_1503.exe` (1048576 bytes)
+- `output\carved\disk_carved_1504.exe` (1048576 bytes)
+- `output\carved\disk_carved_1505.exe` (1048576 bytes)
+- `output\carved\disk_carved_1506.exe` (1048576 bytes)
+- `output\carved\disk_carved_1507.exe` (1048576 bytes)
+- `output\carved\disk_carved_1508.exe` (1048576 bytes)
+- `output\carved\disk_carved_1509.exe` (1048576 bytes)
+- `output\carved\disk_carved_1510.exe` (1048576 bytes)
+- `output\carved\disk_carved_1511.exe` (1048576 bytes)
+- `output\carved\disk_carved_1512.exe` (1048576 bytes)
+- `output\carved\disk_carved_1513.exe` (1048576 bytes)
+- `output\carved\disk_carved_1514.exe` (1048576 bytes)
+- `output\carved\disk_carved_1515.exe` (1048576 bytes)
+- `output\carved\disk_carved_1516.exe` (1048576 bytes)
+- `output\carved\disk_carved_1517.exe` (1048576 bytes)
+- `output\carved\disk_carved_1518.exe` (1048576 bytes)
+- `output\carved\disk_carved_1519.exe` (1048576 bytes)
+- `output\carved\disk_carved_1520.exe` (1048576 bytes)
+- `output\carved\disk_carved_1521.exe` (1048576 bytes)
+- `output\carved\disk_carved_1522.exe` (1048576 bytes)
+- `output\carved\disk_carved_1523.exe` (1048576 bytes)
+- `output\carved\disk_carved_1524.exe` (1048576 bytes)
+- `output\carved\disk_carved_1525.exe` (1048576 bytes)
+- `output\carved\disk_carved_1526.exe` (1048576 bytes)
+- `output\carved\disk_carved_1527.exe` (1048576 bytes)
+- `output\carved\disk_carved_1528.exe` (1048576 bytes)
+- `output\carved\disk_carved_1529.exe` (1048576 bytes)
+- `output\carved\disk_carved_1530.exe` (1048576 bytes)
+- `output\carved\disk_carved_1531.exe` (1048576 bytes)
+- `output\carved\disk_carved_1532.exe` (1048576 bytes)
+- `output\carved\disk_carved_1533.exe` (1048576 bytes)
+- `output\carved\disk_carved_1534.exe` (1048576 bytes)
+- `output\carved\disk_carved_1535.exe` (1048576 bytes)
+- `output\carved\disk_carved_1536.exe` (1048576 bytes)
+- `output\carved\disk_carved_1537.exe` (1048576 bytes)
+- `output\carved\disk_carved_1538.jpg` (24532 bytes)
+- `output\carved\disk_carved_1539.exe` (1048576 bytes)
+- `output\carved\disk_carved_1540.exe` (1048576 bytes)
+- `output\carved\disk_carved_1541.exe` (1048576 bytes)
+- `output\carved\disk_carved_1542.exe` (1048576 bytes)
+- `output\carved\disk_carved_1543.exe` (1048576 bytes)
+- `output\carved\disk_carved_1544.exe` (1048576 bytes)
+- `output\carved\disk_carved_1545.jpg` (38329 bytes)
+- `output\carved\disk_carved_1546.exe` (1048576 bytes)
+- `output\carved\disk_carved_1547.exe` (1048576 bytes)
+- `output\carved\disk_carved_1548.exe` (1048576 bytes)
+- `output\carved\disk_carved_1549.exe` (1048576 bytes)
+- `output\carved\disk_carved_1550.elf` (1048576 bytes)
+- `output\carved\disk_carved_1551.elf` (1048576 bytes)
+- `output\carved\disk_carved_1552.jpg` (52363 bytes)
+- `output\carved\disk_carved_1553.elf` (1048576 bytes)
+- `output\carved\disk_carved_1554.elf` (1048576 bytes)
+- `output\carved\disk_carved_1555.elf` (1048576 bytes)
+- `output\carved\disk_carved_1556.elf` (1048576 bytes)
+- `output\carved\disk_carved_1557.exe` (1048576 bytes)
+- `output\carved\disk_carved_1558.elf` (1048576 bytes)
+- `output\carved\disk_carved_1559.elf` (1048576 bytes)
+- `output\carved\disk_carved_1560.elf` (1048576 bytes)
+- `output\carved\disk_carved_1561.elf` (1048576 bytes)
+- `output\carved\disk_carved_1562.elf` (1048576 bytes)
+- `output\carved\disk_carved_1563.elf` (1048576 bytes)
+- `output\carved\disk_carved_1564.elf` (1048576 bytes)
+- `output\carved\disk_carved_1565.elf` (1048576 bytes)
+- `output\carved\disk_carved_1566.elf` (1048576 bytes)
+- `output\carved\disk_carved_1567.elf` (1048576 bytes)
+- `output\carved\disk_carved_1568.elf` (1048576 bytes)
+- `output\carved\disk_carved_1569.elf` (1048576 bytes)
+- `output\carved\disk_carved_1570.elf` (1048576 bytes)
+- `output\carved\disk_carved_1571.elf` (1048576 bytes)
+- `output\carved\disk_carved_1572.elf` (1048576 bytes)
+- `output\carved\disk_carved_1573.elf` (1048576 bytes)
+- `output\carved\disk_carved_1574.exe` (1048576 bytes)
+- `output\carved\disk_carved_1575.elf` (1048576 bytes)
+- `output\carved\disk_carved_1576.elf` (1048576 bytes)
+- `output\carved\disk_carved_1577.elf` (1048576 bytes)
+- `output\carved\disk_carved_1578.elf` (1048576 bytes)
+- `output\carved\disk_carved_1579.elf` (1048576 bytes)
+- `output\carved\disk_carved_1580.elf` (1048576 bytes)
+- `output\carved\disk_carved_1581.elf` (1048576 bytes)
+- `output\carved\disk_carved_1582.elf` (1048576 bytes)
+- `output\carved\disk_carved_1583.elf` (1048576 bytes)
+- `output\carved\disk_carved_1584.elf` (1048576 bytes)
+- `output\carved\disk_carved_1585.elf` (1048576 bytes)
+- `output\carved\disk_carved_1586.elf` (1048576 bytes)
+- `output\carved\disk_carved_1587.elf` (1048576 bytes)
+- `output\carved\disk_carved_1588.elf` (1048576 bytes)
+- `output\carved\disk_carved_1589.elf` (1048576 bytes)
+- `output\carved\disk_carved_1590.elf` (1048576 bytes)
+- `output\carved\disk_carved_1591.elf` (1048576 bytes)
+- `output\carved\disk_carved_1592.elf` (1048576 bytes)
+- `output\carved\disk_carved_1593.elf` (1048576 bytes)
+- `output\carved\disk_carved_1594.elf` (1048576 bytes)
+- `output\carved\disk_carved_1595.elf` (1048576 bytes)
+- `output\carved\disk_carved_1596.elf` (1048576 bytes)
+- `output\carved\disk_carved_1597.elf` (1048576 bytes)
+- `output\carved\disk_carved_1598.elf` (1048576 bytes)
+- `output\carved\disk_carved_1599.elf` (1048576 bytes)
+- `output\carved\disk_carved_1600.elf` (1048576 bytes)
+- `output\carved\disk_carved_1601.elf` (1048576 bytes)
+- `output\carved\disk_carved_1602.elf` (1048576 bytes)
+- `output\carved\disk_carved_1603.elf` (1048576 bytes)
+- `output\carved\disk_carved_1604.elf` (1048576 bytes)
+- `output\carved\disk_carved_1605.elf` (1048576 bytes)
+- `output\carved\disk_carved_1606.elf` (1048576 bytes)
+- `output\carved\disk_carved_1607.elf` (1048576 bytes)
+- `output\carved\disk_carved_1608.elf` (1048576 bytes)
+- `output\carved\disk_carved_1609.elf` (1048576 bytes)
+- `output\carved\disk_carved_1610.elf` (1048576 bytes)
+- `output\carved\disk_carved_1611.elf` (1048576 bytes)
+- `output\carved\disk_carved_1612.elf` (1048576 bytes)
+- `output\carved\disk_carved_1613.elf` (1048576 bytes)
+- `output\carved\disk_carved_1614.elf` (1048576 bytes)
+- `output\carved\disk_carved_1615.elf` (1048576 bytes)
+- `output\carved\disk_carved_1616.elf` (1048576 bytes)
+- `output\carved\disk_carved_1617.elf` (1048576 bytes)
+- `output\carved\disk_carved_1618.elf` (1048576 bytes)
+- `output\carved\disk_carved_1619.elf` (1048576 bytes)
+- `output\carved\disk_carved_1620.elf` (1048576 bytes)
+- `output\carved\disk_carved_1621.elf` (1048576 bytes)
+- `output\carved\disk_carved_1622.elf` (1048576 bytes)
+- `output\carved\disk_carved_1623.elf` (1048576 bytes)
+- `output\carved\disk_carved_1624.elf` (1048576 bytes)
+- `output\carved\disk_carved_1625.elf` (1048576 bytes)
+- `output\carved\disk_carved_1626.elf` (1048576 bytes)
+- `output\carved\disk_carved_1627.elf` (1048576 bytes)
+- `output\carved\disk_carved_1628.elf` (1048576 bytes)
+- `output\carved\disk_carved_1629.elf` (1048576 bytes)
+- `output\carved\disk_carved_1630.elf` (1048576 bytes)
+- `output\carved\disk_carved_1631.elf` (1048576 bytes)
+- `output\carved\disk_carved_1632.elf` (1048576 bytes)
+- `output\carved\disk_carved_1633.elf` (1048576 bytes)
+- `output\carved\disk_carved_1634.elf` (1048576 bytes)
+- `output\carved\disk_carved_1635.elf` (1048576 bytes)
+- `output\carved\disk_carved_1636.elf` (1048576 bytes)
+- `output\carved\disk_carved_1637.elf` (1048576 bytes)
+- `output\carved\disk_carved_1638.elf` (1048576 bytes)
+- `output\carved\disk_carved_1639.elf` (1048576 bytes)
+- `output\carved\disk_carved_1640.elf` (1048576 bytes)
+- `output\carved\disk_carved_1641.elf` (1048576 bytes)
+- `output\carved\disk_carved_1642.elf` (1048576 bytes)
+- `output\carved\disk_carved_1643.elf` (1048576 bytes)
+- `output\carved\disk_carved_1644.elf` (1048576 bytes)
+- `output\carved\disk_carved_1645.elf` (1048576 bytes)
+- `output\carved\disk_carved_1646.elf` (1048576 bytes)
+- `output\carved\disk_carved_1647.elf` (1048576 bytes)
+- `output\carved\disk_carved_1648.elf` (1048576 bytes)
+- `output\carved\disk_carved_1649.elf` (1048576 bytes)
+- `output\carved\disk_carved_1650.elf` (1048576 bytes)
+- `output\carved\disk_carved_1651.elf` (1048576 bytes)
+- `output\carved\disk_carved_1652.elf` (1048576 bytes)
+- `output\carved\disk_carved_1653.elf` (1048576 bytes)
+- `output\carved\disk_carved_1654.elf` (1048576 bytes)
+- `output\carved\disk_carved_1655.zip` (1048576 bytes)
+- `output\carved\disk_carved_1656.elf` (1048576 bytes)
+- `output\carved\disk_carved_1657.elf` (1048576 bytes)
+- `output\carved\disk_carved_1658.exe` (1048576 bytes)
+- `output\carved\disk_carved_1659.exe` (1048576 bytes)
+- `output\carved\disk_carved_1660.exe` (1048576 bytes)
+- `output\carved\disk_carved_1661.elf` (1048576 bytes)
+- `output\carved\disk_carved_1662.elf` (1048576 bytes)
+- `output\carved\disk_carved_1663.elf` (1048576 bytes)
+- `output\carved\disk_carved_1664.elf` (1048576 bytes)
+- `output\carved\disk_carved_1665.elf` (1048576 bytes)
+- `output\carved\disk_carved_1666.elf` (1048576 bytes)
+- `output\carved\disk_carved_1667.elf` (1048576 bytes)
+- `output\carved\disk_carved_1668.exe` (1048576 bytes)
+- `output\carved\disk_carved_1669.exe` (1048576 bytes)
+- `output\carved\disk_carved_1670.exe` (1048576 bytes)
+- `output\carved\disk_carved_1671.exe` (1048576 bytes)
+- `output\carved\disk_carved_1672.exe` (1048576 bytes)
+- `output\carved\disk_carved_1673.jpg` (10941 bytes)
+- `output\carved\disk_carved_1674.exe` (1048576 bytes)
+- `output\carved\disk_carved_1675.exe` (1048576 bytes)
+- `output\carved\disk_carved_1676.exe` (1048576 bytes)
+- `output\carved\disk_carved_1677.exe` (1048576 bytes)
+- `output\carved\disk_carved_1678.exe` (1048576 bytes)
+- `output\carved\disk_carved_1679.exe` (1048576 bytes)
+- `output\carved\disk_carved_1680.exe` (1048576 bytes)
+- `output\carved\disk_carved_1681.exe` (1048576 bytes)
+- `output\carved\disk_carved_1682.exe` (1048576 bytes)
+- `output\carved\disk_carved_1683.exe` (1048576 bytes)
+- `output\carved\disk_carved_1684.exe` (1048576 bytes)
+- `output\carved\disk_carved_1685.exe` (1048576 bytes)
+- `output\carved\disk_carved_1686.exe` (1048576 bytes)
+- `output\carved\disk_carved_1687.exe` (1048576 bytes)
+- `output\carved\disk_carved_1688.exe` (1048576 bytes)
+- `output\carved\disk_carved_1689.exe` (1048576 bytes)
+- `output\carved\disk_carved_1690.exe` (1048576 bytes)
+- `output\carved\disk_carved_1691.exe` (1048576 bytes)
+- `output\carved\disk_carved_1692.exe` (1048576 bytes)
+- `output\carved\disk_carved_1693.exe` (1048576 bytes)
+- `output\carved\disk_carved_1694.jpg` (12181 bytes)
+- `output\carved\disk_carved_1695.exe` (1048576 bytes)
+- `output\carved\disk_carved_1696.exe` (1048576 bytes)
+- `output\carved\disk_carved_1697.exe` (1048576 bytes)
+- `output\carved\disk_carved_1698.exe` (1048576 bytes)
+- `output\carved\disk_carved_1699.jpg` (19322 bytes)
+- `output\carved\disk_carved_1700.exe` (1048576 bytes)
+- `output\carved\disk_carved_1701.exe` (1048576 bytes)
+- `output\carved\disk_carved_1702.exe` (1048576 bytes)
+- `output\carved\disk_carved_1703.exe` (1048576 bytes)
+- `output\carved\disk_carved_1704.exe` (1048576 bytes)
+- `output\carved\disk_carved_1705.exe` (1048576 bytes)
+- `output\carved\disk_carved_1706.exe` (1048576 bytes)
+- `output\carved\disk_carved_1707.exe` (1048576 bytes)
+- `output\carved\disk_carved_1708.exe` (1048576 bytes)
+- `output\carved\disk_carved_1709.exe` (1048576 bytes)
+- `output\carved\disk_carved_1710.exe` (1048576 bytes)
+- `output\carved\disk_carved_1711.exe` (1048576 bytes)
+- `output\carved\disk_carved_1712.exe` (1048576 bytes)
+- `output\carved\disk_carved_1713.exe` (1048576 bytes)
+- `output\carved\disk_carved_1714.exe` (1048576 bytes)
+- `output\carved\disk_carved_1715.exe` (1048576 bytes)
+- `output\carved\disk_carved_1716.exe` (1048576 bytes)
+- `output\carved\disk_carved_1717.exe` (1048576 bytes)
+- `output\carved\disk_carved_1718.exe` (1048576 bytes)
+- `output\carved\disk_carved_1719.exe` (1048576 bytes)
+- `output\carved\disk_carved_1720.exe` (1048576 bytes)
+- `output\carved\disk_carved_1721.exe` (1048576 bytes)
+- `output\carved\disk_carved_1722.exe` (1048576 bytes)
+- `output\carved\disk_carved_1723.exe` (1048576 bytes)
+- `output\carved\disk_carved_1724.exe` (1048576 bytes)
+- `output\carved\disk_carved_1725.exe` (1048576 bytes)
+- `output\carved\disk_carved_1726.jpg` (13876 bytes)
+- `output\carved\disk_carved_1727.exe` (1048576 bytes)
+- `output\carved\disk_carved_1728.exe` (1048576 bytes)
+- `output\carved\disk_carved_1729.exe` (1048576 bytes)
+- `output\carved\disk_carved_1730.exe` (1048576 bytes)
+- `output\carved\disk_carved_1731.exe` (1048576 bytes)
+- `output\carved\disk_carved_1732.exe` (1048576 bytes)
+- `output\carved\disk_carved_1733.exe` (1048576 bytes)
+- `output\carved\disk_carved_1734.exe` (1048576 bytes)
+- `output\carved\disk_carved_1735.exe` (1048576 bytes)
+- `output\carved\disk_carved_1736.exe` (1048576 bytes)
+- `output\carved\disk_carved_1737.exe` (1048576 bytes)
+- `output\carved\disk_carved_1738.exe` (1048576 bytes)
+- `output\carved\disk_carved_1739.exe` (1048576 bytes)
+- `output\carved\disk_carved_1740.exe` (1048576 bytes)
+- `output\carved\disk_carved_1741.exe` (1048576 bytes)
+- `output\carved\disk_carved_1742.exe` (1048576 bytes)
+- `output\carved\disk_carved_1743.exe` (1048576 bytes)
+- `output\carved\disk_carved_1744.exe` (1048576 bytes)
+- `output\carved\disk_carved_1745.exe` (1048576 bytes)
+- `output\carved\disk_carved_1746.exe` (1048576 bytes)
+- `output\carved\disk_carved_1747.exe` (1048576 bytes)
+- `output\carved\disk_carved_1748.exe` (1048576 bytes)
+- `output\carved\disk_carved_1749.exe` (1048576 bytes)
+- `output\carved\disk_carved_1750.exe` (1048576 bytes)
+- `output\carved\disk_carved_1751.exe` (1048576 bytes)
+- `output\carved\disk_carved_1752.exe` (1048576 bytes)
+- `output\carved\disk_carved_1753.exe` (1048576 bytes)
+- `output\carved\disk_carved_1754.exe` (1048576 bytes)
+- `output\carved\disk_carved_1755.exe` (1048576 bytes)
+- `output\carved\disk_carved_1756.exe` (1048576 bytes)
+- `output\carved\disk_carved_1757.exe` (1048576 bytes)
+- `output\carved\disk_carved_1758.exe` (1048576 bytes)
+- `output\carved\disk_carved_1759.exe` (1048576 bytes)
+- `output\carved\disk_carved_1760.exe` (1048576 bytes)
+- `output\carved\disk_carved_1761.exe` (1048576 bytes)
+- `output\carved\disk_carved_1762.exe` (1048576 bytes)
+- `output\carved\disk_carved_1763.exe` (1048576 bytes)
+- `output\carved\disk_carved_1764.exe` (1048576 bytes)
+- `output\carved\disk_carved_1765.exe` (1048576 bytes)
+- `output\carved\disk_carved_1766.exe` (1048576 bytes)
+- `output\carved\disk_carved_1767.exe` (1048576 bytes)
+- `output\carved\disk_carved_1768.exe` (1048576 bytes)
+- `output\carved\disk_carved_1769.exe` (1048576 bytes)
+- `output\carved\disk_carved_1770.exe` (1048576 bytes)
+- `output\carved\disk_carved_1771.exe` (1048576 bytes)
+- `output\carved\disk_carved_1772.elf` (1048576 bytes)
+- `output\carved\disk_carved_1773.elf` (1048576 bytes)
+- `output\carved\disk_carved_1774.exe` (1048576 bytes)
+- `output\carved\disk_carved_1775.exe` (1048576 bytes)
+- `output\carved\disk_carved_1776.exe` (1048576 bytes)
+- `output\carved\disk_carved_1777.exe` (1048576 bytes)
+- `output\carved\disk_carved_1778.exe` (1048576 bytes)
+- `output\carved\disk_carved_1779.exe` (1048576 bytes)
+- `output\carved\disk_carved_1780.exe` (1048576 bytes)
+- `output\carved\disk_carved_1781.exe` (1048576 bytes)
+- `output\carved\disk_carved_1782.exe` (1048576 bytes)
+- `output\carved\disk_carved_1783.exe` (1048576 bytes)
+- `output\carved\disk_carved_1784.exe` (1048576 bytes)
+- `output\carved\disk_carved_1785.exe` (1048576 bytes)
+- `output\carved\disk_carved_1786.exe` (1048576 bytes)
+- `output\carved\disk_carved_1787.exe` (1048576 bytes)
+- `output\carved\disk_carved_1788.exe` (1048576 bytes)
+- `output\carved\disk_carved_1789.exe` (1048576 bytes)
+- `output\carved\disk_carved_1790.jpg` (40939 bytes)
+- `output\carved\disk_carved_1791.exe` (1048576 bytes)
+- `output\carved\disk_carved_1792.exe` (1048576 bytes)
+- `output\carved\disk_carved_1793.exe` (1048576 bytes)
+- `output\carved\disk_carved_1794.exe` (1048576 bytes)
+- `output\carved\disk_carved_1795.exe` (1048576 bytes)
+- `output\carved\disk_carved_1796.exe` (1048576 bytes)
+- `output\carved\disk_carved_1797.exe` (1048576 bytes)
+- `output\carved\disk_carved_1798.exe` (1048576 bytes)
+- `output\carved\disk_carved_1799.exe` (1048576 bytes)
+- `output\carved\disk_carved_1800.exe` (1048576 bytes)
+- `output\carved\disk_carved_1801.exe` (1048576 bytes)
+- `output\carved\disk_carved_1802.exe` (1048576 bytes)
+- `output\carved\disk_carved_1803.exe` (1048576 bytes)
+- `output\carved\disk_carved_1804.exe` (1048576 bytes)
+- `output\carved\disk_carved_1805.exe` (1048576 bytes)
+- `output\carved\disk_carved_1806.exe` (1048576 bytes)
+- `output\carved\disk_carved_1807.exe` (1048576 bytes)
+- `output\carved\disk_carved_1808.exe` (1048576 bytes)
+- `output\carved\disk_carved_1809.exe` (1048576 bytes)
+- `output\carved\disk_carved_1810.exe` (1048576 bytes)
+- `output\carved\disk_carved_1811.exe` (1048576 bytes)
+- `output\carved\disk_carved_1812.exe` (1048576 bytes)
+- `output\carved\disk_carved_1813.exe` (1048576 bytes)
+- `output\carved\disk_carved_1814.exe` (1048576 bytes)
+- `output\carved\disk_carved_1815.jpg` (3180 bytes)
+- `output\carved\disk_carved_1816.exe` (1048576 bytes)
+- `output\carved\disk_carved_1817.exe` (1048576 bytes)
+- `output\carved\disk_carved_1818.exe` (1048576 bytes)
+- `output\carved\disk_carved_1819.exe` (1048576 bytes)
+- `output\carved\disk_carved_1820.exe` (1048576 bytes)
+- `output\carved\disk_carved_1821.exe` (1048576 bytes)
+- `output\carved\disk_carved_1822.exe` (1048576 bytes)
+- `output\carved\disk_carved_1823.exe` (1048576 bytes)
+- `output\carved\disk_carved_1824.exe` (1048576 bytes)
+- `output\carved\disk_carved_1825.exe` (1048576 bytes)
+- `output\carved\disk_carved_1826.exe` (1048576 bytes)
+- `output\carved\disk_carved_1827.exe` (1048576 bytes)
+- `output\carved\disk_carved_1828.exe` (1048576 bytes)
+- `output\carved\disk_carved_1829.exe` (1048576 bytes)
+- `output\carved\disk_carved_1830.exe` (1048576 bytes)
+- `output\carved\disk_carved_1831.exe` (1048576 bytes)
+- `output\carved\disk_carved_1832.exe` (1048576 bytes)
+- `output\carved\disk_carved_1833.exe` (1048576 bytes)
+- `output\carved\disk_carved_1834.exe` (1048576 bytes)
+- `output\carved\disk_carved_1835.exe` (1048576 bytes)
+- `output\carved\disk_carved_1836.exe` (1048576 bytes)
+- `output\carved\disk_carved_1837.exe` (1048576 bytes)
+- `output\carved\disk_carved_1838.exe` (1048576 bytes)
+- `output\carved\disk_carved_1839.exe` (1048576 bytes)
+- `output\carved\disk_carved_1840.exe` (1048576 bytes)
+- `output\carved\disk_carved_1841.exe` (1048576 bytes)
+- `output\carved\disk_carved_1842.exe` (1048576 bytes)
+- `output\carved\disk_carved_1843.exe` (1048576 bytes)
+- `output\carved\disk_carved_1844.exe` (1048576 bytes)
+- `output\carved\disk_carved_1845.exe` (1048576 bytes)
+- `output\carved\disk_carved_1846.exe` (1048576 bytes)
+- `output\carved\disk_carved_1847.exe` (1048576 bytes)
+- `output\carved\disk_carved_1848.exe` (1048576 bytes)
+- `output\carved\disk_carved_1849.exe` (1048576 bytes)
+- `output\carved\disk_carved_1850.exe` (1048576 bytes)
+- `output\carved\disk_carved_1851.exe` (1048576 bytes)
+- `output\carved\disk_carved_1852.exe` (1048576 bytes)
+- `output\carved\disk_carved_1853.exe` (1048576 bytes)
+- `output\carved\disk_carved_1854.exe` (1048576 bytes)
+- `output\carved\disk_carved_1855.jpg` (13408 bytes)
+- `output\carved\disk_carved_1856.exe` (1048576 bytes)
+- `output\carved\disk_carved_1857.exe` (1048576 bytes)
+- `output\carved\disk_carved_1858.exe` (1048576 bytes)
+- `output\carved\disk_carved_1859.exe` (1048576 bytes)
+- `output\carved\disk_carved_1860.exe` (1048576 bytes)
+- `output\carved\disk_carved_1861.exe` (1048576 bytes)
+- `output\carved\disk_carved_1862.exe` (1048576 bytes)
+- `output\carved\disk_carved_1863.exe` (1048576 bytes)
+- `output\carved\disk_carved_1864.exe` (1048576 bytes)
+- `output\carved\disk_carved_1865.exe` (1048576 bytes)
+- `output\carved\disk_carved_1866.exe` (1048576 bytes)
+- `output\carved\disk_carved_1867.exe` (1048576 bytes)
+- `output\carved\disk_carved_1868.exe` (1048576 bytes)
+- `output\carved\disk_carved_1869.exe` (1048576 bytes)
+- `output\carved\disk_carved_1870.exe` (1048576 bytes)
+- `output\carved\disk_carved_1871.exe` (1048576 bytes)
+- `output\carved\disk_carved_1872.exe` (1048576 bytes)
+- `output\carved\disk_carved_1873.exe` (1048576 bytes)
+- `output\carved\disk_carved_1874.jpg` (26700 bytes)
+- `output\carved\disk_carved_1875.exe` (1048576 bytes)
+- `output\carved\disk_carved_1876.exe` (1048576 bytes)
+- `output\carved\disk_carved_1877.exe` (1048576 bytes)
+- `output\carved\disk_carved_1878.exe` (1048576 bytes)
+- `output\carved\disk_carved_1879.exe` (1048576 bytes)
+- `output\carved\disk_carved_1880.exe` (1048576 bytes)
+- `output\carved\disk_carved_1881.exe` (1048576 bytes)
+- `output\carved\disk_carved_1882.exe` (1048576 bytes)
+- `output\carved\disk_carved_1883.exe` (1048576 bytes)
+- `output\carved\disk_carved_1884.exe` (1048576 bytes)
+- `output\carved\disk_carved_1885.exe` (1048576 bytes)
+- `output\carved\disk_carved_1886.exe` (1048576 bytes)
+- `output\carved\disk_carved_1887.exe` (1048576 bytes)
+- `output\carved\disk_carved_1888.exe` (1048576 bytes)
+- `output\carved\disk_carved_1889.exe` (1048576 bytes)
+- `output\carved\disk_carved_1890.exe` (1048576 bytes)
+- `output\carved\disk_carved_1891.exe` (1048576 bytes)
+- `output\carved\disk_carved_1892.exe` (1048576 bytes)
+- `output\carved\disk_carved_1893.exe` (1048576 bytes)
+- `output\carved\disk_carved_1894.exe` (1048576 bytes)
+- `output\carved\disk_carved_1895.exe` (1048576 bytes)
+- `output\carved\disk_carved_1896.exe` (1048576 bytes)
+- `output\carved\disk_carved_1897.exe` (1048576 bytes)
+- `output\carved\disk_carved_1898.exe` (1048576 bytes)
+- `output\carved\disk_carved_1899.exe` (1048576 bytes)
+- `output\carved\disk_carved_1900.exe` (1048576 bytes)
+- `output\carved\disk_carved_1901.exe` (1048576 bytes)
+- `output\carved\disk_carved_1902.jpg` (63783 bytes)
+- `output\carved\disk_carved_1903.exe` (1048576 bytes)
+- `output\carved\disk_carved_1904.exe` (1048576 bytes)
+- `output\carved\disk_carved_1905.exe` (1048576 bytes)
+- `output\carved\disk_carved_1906.exe` (1048576 bytes)
+- `output\carved\disk_carved_1907.exe` (1048576 bytes)
+- `output\carved\disk_carved_1908.exe` (1048576 bytes)
+- `output\carved\disk_carved_1909.exe` (1048576 bytes)
+- `output\carved\disk_carved_1910.jpg` (21245 bytes)
+- `output\carved\disk_carved_1911.exe` (1048576 bytes)
+- `output\carved\disk_carved_1912.exe` (1048576 bytes)
+- `output\carved\disk_carved_1913.exe` (1048576 bytes)
+- `output\carved\disk_carved_1914.exe` (1048576 bytes)
+- `output\carved\disk_carved_1915.exe` (1048576 bytes)
+- `output\carved\disk_carved_1916.exe` (1048576 bytes)
+- `output\carved\disk_carved_1917.exe` (1048576 bytes)
+- `output\carved\disk_carved_1918.exe` (1048576 bytes)
+- `output\carved\disk_carved_1919.exe` (1048576 bytes)
+- `output\carved\disk_carved_1920.exe` (1048576 bytes)
+- `output\carved\disk_carved_1921.exe` (1048576 bytes)
+- `output\carved\disk_carved_1922.exe` (1048576 bytes)
+- `output\carved\disk_carved_1923.exe` (1048576 bytes)
+- `output\carved\disk_carved_1924.exe` (1048576 bytes)
+- `output\carved\disk_carved_1925.exe` (1048576 bytes)
+- `output\carved\disk_carved_1926.exe` (1048576 bytes)
+- `output\carved\disk_carved_1927.exe` (1048576 bytes)
+- `output\carved\disk_carved_1928.exe` (1048576 bytes)
+- `output\carved\disk_carved_1929.exe` (1048576 bytes)
+- `output\carved\disk_carved_1930.exe` (1048576 bytes)
+- `output\carved\disk_carved_1931.exe` (1048576 bytes)
+- `output\carved\disk_carved_1932.exe` (1048576 bytes)
+- `output\carved\disk_carved_1933.exe` (1048576 bytes)
+- `output\carved\disk_carved_1934.exe` (1048576 bytes)
+- `output\carved\disk_carved_1935.exe` (1048576 bytes)
+- `output\carved\disk_carved_1936.exe` (1048576 bytes)
+- `output\carved\disk_carved_1937.exe` (1048576 bytes)
+- `output\carved\disk_carved_1938.exe` (1048576 bytes)
+- `output\carved\disk_carved_1939.exe` (1048576 bytes)
+- `output\carved\disk_carved_1940.exe` (1048576 bytes)
+- `output\carved\disk_carved_1941.exe` (1048576 bytes)
+- `output\carved\disk_carved_1942.exe` (1048576 bytes)
+- `output\carved\disk_carved_1943.exe` (1048576 bytes)
+- `output\carved\disk_carved_1944.exe` (1048576 bytes)
+- `output\carved\disk_carved_1945.exe` (1048576 bytes)
+- `output\carved\disk_carved_1946.exe` (1048576 bytes)
+- `output\carved\disk_carved_1947.exe` (1048576 bytes)
+- `output\carved\disk_carved_1948.exe` (1048576 bytes)
+- `output\carved\disk_carved_1949.exe` (1048576 bytes)
+- `output\carved\disk_carved_1950.exe` (1048576 bytes)
+- `output\carved\disk_carved_1951.exe` (1048576 bytes)
+- `output\carved\disk_carved_1952.exe` (1048576 bytes)
+- `output\carved\disk_carved_1953.exe` (1048576 bytes)
+- `output\carved\disk_carved_1954.exe` (1048576 bytes)
+- `output\carved\disk_carved_1955.exe` (1035297 bytes)
+- `output\carved\disk_carved_1956.exe` (977861 bytes)
+- `output\carved\disk_carved_1957.exe` (949648 bytes)
+- `output\carved\disk_carved_1958.exe` (918308 bytes)
+- `output\carved\disk_carved_1959.exe` (567189 bytes)
+- `output\carved\disk_carved_1960.jpg` (68717 bytes)
+- `output\carved\disk_carved_1961.exe` (359704 bytes)
+- `output\carved\disk_carved_1962.exe` (357369 bytes)
+- `output\carved\disk_carved_1963.exe` (342157 bytes)
+- `output\carved\disk_carved_1964.exe` (312361 bytes)
+- `output\carved\disk_carved_1965.exe` (291144 bytes)
+- `output\carved\disk_carved_1966.exe` (291042 bytes)
+- `output\carved\disk_carved_1967.exe` (225096 bytes)
+- `output\carved\disk_carved_1968.exe` (50113 bytes)
+
+---
