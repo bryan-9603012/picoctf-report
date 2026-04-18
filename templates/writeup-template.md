@@ -1,35 +1,117 @@
-# Challenge Title
+## Challenge Metadata
 
-## Category
-- Web Exploitation / Binary Exploitation / Reverse Engineering / Cryptography / Forensics / General Skills / Blockchain
+- **Platform:** 
+- **Category:** 
+- **Difficulty:** 
+- **Author:** 
+- **Date:** 
 
-## Challenge Summary
-Briefly describe the challenge goal and context.
+## 一、基本資訊
 
-## Key Observations
-- Observation 1
-- Observation 2
-- Observation 3
+- **題目名稱：** 
+- **題目類型：** 
+- **平台：** 
+- **目標：** 
 
-## Solution Approach
-1. Step 1
-2. Step 2
-3. Step 3
+## 二、題目概述
 
-## Important Commands / Payloads
-```bash
-# commands here
-```
+1. 
+2. 
+3. 
 
-## Flag
-```text
-picoCTF{...}
-```
 
-## What I Learned
-- Lesson 1
-- Lesson 2
+## 三、分析目標
 
-## Defensive Takeaways
-- Mitigation 1
-- Mitigation 2
+
+1. 
+2. 
+3. 
+4. 
+5. 
+
+## 四、加密方式判定
+
+
+- 
+- 
+
+- 
+- 
+- 
+
+## 五、弱點判定
+
+### 5.1 弱點描述
+
+本題雖然不是在考傳統系統漏洞，但其核心弱點在於：
+
+- 已知部分明文 `SOLVECRYPTO`
+- 已知對應密文 `UFJKXQZQUNB`
+- 題目還提供了完整的 Vigenère table
+
+- 
+- 
+
+1.
+2. 
+3. 
+
+
+## 六、攻擊思路
+
+
+- 
+- 
+
+
+- 
+- 
+
+
+- 
+- 
+
+
+- 
+- 
+
+
+## 七、利用過程
+
+
+
+## 八、利用結果
+
+
+
+## 九、完整解題邏輯
+
+
+## 十、成因分析
+
+
+1. 
+2. 
+3. 
+
+
+- 
+- 
+- 
+
+## 十一、防禦建議
+
+
+## 十二、結論
+
+
+
+## 十三、附錄：關鍵觀念整理
+
+
+
+## 使用工具
+
+- 
+- 
+- 
