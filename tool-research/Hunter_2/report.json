@@ -1,0 +1,285 @@
+{
+  "target": "http://192.168.56.1:5000",
+  "loot_dir": "loot",
+  "metadata": {
+    "generated_at": "2026-04-18T05:24:46.483378Z",
+    "scan_id": "scan-20260418-052340",
+    "policy": "balanced",
+    "environment": "unknown",
+    "summary": {
+      "total_findings": 2,
+      "by_severity": {
+        "critical": 1,
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "info": 0
+      },
+      "by_verification": {
+        "observed": 0,
+        "suspected": 2,
+        "verified": 0,
+        "exploited": 0
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "finding-role-cookie-bypass-64598",
+      "rule_id": "role-cookie-bypass",
+      "title": "Client-Controlled Role Cookie Enables Admin Access",
+      "name": "Client-Controlled Role Cookie Enables Admin Access",
+      "category": "Broken Access Control",
+      "severity": "Critical",
+      "confidence": "medium",
+      "url": "http://192.168.56.1:5000/admin",
+      "affected_asset": "",
+      "verification_state": "suspected",
+      "cwe": null,
+      "owasp": null,
+      "description": null,
+      "evidence": {
+        "method": "GET",
+        "url": "http://192.168.56.1:5000/admin",
+        "status": 200,
+        "headers": {
+          "Server": "Werkzeug/3.1.8 Python/3.13.5",
+          "Content-Type": "text/html; charset=utf-8"
+        },
+        "content_length": 41,
+        "elapsed_ms": 21.055999997770414,
+        "snippet": null,
+        "artifact": null,
+        "scope_reason": "ok",
+        "request_body": null,
+        "response_body": null,
+        "response_headers": null,
+        "matched_pattern": null,
+        "timestamp": null
+      },
+      "matches": [
+        "welcome admin",
+        "picoCTF{test_web_lab}"
+      ],
+      "tags": [],
+      "remediation": "Store authorization state server-side, sign or encrypt session data, and never trust a client-supplied role cookie for access control.",
+      "references": [],
+      "preconditions": [],
+      "safe_check": null,
+      "verify_check": null,
+      "evidence_type": null,
+      "extracted_data": {},
+      "chain": [
+        {
+          "finding_id": "0:http://192.168.56.1:5000/admin",
+          "rule_id": "role-cookie-bypass",
+          "url": "http://192.168.56.1:5000/admin",
+          "action": "initial_access",
+          "result": "success"
+        },
+        {
+          "finding_id": "1:http://192.168.56.1:5000/backup.zip",
+          "rule_id": "passive-artifact-analysis",
+          "url": "http://192.168.56.1:5000/backup.zip",
+          "action": "initial_access",
+          "result": "success"
+        }
+      ],
+      "related_artifacts": [],
+      "clues": [
+        "path_keyword: admin"
+      ],
+      "variables": {
+        "_previous_status": 200
+      },
+      "risk_score": 102,
+      "exploitability": null,
+      "reproduction_steps": [],
+      "exploit_chain": [],
+      "scan_id": "scan-20260418-052340",
+      "discovered_at": null,
+      "verified_at": null,
+      "source_rule_pack": null,
+      "remediation_draft": null,
+      "remediation_summary": "Review and secure the exposed endpoint",
+      "remediation_steps": [
+        {
+          "step": "Assess exposure scope and data sensitivity",
+          "priority": "immediate",
+          "effort": "medium",
+          "description": "Determine what data was accessible and its sensitivity"
+        },
+        {
+          "step": "Implement appropriate access controls",
+          "priority": "short",
+          "effort": "medium",
+          "description": "Add authentication, IP restrictions, or disable the endpoint"
+        },
+        {
+          "step": "Document and monitor the fix",
+          "priority": "short",
+          "effort": "low",
+          "description": "Add to security monitoring and regression tests"
+        }
+      ],
+      "remediation_references": [
+        "https://owasp.org/www-project-web-security-testing-guide/"
+      ],
+      "remediation_additional_resources": []
+    },
+    {
+      "id": "finding-passive-artifact-analysis-78851",
+      "rule_id": "passive-artifact-analysis",
+      "title": "Passive Artifact Analysis: ZIP",
+      "name": "Passive Artifact Analysis: ZIP",
+      "category": "passive",
+      "severity": "medium",
+      "confidence": "medium",
+      "url": "http://192.168.56.1:5000/backup.zip",
+      "affected_asset": "",
+      "verification_state": "suspected",
+      "cwe": null,
+      "owasp": null,
+      "description": null,
+      "evidence": {
+        "method": "GET",
+        "url": "http://192.168.56.1:5000/backup.zip",
+        "status": 200,
+        "headers": {
+          "Server": "Werkzeug/3.1.8 Python/3.13.5",
+          "Content-Disposition": "attachment; filename=backup.zip",
+          "Content-Type": "application/zip"
+        },
+        "content_length": 28,
+        "elapsed_ms": 26.86019998509437,
+        "snippet": "[FAIL] ZIP validation failed: File is not a zip file",
+        "artifact": {
+          "source_file": "loot\\artifacts\\passive\\backup_b4326b0247.zip",
+          "bytes_analyzed": 28,
+          "header_hex_preview": "50 4B 03 04 66 61 6B 65 2D 7A 69 70 2D 63 6F 6E 74 65 6E 74 2D 66 6F 72 2D 6C 61 62",
+          "header_ascii_preview": "PK..fake-zip-content-for-lab",
+          "tail_hex_preview": "50 4B 03 04 66 61 6B 65 2D 7A 69 70 2D 63 6F 6E 74 65 6E 74 2D 66 6F 72 2D 6C 61 62",
+          "original_extension": ".zip",
+          "suggested_extension": ".zip",
+          "extension_mismatch": false,
+          "suspicious_score": 35,
+          "repair_recommended": true,
+          "candidates": [
+            {
+              "name": "ZIP",
+              "subtype": null,
+              "score": 74,
+              "confidence": "Medium",
+              "reasons": [
+                "header matched: b'PK\\x03\\x04'",
+                "marker found: b'PK'"
+              ]
+            }
+          ],
+          "best_guess": {
+            "name": "ZIP",
+            "subtype": null,
+            "score": 74,
+            "confidence": "Medium"
+          },
+          "repair_actions": [],
+          "output_file": "loot\\recovered\\passive\\backup_b4326b0247_repaired.zip",
+          "validations": [
+            "[FAIL] ZIP validation failed: File is not a zip file"
+          ]
+        },
+        "scope_reason": "ok",
+        "request_body": null,
+        "response_body": null,
+        "response_headers": null,
+        "matched_pattern": null,
+        "timestamp": null,
+        "artifact_summary": {
+          "source_file": "loot\\artifacts\\passive\\backup_b4326b0247.zip",
+          "best_guess": "ZIP",
+          "subtype": null,
+          "confidence": "Medium",
+          "repair_actions": [],
+          "output_file": "loot\\recovered\\passive\\backup_b4326b0247_repaired.zip",
+          "validations": [
+            "[FAIL] ZIP validation failed: File is not a zip file"
+          ],
+          "repair_recommended": true,
+          "suspicious_score": 35
+        }
+      },
+      "matches": [
+        "best_guess:ZIP",
+        "confidence:Medium"
+      ],
+      "tags": [
+        "passive",
+        "artifact",
+        "file-analysis"
+      ],
+      "remediation": "Review downloaded artifact, verify true file type, and inspect repaired output if generated.",
+      "references": [],
+      "preconditions": [],
+      "safe_check": null,
+      "verify_check": null,
+      "evidence_type": null,
+      "extracted_data": {},
+      "chain": [
+        {
+          "finding_id": "0:http://192.168.56.1:5000/admin",
+          "rule_id": "role-cookie-bypass",
+          "url": "http://192.168.56.1:5000/admin",
+          "action": "initial_access",
+          "result": "success"
+        },
+        {
+          "finding_id": "1:http://192.168.56.1:5000/backup.zip",
+          "rule_id": "passive-artifact-analysis",
+          "url": "http://192.168.56.1:5000/backup.zip",
+          "action": "initial_access",
+          "result": "success"
+        }
+      ],
+      "related_artifacts": [],
+      "clues": [
+        "path_keyword: backup"
+      ],
+      "variables": {},
+      "risk_score": 87,
+      "exploitability": null,
+      "reproduction_steps": [],
+      "exploit_chain": [],
+      "scan_id": "scan-20260418-052340",
+      "discovered_at": null,
+      "verified_at": null,
+      "source_rule_pack": null,
+      "remediation_draft": null,
+      "remediation_summary": "Review and secure the exposed endpoint",
+      "remediation_steps": [
+        {
+          "step": "Assess exposure scope and data sensitivity",
+          "priority": "immediate",
+          "effort": "medium",
+          "description": "Determine what data was accessible and its sensitivity"
+        },
+        {
+          "step": "Implement appropriate access controls",
+          "priority": "short",
+          "effort": "medium",
+          "description": "Add authentication, IP restrictions, or disable the endpoint"
+        },
+        {
+          "step": "Document and monitor the fix",
+          "priority": "short",
+          "effort": "low",
+          "description": "Add to security monitoring and regression tests"
+        }
+      ],
+      "remediation_references": [
+        "https://owasp.org/www-project-web-security-testing-guide/"
+      ],
+      "remediation_additional_resources": []
+    }
+  ],
+  "file_recovery": []
+}
