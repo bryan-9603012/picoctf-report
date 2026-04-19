@@ -29,6 +29,64 @@ SUSPICIOUS_TERMS = [
     "base64",
 ]
 
+GIT_PATTERNS = [
+    ".git",
+    ".git/HEAD",
+    ".git/index",
+    ".git/config",
+    ".git/refs",
+    "refs/heads",
+    "refs/tags",
+    "refs/remotes",
+    "HEAD",
+    "commit ",
+    "Author: ",
+    "Date: ",
+    "git-svn-id",
+    "gitdir:",
+    "objects/",
+    "packed-refs",
+    "tree ",
+    "blob ",
+]
+
+GIT_INDICATOR_STRINGS = [
+    ".git/HEAD",
+    ".git/index",
+    ".git/config",
+    ".git/refs/heads",
+    "refs/heads/",
+    "refs/tags/",
+    "packed-refs",
+    "objects/",
+    "gitdir:",
+]
+
+GIT_FILES = [
+    ".git/HEAD",
+    ".git/index",
+    ".git/config",
+    ".git/objects",
+    ".git/refs/heads",
+    ".git/hooks",
+    ".git/logs",
+]
+
+FLAG_PATTERNS = [
+    "picoCTF{",
+    "flag{",
+    "CTF{",
+    "actf{",
+    "dctf{",
+]
+
+FLAG_REGEXES = [
+    r"picoCTF\{[^}\r\n]{1,100}\}",
+    r"flag\{[^}\r\n]{1,100}\}",
+    r"ACTF\{[^}\r\n]{1,100}\}",
+    r"DCTF\{[^}\r\n]{1,100}\}",
+]
+
 
 def extract_ascii_strings(data: bytes, min_length: int = 4, max_results: int = 500) -> List[str]:
     pattern = re.compile(rb"[\x20-\x7e]{" + str(min_length).encode() + rb",}")
@@ -72,3 +130,88 @@ def _valid_ipv4(ip: str) -> bool:
     except ValueError:
         return False
     return len(parts) == 4 and all(0 <= p <= 255 for p in parts)
+
+
+def detect_git_artifacts(strings: List[str], sample_strings: List[str]) -> Dict[str, object]:
+    all_text = "\n".join(sample_strings) + "\n" + "\n".join(strings)
+
+    found_git_files = []
+    for pattern in GIT_FILES:
+        if pattern in all_text or pattern.replace("/", "\\") in all_text:
+            found_git_files.append(pattern)
+
+    found_indicators = []
+    for indicator in GIT_INDICATOR_STRINGS:
+        if indicator in all_text or indicator.replace("/", "\\") in all_text:
+            found_indicators.append(indicator)
+
+    found_git_refs = []
+    refs_pattern = re.compile(r"refs/(heads|tags|remotes)/[^\s]+")
+    for s in strings:
+        for m in refs_pattern.findall(s):
+            found_git_refs.append(s)
+
+    found_commits = []
+    commit_hash = re.compile(r"[0-9a-f]{40}|\b[0-9a-f]{7,40}\b")
+    for s in strings:
+        if commit_hash.match(s) and len(s) <= 50:
+            found_commits.append(s[:50])
+
+    total_indicators = len(found_git_files) + len(found_indicators)
+    if total_indicators >= 3:
+        confidence = "high"
+    elif total_indicators >= 1:
+        confidence = "medium"
+    else:
+        confidence = "none"
+
+    return {
+        "git_files": _unique(found_git_files),
+        "git_related_strings": _unique(found_indicators),
+        "git_refs": _unique(found_git_refs)[:20],
+        "commit_hashes": _unique(found_commits)[:20],
+        "confidence": confidence,
+        "indicator_count": total_indicators,
+    }
+
+
+def detect_flag_patterns(strings: List[str], all_text: str = "") -> List[Dict[str, str]]:
+    flags = []
+    seen = set()
+
+    for pattern in FLAG_REGEXES:
+        try:
+            regex = re.compile(pattern, re.IGNORECASE)
+            for match in regex.finditer(all_text):
+                flag_str = match.group(0)
+                if flag_str not in seen and len(flag_str) < 100:
+                    flags.append({
+                        "pattern": pattern_str,
+                        "match": flag_str,
+                    })
+                    seen.add(flag_str)
+        except:
+            pass
+
+    for pattern_str in FLAG_PATTERNS:
+        for s in strings:
+            if pattern_str.lower() in s.lower():
+                if s not in seen:
+                    flags.append({
+                        "pattern": pattern_str,
+                        "match": s[:200],
+                    })
+                    seen.add(s)
+            if pattern_str.lower() in all_text.lower():
+                idx = all_text.lower().find(pattern_str.lower())
+                if idx != -1:
+                    match_end = idx + 200
+                    snippet = all_text[idx:match_end]
+                    if snippet not in seen:
+                        flags.append({
+                            "pattern": pattern_str,
+                            "match": snippet,
+                        })
+                        seen.add(snippet)
+
+    return flags[:50]

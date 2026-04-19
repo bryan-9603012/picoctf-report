@@ -18,6 +18,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--recursive", action="store_true", help="Recursively analyze files in a directory.")
     parser.add_argument("--strings", action="store_true", help="Enable string extraction and IOC-like pattern scan.")
     parser.add_argument("--carve", action="store_true", help="Enable embedded file carving.")
+    parser.add_argument("--mount", action="store_true", help="Mount partitions and analyze git repos (slower).")
     parser.add_argument("--report-json", action="store_true", help="Write a JSON report to output/.")
     parser.add_argument("--report-md", action="store_true", help="Write a Markdown report to output/.")
     parser.add_argument("--output-dir", default="output", help="Directory for reports and carved files.")
@@ -49,6 +50,7 @@ def main() -> int:
                 scan_strings=args.strings,
                 carve=args.carve,
                 carve_dir=carve_dir,
+                mount_git=args.mount,
             )
             results.append(result)
         except Exception as exc:
