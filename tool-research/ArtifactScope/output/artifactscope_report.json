@@ -1,17 +1,17 @@
 [
   {
     "file_info": {
-      "name": "diskes.img",
-      "path": "/mnt/c/Users/10801/OneDrive/เอกสาร/資料夾/pico解題區/ArtifactScope/diskes.img",
+      "name": "disk-2.img",
+      "path": "/mnt/c/Users/10801/OneDrive/เอกสาร/資料夾/pico解題區/ArtifactScope/disk-2.img",
       "extension": ".img",
       "size": 1073741824,
-      "created": "2026-04-19 19:43:02",
-      "modified": "2025-11-19 17:25:49"
+      "created": "2026-04-23 15:43:49",
+      "modified": "2025-11-19 18:57:00"
     },
     "hashes": {
-      "md5": "1a101c3785285f877df1ab92a1f4e314",
-      "sha1": "d9ed5c07c468fb5b2035ce935186cc986b70be42",
-      "sha256": "6e754689d9ef74e0cedb87af22915aefe8438b4ce3b707ecc6e67e75289edfef"
+      "md5": "493fbbb3c28384a7c254cce347752e1b",
+      "sha1": "d4a9c826f13f7de3ed919990c8243d270e5acd7c",
+      "sha256": "4794042b958ec11d8a0c5fbf481ff5736218ea912f5dc2375f3fd3b9d18b7a27"
     },
     "signature": {
       "detected": false,
@@ -22,7 +22,7 @@
       "file_extension": ".img"
     },
     "entropy": {
-      "score": 1.7330614485831541,
+      "score": 1.7330181501758826,
       "classification": "low"
     },
     "embedded": [
@@ -12060,38 +12060,29 @@
     ],
     "git_repos": [
       {
-        "repo_path": "/tmp/artifactscope/part_584056832/home/ctf-player/Code/secrets",
+        "repo_path": "/tmp/artifactscope/part_584056832/home/ctf-player/Code/killer-chat-app",
         "branch": "master"
       }
     ],
     "git_history": [
       {
-        "repo_path": "/tmp/artifactscope/part_584056832/home/ctf-player/Code/secrets",
-        "commits": [
-          {
-            "hash": "5fb8194",
-            "message": "Remove flag"
-          },
-          {
-            "hash": "177789a",
-            "message": "Add flag"
-          }
-        ],
-        "deleted_files": [
-          "flag.txt"
-        ],
-        "flag_candidates": [
-          "picoCTF{g17_r3m3mb3r5_d4ddf904}",
-          "CTF{g17_r3m3mb3r5_d4ddf904}"
-        ],
+        "repo_path": "/tmp/artifactscope/part_584056832/home/ctf-player/Code/killer-chat-app",
+        "commits": [],
+        "deleted_files": [],
+        "flag_candidates": [],
+        "hint_candidates": [],
         "recovered_content": [
           {
-            "file": "flag.txt",
-            "content": "picoCTF{g17_r3m3mb3r5_d4ddf904}"
+            "file": "<git-status>",
+            "content": "A  client\nA  logs/1.txt\nA  logs/2.txt\nA  logs/4.txt\nA  server\n"
+          },
+          {
+            "file": "<git-diff-cached>",
+            "content": "diff --git a/client b/client\nnew file mode 100755\nindex 0000000..d7b4a37\n--- /dev/null\n+++ b/client\n@@ -0,0 +1,2 @@\n+#!/bin/bash\n+nc \"$1\" 9000\ndiff --git a/logs/1.txt b/logs/1.txt\nnew file mode 100644\nindex 0000000..aa1cc01\n--- /dev/null\n+++ b/logs/1.txt\n@@ -0,0 +1,3 @@\n+Jade: Finally beat the Elden Ring DLC tonight.\n+Marco: Nice! That Messmer fight was brutal but so good.\n+Jade: Totally worth the grind.\ndiff --git a/logs/2.txt b/logs/2.txt\nnew file mode 100644\nindex 0000000..f150f0b\n--- /dev/null\n+++ b/logs/2.txt\n@@ -0,0 +1,3 @@\n+Eva: Are you caught up on The Last of Us?\n+Nina: Episode 5 wrecked me; the clickers were intense.\n+Eva: Can't wait for the next season already.\ndiff --git a/logs/4.txt b/logs/4.txt\nnew file mode 100644\nindex 0000000..6627387\n--- /dev/null\n+++ b/logs/4.txt\n@@ -0,0 +1,3 @@\n+Pip: My cat thinks the keyboard is a napping pad now.\n+Lou: Maybe it's writing a novel in secret.\n+Pip: I'd read anything titled \"Meowmoirs\".\ndiff --git a/server b/server\nnew file mode 100755\nindex 0000000..71fd2fa\n--- /dev/null\n+++ b/server\n@@ -0,0 +1,2 @@\n+#!/bin/bash\n+nc -lvp 9000\n"
           }
         ],
-        "last_commit_message": "Remove flag",
-        "source": "deleted_content_recovery"
+        "last_commit_message": "",
+        "source": "working_tree_recovery"
       }
     ]
   }

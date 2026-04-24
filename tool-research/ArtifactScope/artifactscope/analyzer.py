@@ -103,7 +103,6 @@ def analyze_file(
             "risk_level": "Unknown",
         }
 
-    # -------- disk / raw triage --------
     partitions = parse_partition_info(file_path)
     if partitions:
         result["partitions"] = partitions
@@ -116,7 +115,6 @@ def analyze_file(
         if flag_hits:
             result["flag_in_raw_data"] = flag_hits[:20]
 
-    # -------- mount + git analysis --------
     if mount_git:
         mounted: List[Dict[str, object]] = []
         git_repos: List[Dict[str, object]] = []
@@ -154,12 +152,12 @@ def analyze_file(
                             history.get("commits")
                             or history.get("deleted_files")
                             or history.get("flag_candidates")
+                            or history.get("hint_candidates")
                             or history.get("recovered_content")
                         ):
                             history["repo_path"] = str(repo_full)
                             git_history.append(history)
 
-        # optional fallback hooks
         extracted_parts = extract_partitions_7z(file_path)
         all_flag_candidates: List[Dict[str, object]] = []
 
@@ -168,7 +166,15 @@ def analyze_file(
                 continue
 
             full_recovery = full_git_recovery(part_img)
-            if full_recovery.get("repo_path") and full_recovery.get("commits"):
+            if (
+                full_recovery.get("repo_path")
+                and (
+                    full_recovery.get("commits")
+                    or full_recovery.get("flag_candidates")
+                    or full_recovery.get("hint_candidates")
+                    or full_recovery.get("recovered_content")
+                )
+            ):
                 full_recovery["source"] = "full_git_recovery"
                 full_recovery["partition_index"] = part_idx
                 git_history.append(full_recovery)

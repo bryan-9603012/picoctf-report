@@ -365,11 +365,12 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 "### Git History Analysis",
                 "",
             ])
+
             for hist in git_history:
                 repo_path = hist.get("repo_path", "unknown")
                 source = hist.get("source", "unknown")
 
-                if source in ("deleted_content_recovery", "full_git_recovery"):
+                if source in ("deleted_content_recovery", "full_git_recovery", "working_tree_recovery"):
                     lines.append("")
                     lines.append("### Recovered Evidence")
                     lines.append("")
@@ -383,7 +384,12 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     if commits:
                         lines.append("- **Commit History:**")
                         for c in commits[:5]:
-                            hash_key = (c.get("hash") or c.get("new_hash") or c.get("old_hash") or "")[:7]
+                            hash_key = (
+                                c.get("hash")
+                                or c.get("new_hash")
+                                or c.get("old_hash")
+                                or ""
+                            )[:7]
                             action = c.get("action", "commit")
                             msg = c.get("message", "")[:80]
                             lines.append(f"  - {hash_key} ({action}): {msg}")
@@ -398,15 +404,26 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                         lines.append("### Recovered Content")
                         for rc in recovered[:3]:
                             lines.append(f"- **{rc.get('file', 'unknown')}:**")
-                            lines.append(f"  ```\n  {rc.get('content', '')}\n  ```")
+                            lines.append("  ```")
+                            lines.append(f"  {rc.get('content', '')}")
+                            lines.append("  ```")
 
                     flag_cands = hist.get("flag_candidates", [])
                     if flag_cands:
                         lines.append("")
                         lines.append("### Recovered Flag Candidates")
                         lines.append("")
-                        for fc in flag_cands[:5]:
+                        for fc in flag_cands[:10]:
                             lines.append(f"- `{fc[:100]}`")
+
+                    hint_cands = hist.get("hint_candidates", [])
+                    if hint_cands:
+                        lines.append("")
+                        lines.append("### Hint Candidates")
+                        lines.append("")
+                        for hc in hint_cands[:10]:
+                            lines.append(f"- `{hc}`")
+
                     continue
 
                 lines.append(f"**Repo:** {repo_path}")
@@ -422,8 +439,14 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 flags = hist.get("flag_candidates", [])
                 if flags:
                     lines.append("- **Flag Candidates:**")
-                    for fl in flags[:5]:
+                    for fl in flags[:10]:
                         lines.append(f"  - {fl[:100]}")
+
+                hints = hist.get("hint_candidates", [])
+                if hints:
+                    lines.append("- **Hint Candidates:**")
+                    for hc in hints[:10]:
+                        lines.append(f"  - {hc}")
 
         git_raw = result.get("git_in_raw_data", [])
         if git_raw:
@@ -599,7 +622,6 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
             high_priority = []
             readable = []
             archives = []
-            other = []
 
             for item in carved:
                 ext = item.get("extension", "")
@@ -620,8 +642,6 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     readable.append(item)
                 elif size < 100 * 1024:
                     readable.append(item)
-                else:
-                    other.append(item)
 
             lines.extend([
                 "",
@@ -648,7 +668,6 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     all_files = zc.get("files", [])
                     high_files = []
                     text_files = []
-                    other_files = []
 
                     for f in all_files:
                         path = f.get("path", "").lower()
@@ -658,8 +677,6 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                             high_files.append(f)
                         elif path.endswith((".md", ".txt", ".json", ".py", ".sh")):
                             text_files.append(f)
-                        else:
-                            other_files.append(f)
 
                     lines.append(f"  - Contents ({zc['count']} files):")
 
@@ -693,9 +710,8 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 lines.append(f"  - {reid_name}")
                 shown += 1
 
-            total_shown = shown
-            if total_shown < len(carved):
-                lines.append(f"... and {len(carved) - total_shown} more files (not shown)")
+            if shown < len(carved):
+                lines.append(f"... and {len(carved) - shown} more files (not shown)")
 
         lines.extend(["", "---", ""])
 

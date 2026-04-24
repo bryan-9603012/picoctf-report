@@ -1,16 +1,16 @@
 # ArtifactScope Report
 
-## diskes.img
+## disk-2.img
 
-- **Path:** `/mnt/c/Users/10801/OneDrive/เอกสาร/資料夾/pico解題區/ArtifactScope/diskes.img`
+- **Path:** `/mnt/c/Users/10801/OneDrive/เอกสาร/資料夾/pico解題區/ArtifactScope/disk-2.img`
 - **Size:** 1.00 GB (1073741824 bytes)
 - **Extension:** `.img`
-- **Created:** 2026-04-19 19:43:02
-- **Modified:** 2025-11-19 17:25:49
+- **Created:** 2026-04-23 15:43:49
+- **Modified:** 2025-11-19 18:57:00
 
 ### Top Leads (Priority Order)
 
-1. Git repo: /tmp/artifactscope/part_584056832/home/ctf-player/Code/secrets [Branch: master] [high/high]
+1. Git repo: /tmp/artifactscope/part_584056832/home/ctf-player/Code/killer-chat-app [Branch: master] [high/high]
 2. Mounted p1 @ /tmp/artifactscope/part_1048576 [Partition mounted successfully] [high/high]
 3. Mounted p3 @ /tmp/artifactscope/part_584056832 [Partition mounted successfully] [high/high]
 4. Partition p1 *: Linux (300MB) [Linux filesystem - may contain .git] [high/high]
@@ -34,30 +34,72 @@
 
 ### Git Repositories (Confirmed)
 
-- `/tmp/artifactscope/part_584056832/home/ctf-player/Code/secrets` (branch: master)
+- `/tmp/artifactscope/part_584056832/home/ctf-player/Code/killer-chat-app` (branch: master)
 
 ### Git History Analysis
 
 
 ### Recovered Evidence
 
-- **Repo:** /tmp/artifactscope/part_584056832/home/ctf-player/Code/secrets
-- **Last Commit:** Remove flag
-- **Commit History:**
-  - 5fb8194 (commit): Remove flag
-  - 177789a (commit): Add flag
-- **Deleted Files:** flag.txt
+- **Repo:** /tmp/artifactscope/part_584056832/home/ctf-player/Code/killer-chat-app
 
 ### Recovered Content
-- **flag.txt:**
+- **<git-status>:**
   ```
-  picoCTF{g17_r3m3mb3r5_d4ddf904}
+  A  client
+A  logs/1.txt
+A  logs/2.txt
+A  logs/4.txt
+A  server
+
   ```
+- **<git-diff-cached>:**
+  ```
+  diff --git a/client b/client
+new file mode 100755
+index 0000000..d7b4a37
+--- /dev/null
++++ b/client
+@@ -0,0 +1,2 @@
++#!/bin/bash
++nc "$1" 9000
+diff --git a/logs/1.txt b/logs/1.txt
+new file mode 100644
+index 0000000..aa1cc01
+--- /dev/null
++++ b/logs/1.txt
+@@ -0,0 +1,3 @@
++Jade: Finally beat the Elden Ring DLC tonight.
++Marco: Nice! That Messmer fight was brutal but so good.
++Jade: Totally worth the grind.
+diff --git a/logs/2.txt b/logs/2.txt
+new file mode 100644
+index 0000000..f150f0b
+--- /dev/null
++++ b/logs/2.txt
+@@ -0,0 +1,3 @@
++Eva: Are you caught up on The Last of Us?
++Nina: Episode 5 wrecked me; the clickers were intense.
++Eva: Can't wait for the next season already.
+diff --git a/logs/4.txt b/logs/4.txt
+new file mode 100644
+index 0000000..6627387
+--- /dev/null
++++ b/logs/4.txt
+@@ -0,0 +1,3 @@
++Pip: My cat thinks the keyboard is a napping pad now.
++Lou: Maybe it's writing a novel in secret.
++Pip: I'd read anything titled "Meowmoirs".
+diff --git a/server b/server
+new file mode 100755
+index 0000000..71fd2fa
+--- /dev/null
++++ b/server
+@@ -0,0 +1,2 @@
++#!/bin/bash
++nc -lvp 9000
 
-### Recovered Flag Candidates
-
-- `picoCTF{g17_r3m3mb3r5_d4ddf904}`
-- `CTF{g17_r3m3mb3r5_d4ddf904}`
+  ```
 
 ### Git Indicators (Raw Data)
 
@@ -69,9 +111,9 @@
 
 ### Hashes
 
-- **MD5:** `1a101c3785285f877df1ab92a1f4e314`
-- **SHA1:** `d9ed5c07c468fb5b2035ce935186cc986b70be42`
-- **SHA256:** `6e754689d9ef74e0cedb87af22915aefe8438b4ce3b707ecc6e67e75289edfef`
+- **MD5:** `493fbbb3c28384a7c254cce347752e1b`
+- **SHA1:** `d4a9c826f13f7de3ed919990c8243d270e5acd7c`
+- **SHA256:** `4794042b958ec11d8a0c5fbf481ff5736218ea912f5dc2375f3fd3b9d18b7a27`
 
 ### Type Detection
 
