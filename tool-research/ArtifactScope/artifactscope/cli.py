@@ -18,10 +18,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--recursive", action="store_true", help="Recursively analyze files in a directory.")
     parser.add_argument("--strings", action="store_true", help="Enable string extraction and IOC-like pattern scan.")
     parser.add_argument("--carve", action="store_true", help="Enable embedded file carving.")
-    parser.add_argument("--mount", action="store_true", help="Mount partitions and analyze git repos (slower).")
-    parser.add_argument("--report-json", action="store_true", help="Write a JSON report to output/.")
-    parser.add_argument("--report-md", action="store_true", help="Write a Markdown report to output/.")
-    parser.add_argument("--output-dir", default="output", help="Directory for reports and carved files.")
+    parser.add_argument("--mount", "--mount-git", dest="mount", action="store_true", help="Enable deep forensic recovery (mount/fallback/Git recovery).")
+    parser.add_argument("--git", action="store_true", help="Prefer deep Git forensic recovery when Git artifacts are detected.")
+    parser.add_argument("--full-recover", action="store_true", help="Allow full partition recovery with tsk_recover as a last resort.")
+    parser.add_argument("--timeout", type=int, default=120, help="Timeout in seconds for external forensic tools.")
+    parser.add_argument("--report", action="store_true", help="Write both JSON and Markdown reports to output/.")
+    parser.add_argument("--report-json", action="store_true", help="Write a JSON report to output/." )
+    parser.add_argument("--report-md", action="store_true", help="Write a Markdown report to output/." )
+    parser.add_argument("--output-dir", default="output", help="Directory for reports and analysis artifacts.")
     parser.add_argument("--rules", default="rules/default_rules.yaml", help="Path to YAML rules file.")
     return parser
 
@@ -43,6 +47,7 @@ def main() -> int:
 
     results: List[dict] = []
     for file_path in iter_files(target, recursive=args.recursive):
+        per_file_output = ensure_dir(output_dir / file_path.stem)
         try:
             result = analyze_file(
                 file_path,
@@ -51,6 +56,10 @@ def main() -> int:
                 carve=args.carve,
                 carve_dir=carve_dir,
                 mount_git=args.mount,
+                output_dir=per_file_output,
+                full_recover=args.full_recover,
+                timeout=args.timeout,
+                git_mode=args.git,
             )
             results.append(result)
         except Exception as exc:
@@ -65,14 +74,27 @@ def main() -> int:
                 },
                 "error": str(exc),
                 "hashes": {},
-                "signature": {"name": "Error", "type": "error", "extension_matches": False, "expected_extensions": []},
+                "signature": {
+                    "name": "Error",
+                    "type": "error",
+                    "extension_matches": False,
+                    "expected_extensions": [],
+                },
                 "entropy": {"score": 0.0, "classification": "unknown"},
                 "embedded": [],
                 "carved": [],
                 "risk": {"findings": [], "risk_score": 0, "risk_level": "Unknown"},
+                "verified_flags": [],
+                "flag_candidates": [],
+                "forensic_leads": [],
+                "access_trace": [],
             })
 
     print(render_terminal_summary(results))
+
+    if args.report:
+        args.report_json = True
+        args.report_md = True
 
     if args.report_json:
         json_path = output_dir / "artifactscope_report.json"

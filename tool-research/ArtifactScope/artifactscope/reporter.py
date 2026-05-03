@@ -11,17 +11,66 @@ PRIORITY_LEAD_SCORE = {
     "partition": 60,
     "ZIP archive": 50,
     "Git repository": 45,
+    "Git indicators": 40,
     "PE executable": 30,
     "ELF executable": 25,
     "PNG image": 10,
     "JPEG image": 10,
     "PDF document": 20,
     "Suspicious string": 15,
+    "SleuthKit": 55,
 }
 
 
 def _build_priority_leads(result: Dict[str, object]) -> List[dict]:
     leads = []
+
+    is_forensic = result.get("is_forensic_image", False)
+
+    partition_access = result.get("partition_access", [])
+    if partition_access:
+        for pa in partition_access:
+            status = pa.get("access_status", "failed")
+            part = pa.get("partition", "?")
+            fs_type = pa.get("fs_type", "")
+            error = pa.get("error", "")
+
+            if status == "mounted":
+                leads.append({
+                    "text": f"Mounted {part} ({fs_type})",
+                    "reason": pa.get("mount_path", ""),
+                    "priority": "high",
+                    "confidence": "high",
+                    "score": 65,
+                    "type": "partition_access",
+                })
+            elif status == "recovered_by_tsk":
+                leads.append({
+                    "text": f"TSK Recovered {part} ({fs_type})",
+                    "reason": pa.get("tsk_recover_output", ""),
+                    "priority": "high",
+                    "confidence": "high",
+                    "score": 60,
+                    "type": "partition_access",
+                })
+            elif status == "extracted_by_icat":
+                leads.append({
+                    "text": f"ICAT Extracted {part} ({fs_type})",
+                    "reason": pa.get("icat_output", ""),
+                    "priority": "high",
+                    "confidence": "medium",
+                    "score": 55,
+                    "type": "partition_access",
+                })
+            elif error:
+                leads.append({
+                    "text": f"Failed {part} ({fs_type})",
+                    "reason": error[:60],
+                    "priority": "low",
+                    "confidence": "low",
+                    "score": 10,
+                    "type": "partition_access",
+                })
 
     mounted = result.get("mounted_partitions", [])
     if mounted:
@@ -46,6 +95,17 @@ def _build_priority_leads(result: Dict[str, object]) -> List[dict]:
             "type": "git_confirmed",
         })
 
+    sleuthkit_files = result.get("sleuthkit_file_listings", [])
+    if sleuthkit_files:
+        leads.append({
+            "text": f"SleuthKit file listings: {len(sleuthkit_files)} matches",
+            "reason": "File listing from fls",
+            "priority": "high",
+            "confidence": "high",
+            "score": PRIORITY_LEAD_SCORE.get("SleuthKit", 55),
+            "type": "sleuthkit",
+        })
+
     partitions = result.get("partitions", [])
     for p in partitions:
         if p.get("fs_type") in ("Linux",):
@@ -64,6 +124,9 @@ def _build_priority_leads(result: Dict[str, object]) -> List[dict]:
         name = item.get("name", "")
         offset = item.get("offset", 0)
         score = PRIORITY_LEAD_SCORE.get(name, 0)
+
+        if is_forensic:
+            score = max(0, score - 20)
 
         reason = ""
         priority = "low"
@@ -102,14 +165,29 @@ def _build_priority_leads(result: Dict[str, object]) -> List[dict]:
     indicator_count = git.get("indicator_count", 0)
     if indicator_count > 0:
         conf = git.get("confidence", "none")
+        if conf == "critical":
+            priority = "high"
+            score = 80
+        elif conf == "high":
+            priority = "high"
+            score = 50
+        elif conf == "medium":
+            priority = "medium"
+            score = 35
+        elif conf == "low":
+            priority = "low"
+            score = 20
+        else:
+            priority = "low"
+            score = 10
+
         reason = f"{indicator_count} git indicators ({conf})"
-        priority = "high" if conf == "high" else "medium" if conf == "medium" else "low"
         leads.append({
             "text": f"Git indicators: {indicator_count}",
             "reason": reason,
             "priority": priority,
             "confidence": conf,
-            "score": PRIORITY_LEAD_SCORE.get("Git repository", 0),
+            "score": score,
             "type": "git",
         })
 
@@ -142,15 +220,27 @@ def _build_priority_leads(result: Dict[str, object]) -> List[dict]:
         })
 
     strings = result.get("strings", {})
-    for s in strings.get("suspicious_strings", [])[:5]:
-        leads.append({
-            "text": f"Suspicious string: {s}",
-            "reason": "encoding/crypto hint",
-            "priority": "medium",
-            "confidence": "medium",
-            "score": PRIORITY_LEAD_SCORE.get("Suspicious string", 0),
-            "type": "string",
-        })
+    if is_forensic:
+        suspicious_details = strings.get("suspicious_details", [])
+        for sd in suspicious_details[:10]:
+            leads.append({
+                "text": f"Suspicious string: {sd.get('string', '')[:40]}",
+                "reason": f"{sd.get('pattern', '')} @ {sd.get('likely_partition', 'raw')}",
+                "priority": "medium",
+                "confidence": "medium",
+                "score": 15,
+                "type": "string",
+            })
+    else:
+        for s in strings.get("suspicious_strings", [])[:5]:
+            leads.append({
+                "text": f"Suspicious string: {s}",
+                "reason": "encoding/crypto hint",
+                "priority": "medium",
+                "confidence": "medium",
+                "score": PRIORITY_LEAD_SCORE.get("Suspicious string", 0),
+                "type": "string",
+            })
 
     leads.sort(key=lambda x: (x["score"], x["confidence"] == "high"), reverse=True)
     return leads[:10]
@@ -225,6 +315,31 @@ def render_terminal_summary(results: List[Dict[str, object]]) -> str:
                 f"ips={len(result['strings']['ips'])}, "
                 f"suspicious={len(result['strings']['suspicious_strings'])}"
             )
+
+        verified_flags = result.get("verified_flags", []) or []
+        flag_candidates = result.get("flag_candidates", []) or []
+        if verified_flags:
+            first_flag = verified_flags[0]
+            if isinstance(first_flag, dict):
+                first_flag = first_flag.get("value") or first_flag.get("flag") or str(first_flag)
+            lines.append(f"Solved:       YES ({len(verified_flags)} flag(s))")
+            lines.append(f"Flag:         {str(first_flag)[:120]}")
+        elif flag_candidates:
+            lines.append(f"Solved:       NO (candidates={len(flag_candidates)})")
+
+        answers = result.get("answers", []) or []
+        if answers:
+            first_answer = answers[0]
+            if isinstance(first_answer, dict):
+                val = first_answer.get("value") or str(first_answer)
+                kind = first_answer.get("kind", "answer")
+                lines.append(f"Answer:       {kind} = {val}")
+            else:
+                lines.append(f"Answer:       {first_answer}")
+
+        artifacts = result.get("verified_artifacts", []) or []
+        if artifacts:
+            lines.append(f"Artifacts:    {len(artifacts)} verified artifact(s)")
 
         leads = _build_priority_leads(result)
         if leads:
@@ -302,6 +417,105 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
             f"- **Modified:** {file_info['modified']}",
         ])
 
+        verified_flags = result.get("verified_flags", []) or []
+        flag_candidates_summary = result.get("flag_candidates", []) or []
+        forensic_leads_summary = result.get("forensic_leads", []) or []
+        access_trace = result.get("access_trace", []) or []
+
+        lines.extend([
+            "",
+            "### Final Result",
+            "",
+            f"- **Solved:** {'Yes' if verified_flags else 'No'}",
+            f"- **Verified Flag Count:** {len(verified_flags)}",
+            f"- **Flag Candidate Count:** {len(flag_candidates_summary)}",
+            f"- **Forensic Lead Count:** {len(forensic_leads_summary)}",
+            f"- **Answer Count:** {len(result.get('answers', []) or [])}",
+            f"- **Verified Artifact Count:** {len(result.get('verified_artifacts', []) or [])}",
+        ])
+
+        if verified_flags:
+            lines.extend([
+                "",
+                "### Verified Flags",
+                "",
+            ])
+            for vf in verified_flags[:10]:
+                if isinstance(vf, dict):
+                    value = vf.get("value") or vf.get("flag") or str(vf)
+                    source = vf.get("source", "unknown")
+                    lines.append(f"- **{value}**")
+                    lines.append(f"  - Source: {source}")
+                else:
+                    lines.append(f"- **{vf}**")
+
+        elif flag_candidates_summary:
+            lines.extend([
+                "",
+                "### Flag Candidates",
+                "",
+            ])
+            for fc in flag_candidates_summary[:10]:
+                if isinstance(fc, dict):
+                    value = fc.get("value") or fc.get("flag") or str(fc)
+                    source = fc.get("source", "unknown")
+                    lines.append(f"- `{value}`")
+                    lines.append(f"  - Source: {source}")
+                else:
+                    lines.append(f"- `{fc}`")
+
+        answers = result.get("answers", []) or []
+        if answers:
+            lines.extend(["", "### Extracted Answers", ""])
+            for ans in answers[:20]:
+                if isinstance(ans, dict):
+                    lines.append(f"- **{ans.get('kind', 'answer')}:** `{ans.get('value')}`")
+                    lines.append(f"  - Source: {ans.get('source', 'unknown')}")
+                else:
+                    lines.append(f"- `{ans}`")
+
+        verified_artifacts = result.get("verified_artifacts", []) or []
+        if verified_artifacts:
+            lines.extend(["", "### Verified Artifacts", ""])
+            for va in verified_artifacts[:20]:
+                if isinstance(va, dict):
+                    lines.append(f"- {va.get('value', str(va))}")
+                    lines.append(f"  - Source: {va.get('source', 'unknown')}")
+                else:
+                    lines.append(f"- {va}")
+
+        if forensic_leads_summary and not verified_flags:
+            lines.extend([
+                "",
+                "### Forensic Leads",
+                "",
+            ])
+            for fl in forensic_leads_summary[:10]:
+                if isinstance(fl, dict):
+                    value = fl.get("value") or str(fl)
+                    source = fl.get("source", "unknown")
+                    lines.append(f"- {value}")
+                    lines.append(f"  - Source: {source}")
+                else:
+                    lines.append(f"- {fl}")
+
+        if access_trace:
+            lines.extend([
+                "",
+                "### Access Trace",
+                "",
+            ])
+            for at in access_trace:
+                lines.append(f"- **{at.get('partition', '?')}:** {at.get('access_status', 'unknown')}")
+                for key in ("mount_result", "fls_result", "icat_result", "tsk_result"):
+                    value = at.get(key)
+                    if value:
+                        lines.append(f"  - {key}: {value}")
+                for key in ("mount_path", "icat_output", "tsk_recover_output"):
+                    value = at.get(key)
+                    if value:
+                        lines.append(f"  - {key}: `{value}`")
+
         leads = _build_priority_leads(result)
         if leads:
             lines.extend([
@@ -336,6 +550,72 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     f"- **p{p['partition']}{marker}:** offset={p['offset_bytes']}, "
                     f"size={p['size_mb']}MB, fs={p['fs_type']}"
                 )
+
+        ctf_subresults = result.get("ctf_subresults", []) or []
+        if ctf_subresults:
+            lines.extend(["", "### CTF Handler Results", ""])
+            for sr in ctf_subresults:
+                lines.append(f"- **{sr.get('tool', 'ctf_handler')}**: {sr.get('status', 'unknown')}")
+                if sr.get('candidate_inodes'):
+                    for ci in sr.get('candidate_inodes', [])[:10]:
+                        lines.append(f"  - inode {ci.get('inode')}: `{ci.get('path', '')}`")
+                if sr.get('candidates'):
+                    for ci in sr.get('candidates', [])[:10]:
+                        lines.append(f"  - inode {ci.get('inode')}: `{ci.get('path', '')}` @ sector {ci.get('offset')}" )
+                if sr.get('raw_hits'):
+                    lines.append(f"  - residual grep hits: {len(sr.get('raw_hits', []))}")
+                if sr.get('icat_attempts'):
+                    lines.append(f"  - icat attempts: {len(sr.get('icat_attempts', []))}")
+                    for at in sr.get('icat_attempts', [])[:8]:
+                        preview = str(at.get('preview', '')).replace('`', "'").replace('\n', ' / ')[:180]
+                        rc = at.get('returncode')
+                        lines.append(
+                            f"  - inode {at.get('inode')} @ sector {at.get('offset')} rc={rc}: `{at.get('path', '')}` preview=`{preview}`"
+                        )
+
+        partition_access = result.get("partition_access", [])
+        if partition_access:
+            lines.extend([
+                "",
+                "### Filesystem Access",
+                "",
+            ])
+            for pa in partition_access:
+                part = pa.get("partition", "?")
+                fs_type = pa.get("fs_type", "")
+                status = pa.get("access_status", "failed")
+                error = pa.get("error", "")
+
+                if status == "mounted":
+                    lines.append(f"- **p{part}:** mounted @ {pa.get('mount_path', 'N/A')}")
+                elif status == "recovered_by_tsk":
+                    lines.append(f"- **p{part}:** TSK recovered ({pa.get('tsk_recover_output', 'N/A')})")
+                elif status == "extracted_by_icat":
+                    lines.append(f"- **p{part}:** ICAT extracted ({pa.get('icat_output', 'N/A')})")
+                elif error:
+                    lines.append(f"- **p{part}:** FAILED - {error[:50]}")
+
+        sleuthkit_files = result.get("sleuthkit_file_listings", [])
+        if sleuthkit_files:
+            lines.extend([
+                "",
+                "### SleuthKit File Listings",
+                "",
+            ])
+            for fl in sleuthkit_files[:20]:
+                lines.append(f"- {fl}")
+            if len(sleuthkit_files) > 20:
+                lines.append(f"... and {len(sleuthkit_files) - 20} more")
+
+        sleuthkit_suggested = result.get("sleuthkit_suggested_commands", [])
+        if sleuthkit_suggested:
+            lines.extend([
+                "",
+                "### Suggested SleuthKit Commands",
+                "",
+            ])
+            for cmd in sleuthkit_suggested:
+                lines.append(f"- {cmd}")
 
         mounted = result.get("mounted_partitions", [])
         if mounted:
@@ -376,6 +656,10 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     lines.append("")
                     lines.append(f"- **Repo:** {repo_path}")
 
+                    access_method = hist.get("access_method", "unknown")
+                    if access_method and access_method != "unknown":
+                        lines.append(f"- **Access:** {access_method}")
+
                     last_msg = hist.get("last_commit_message", "")
                     if last_msg:
                         lines.append(f"- **Last Commit:** {last_msg}")
@@ -411,10 +695,26 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                     flag_cands = hist.get("flag_candidates", [])
                     if flag_cands:
                         lines.append("")
-                        lines.append("### Recovered Flag Candidates")
+                        lines.append("### Flag Candidates")
                         lines.append("")
                         for fc in flag_cands[:10]:
                             lines.append(f"- `{fc[:100]}`")
+
+                    verified = hist.get("verified_flags", [])
+                    if verified:
+                        lines.append("")
+                        lines.append("### Verified Flags")
+                        lines.append("")
+                        for vf in verified[:10]:
+                            lines.append(f"- **{vf[:100]}**")
+
+                    forensic = hist.get("forensic_leads", [])
+                    if forensic:
+                        lines.append("")
+                        lines.append("### Forensic Leads")
+                        lines.append("")
+                        for fl in forensic[:10]:
+                            lines.append(f"- {fl}")
 
                     hint_cands = hist.get("hint_candidates", [])
                     if hint_cands:
@@ -436,11 +736,23 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                         msg_key = c.get("message", c.get("action", ""))
                         lines.append(f"  - {hash_key[:7]}: {msg_key[:60]}")
 
-                flags = hist.get("flag_candidates", [])
+                flags = hist.get("verified_flags", [])
                 if flags:
-                    lines.append("- **Flag Candidates:**")
+                    lines.append("- **Verified Flags:**")
                     for fl in flags[:10]:
+                        lines.append(f"  - **{fl[:100]}**")
+
+                cand_flags = hist.get("flag_candidates", [])
+                if cand_flags:
+                    lines.append("- **Flag Candidates:**")
+                    for fl in cand_flags[:10]:
                         lines.append(f"  - {fl[:100]}")
+
+                lead_flags = hist.get("forensic_leads", [])
+                if lead_flags:
+                    lines.append("- **Forensic Leads:**")
+                    for fl in lead_flags[:10]:
+                        lines.append(f"  - {fl}")
 
                 hints = hist.get("hint_candidates", [])
                 if hints:
@@ -456,7 +768,8 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 "",
             ])
             for g in git_raw[:5]:
-                lines.append(f"- {g.get('marker', 'unknown')} at offset {g.get('offset')}")
+                part = g.get("likely_partition", "unknown")
+                lines.append(f"- {g.get('marker', 'unknown')} @ offset {g.get('offset')} [{part}]")
 
         flag_raw = result.get("flag_in_raw_data", [])
         if flag_raw:
@@ -466,20 +779,104 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 "",
             ])
             for f in flag_raw[:10]:
-                lines.append(f"- **{f.get('pattern')}**: `{f.get('match')}`")
+                part = f.get("likely_partition", "unknown")
+                lines.append(f"- **{f.get('pattern')}**: `{f.get('match')}` @ {f.get('offset')} [{part}]")
 
         flag_cands = result.get("flag_candidates", [])
-        if flag_cands:
+        partition_flag_cands = [fc for fc in flag_cands if isinstance(fc, dict) and (fc.get("flag") or fc.get("offset") is not None or fc.get("partition") is not None)]
+        if partition_flag_cands:
             lines.extend([
                 "",
-                "### Recovered Flags (Partition Search)",
+                "### Recovered Flags / Candidates",
                 "",
             ])
-            for fc in flag_cands[:10]:
-                flag_str = fc.get("flag", "")
-                offset = fc.get("offset", 0)
+            for fc in partition_flag_cands[:10]:
+                flag_str = fc.get("flag") or fc.get("value") or fc.get("content_preview") or str(fc)
+                offset = fc.get("offset", "?")
                 partition = fc.get("partition", "?")
-                lines.append(f"- **{flag_str}** @ p{partition} offset {offset}")
+                source = fc.get("source", "unknown")
+                lines.append(f"- **{flag_str}** @ p{partition} offset {offset} ({source})")
+
+        deleted_recovery = result.get("deleted_recovery", [])
+        if deleted_recovery:
+            lines.extend([
+                "",
+                "### Deleted File Recovery",
+                "",
+            ])
+            for dr in deleted_recovery:
+                part = dr.get("partition", "unknown")
+                deleted_inodes = dr.get("deleted_inodes", [])
+                flag_cands = dr.get("flag_candidates", [])
+
+                lines.append(f"**Partition {part}:**")
+                if deleted_inodes:
+                    lines.append(f"- Deleted inodes: {', '.join(deleted_inodes[:10])}")
+
+                recovered = dr.get("recovered_content", [])
+                if recovered:
+                    lines.append("- Recovered content:")
+                    for rc in recovered[:3]:
+                        inode = rc.get("inode", "?")
+                        content = rc.get("content", "")[:150]
+                        lines.append(f"  - inode {inode}: {content}")
+
+                if flag_cands:
+                    lines.append("- **Flag candidates:**")
+                    for fc in flag_cands[:5]:
+                        pattern = fc.get("matched_pattern", "")
+                        preview = fc.get("content_preview", "")[:80]
+                        lines.append(f"  - {pattern}: {preview}")
+
+        timeline_analysis = result.get("timeline_analysis", {})
+        if timeline_analysis:
+            lines.extend([
+                "",
+                "### Timeline Analysis",
+                "",
+            ])
+
+            bodyfile = timeline_analysis.get("bodyfile")
+            if bodyfile:
+                lines.append(f"- **Bodyfile:** `{bodyfile}`")
+
+            csv_output = timeline_analysis.get("csv_output")
+            if csv_output:
+                lines.append(f"- **Timeline CSV:** `{csv_output}`")
+
+            recent_mods = timeline_analysis.get("recent_modifications", [])
+            if recent_mods:
+                lines.append("- **Recent Modifications:**")
+                for mod in recent_mods[:10]:
+                    lines.append(f"  - {mod[:100]}")
+
+            recent_dels = timeline_analysis.get("recent_deletions", [])
+            if recent_dels:
+                lines.append("- **Recent Deletions:**")
+                for dele in recent_dels[:10]:
+                    lines.append(f"  - {dele[:100]}")
+
+            suspicious = timeline_analysis.get("suspicious_filenames", [])
+            if suspicious:
+                lines.append("- **Suspicious Filenames:**")
+                for susp in suspicious[:10]:
+                    lines.append(f"  - {susp[:100]}")
+
+        extracted_scan = result.get("extracted_content_scan", [])
+        if extracted_scan:
+            lines.extend([
+                "",
+                "### Extracted Content Scan",
+                "",
+            ])
+            for esc in extracted_scan[:20]:
+                src = esc.get("source_file", "")
+                part = esc.get("partition", "unknown")
+                pattern = esc.get("matched_pattern", "")
+                ctx = esc.get("context", "")[:80]
+                lines.append(f"- **{pattern}** in {src} [{part}]")
+                if ctx:
+                    lines.append(f"  - Context: {ctx}")
 
         lines.extend([
             "",
@@ -531,6 +928,20 @@ def write_markdown_report(results: List[Dict[str, object]], out_path: Path) -> P
                 f"- Base64-like strings: {len(s['base64_like'])}",
                 f"- Suspicious strings: {len(s['suspicious_strings'])}",
             ])
+
+            if s.get("suspicious_details"):
+                lines.extend([
+                    "",
+                    "### Suspicious String Details",
+                    "",
+                ])
+                total = len(s["suspicious_details"])
+                for sd in s["suspicious_details"][:20]:
+                    lines.append(
+                        f"- **{sd.get('pattern', '')}**: {sd.get('string', '')[:50]} @ {sd.get('offset')} [{sd.get('likely_partition', 'raw')}]"
+                    )
+                if total > 20:
+                    lines.append(f"... and {total - 20} more (not shown)")
 
         if result.get("git_artifacts"):
             ga = result["git_artifacts"]

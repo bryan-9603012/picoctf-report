@@ -3,19 +3,103 @@ from __future__ import annotations
 import re
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 
-FLAG_PATTERNS = [
+VERIFIED_FLAG_REGEXES = [
     r"picoCTF\{[^}\r\n]{1,300}\}",
     r"flag\{[^}\r\n]{1,300}\}",
     r"ctf\{[^}\r\n]{1,300}\}",
+]
+
+FLAG_PATTERNS = [
+    "picoCTF{",
+    "flag{",
+    "CTF{",
+    "actf{",
+    "dctf{",
+]
+
+SUSPICIOUS_KEYWORDS = [
+    "flag",
+    "secret",
+    "password",
+    "key",
+    "ctf",
+    "pico",
+    "token",
+    "api_key",
+    "private_key",
 ]
 
 HINT_PATTERNS = [
     r"g17_[A-Za-z0-9_]+",
     r"Wrap this phrase in the flag format:\s*([A-Za-z0-9_]+)",
 ]
+
+FORENSIC_LEAD_KEYWORDS = [
+    "remove flag",
+    "add random",
+    "delete flag",
+    "secret file",
+    "chat log",
+]
+
+FLAG_LIKE_PREFIXES = ["secret", "password", "key", "token", "flag", "ctf", "api_", "api_key", "private"]
+
+
+def _classify_flag_content(content: str, source: str = "unknown") -> Tuple[List[str], List[str], List[str]]:
+    verified_flags = []
+    flag_candidates = []
+    forensic_leads = []
+
+    for pattern in VERIFIED_FLAG_REGEXES:
+        for match in re.finditer(pattern, content, flags=re.IGNORECASE):
+            verified_flags.append(match.group(0))
+
+    content_lower = content.lower()
+    for keyword in FORENSIC_LEAD_KEYWORDS:
+        if keyword in content_lower:
+            idx = content_lower.find(keyword)
+            snippet = content[idx : idx + len(keyword) + 30]
+            forensic_leads.append(f"[{keyword.upper()}] {snippet[:60]}")
+
+    lines = content.split("\n")
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        if raw_line.startswith(("-", "+")):
+            if len(line) > 1:
+                line = line[1:].strip()
+                if not line:
+                    continue
+
+        line_lower = line.lower()
+
+        if any(line.startswith(kw) for kw in FLAG_LIKE_PREFIXES):
+            if len(line) > 5 and len(line) < 200 and "{" not in line:
+                if "remove" not in line_lower and "add" not in line_lower and "delete" not in line_lower:
+                    if line not in verified_flags:
+                        flag_candidates.append(f"[SUSPICIOUS_LINE] {line[:80]}")
+
+        if any(kw in line_lower for kw in ["flag", "secret", "password", "token"]):
+            if "remove" not in line_lower and "delete" not in line_lower and "add" not in line_lower:
+                if len(line) > 5 and len(line) < 150 and line not in verified_flags:
+                    if not any(line.startswith(kw) for kw in ["diff", "---", "+++", "commit", "Author", "Date"]):
+                        flag_candidates.append(f"[FLAG_LIKE] {line[:80]}")
+
+    file_path_pattern = re.compile(
+        r"(?:^|[\s/])(flag|secret|password|key|token|ctf)[^\s]*",
+        re.IGNORECASE,
+    )
+    for match in file_path_pattern.finditer(content):
+        path_snippet = match.group(0).strip()
+        if path_snippet not in forensic_leads and len(path_snippet) < 100:
+            forensic_leads.append(f"[FILENAME] {path_snippet}")
+
+    return verified_flags, flag_candidates, forensic_leads
 
 
 def _run_git(repo_path: Path, args: List[str], timeout: int = 90) -> subprocess.CompletedProcess:
@@ -245,11 +329,8 @@ def find_git_repos(root: Path) -> List[Dict[str, str]]:
 
 
 def _extract_flags_from_text(text: str) -> List[str]:
-    found = []
-    for pat in FLAG_PATTERNS:
-        for m in re.finditer(pat, text, flags=re.IGNORECASE):
-            found.append(m.group(0))
-    return found
+    verified_flags, flag_candidates, forensic_leads = _classify_flag_content(text, "git_text")
+    return verified_flags + flag_candidates
 
 
 def _extract_hints_from_text(text: str) -> List[str]:
@@ -268,7 +349,9 @@ def analyze_git_history(repo_path: Path) -> Dict[str, object]:
         "repo_path": str(repo_path),
         "commits": [],
         "deleted_files": [],
+        "verified_flags": [],
         "flag_candidates": [],
+        "forensic_leads": [],
         "hint_candidates": [],
         "recovered_content": [],
         "last_commit_message": "",
@@ -285,10 +368,16 @@ def analyze_git_history(repo_path: Path) -> Dict[str, object]:
             if not line:
                 continue
             parts = line.split(None, 1)
+            msg = parts[1] if len(parts) > 1 else ""
+            for lead_kw in FORENSIC_LEAD_KEYWORDS:
+                if lead_kw in msg.lower():
+                    result["forensic_leads"].append(f"[COMMIT_MSG] {msg[:80]}")
+                    break
+
             result["commits"].append(
                 {
                     "hash": parts[0],
-                    "message": parts[1] if len(parts) > 1 else "",
+                    "message": msg,
                 }
             )
 
@@ -297,10 +386,20 @@ def analyze_git_history(repo_path: Path) -> Dict[str, object]:
 
     result["deleted_files"] = [d["path"] for d in find_deleted_files(repo_path) if d.get("path")]
 
+    for deleted_file in result["deleted_files"]:
+        fn_lower = deleted_file.lower()
+        if any(kw in fn_lower for kw in ["flag", "secret", "password", "token", "key"]):
+            result["forensic_leads"].append(f"[DELETED_FILE] {deleted_file}")
+
     proc_patch = _run_git(repo_path, ["log", "-p", "--all"], timeout=120)
     if proc_patch.returncode == 0 and proc_patch.stdout.strip():
         patch_text = proc_patch.stdout
-        result["flag_candidates"].extend(_extract_flags_from_text(patch_text))
+
+        verified, candidates, leads = _classify_flag_content(patch_text, "git_patch")
+        result["verified_flags"].extend(verified)
+        result["flag_candidates"].extend(candidates)
+        result["forensic_leads"].extend(leads)
+
         result["hint_candidates"].extend(_extract_hints_from_text(patch_text))
 
         current_file = None
@@ -423,19 +522,25 @@ def analyze_git_history(repo_path: Path) -> Dict[str, object]:
     for rc in result["recovered_content"]:
         content = rc.get("content", "")
         if content:
-            result["flag_candidates"].extend(_extract_flags_from_text(content))
+            verified, candidates, leads = _classify_flag_content(content, "recovered_content")
+            result["verified_flags"].extend(verified)
+            result["flag_candidates"].extend(candidates)
+            result["forensic_leads"].extend(leads)
             result["hint_candidates"].extend(_extract_hints_from_text(content))
 
     for hint in list(result["hint_candidates"]):
         if hint.startswith("g17_"):
             wrapped = f"picoCTF{{{hint}}}"
-            result["flag_candidates"].append(wrapped)
+            result["verified_flags"].append(wrapped)
 
+    result["verified_flags"] = list(dict.fromkeys([x for x in result["verified_flags"] if x]))[:20]
     result["flag_candidates"] = list(dict.fromkeys([x for x in result["flag_candidates"] if x]))[:20]
+    result["forensic_leads"] = list(dict.fromkeys([x for x in result["forensic_leads"] if x]))[:20]
     result["hint_candidates"] = list(dict.fromkeys([x for x in result["hint_candidates"] if x]))[:20]
 
     if (
-        result["flag_candidates"]
+        result["verified_flags"]
+        or result["flag_candidates"]
         or result["deleted_files"]
         or result["recovered_content"]
         or result["hint_candidates"]
@@ -468,12 +573,365 @@ def extract_git_repo_from_file(
 
 
 def full_git_recovery(part_img: Path) -> Dict[str, object]:
-    return {
+    result = {
         "repo_path": "",
         "commits": [],
         "deleted_files": [],
+        "verified_flags": [],
         "flag_candidates": [],
+        "forensic_leads": [],
         "hint_candidates": [],
         "recovered_content": [],
         "source": "full_git_recovery",
+        "git_objects": [],
+        "git_logs": [],
+        "lost_found": [],
     }
+
+    if not part_img or not part_img.exists():
+        return result
+
+    git_dir = part_img / ".git"
+    if not git_dir.exists():
+        return result
+
+    result["repo_path"] = str(part_img)
+
+    if is_git_repo(part_img):
+        result.update(analyze_git_history(part_img))
+        result["source"] = "full_git_recovery"
+        return result
+
+    import zlib as zlib_module
+    git_objects = git_dir / "objects"
+    if git_objects.exists() and git_objects.is_dir():
+        try:
+            for obj in git_objects.rglob("*"):
+                if obj.is_file() and obj.stat().st_size > 0:
+                    try:
+                        raw = obj.read_bytes()
+                        try:
+                            decompressed = zlib_module.decompress(raw)
+                            text = decompressed.decode("utf-8", errors="ignore")
+                            verified, candidates, leads = _classify_flag_content(text, "git_object")
+                            result["verified_flags"].extend(verified)
+                            result["flag_candidates"].extend(candidates)
+                            result["forensic_leads"].extend(leads)
+                        except zlib_module.error:
+                            text = raw.decode("utf-8", errors="replace")
+                            verified, candidates, leads = _classify_flag_content(text, "git_object")
+                            result["verified_flags"].extend(verified)
+                            result["flag_candidates"].extend(candidates)
+                            result["forensic_leads"].extend(leads)
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+    git_logs = git_dir / "logs" / "HEAD"
+    if git_logs.exists():
+        try:
+            logs_text = git_logs.read_text(errors="replace")
+            result["git_logs"].append(logs_text[:2000])
+            verified, candidates, leads = _classify_flag_content(logs_text, "git_log")
+            result["verified_flags"].extend(verified)
+            result["flag_candidates"].extend(candidates)
+            result["forensic_leads"].extend(leads)
+        except Exception:
+            pass
+
+    lost_found_dir = git_dir / "lost-found"
+    if lost_found_dir.exists():
+        try:
+            for lost_file in lost_found_dir.rglob("*"):
+                if lost_file.is_file():
+                    try:
+                        content = lost_file.read_text(errors="replace")
+                        result["lost_found"].append({
+                            "file": str(lost_file),
+                            "content": content[:500],
+                        })
+                        verified, candidates, leads = _classify_flag_content(content, "lost_found")
+                        result["verified_flags"].extend(verified)
+                        result["flag_candidates"].extend(candidates)
+                        result["forensic_leads"].extend(leads)
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+    return result
+
+
+def git_deep_scan(git_dir_path: Path) -> Dict[str, object]:
+    result = {
+        "is_git_repo": False,
+        "commits": [],
+        "flag_search": [],
+        "deleted_files": [],
+        "log_name_status": [],
+        "show_all": [],
+        "fsck_lost_found": [],
+        "git_objects": [],
+        "git_logs": [],
+        "lost_found": [],
+        "verified_flags": [],
+        "flag_candidates": [],
+        "forensic_leads": [],
+    }
+
+    if not git_dir_path.exists():
+        return result
+
+    git_path = git_dir_path
+    if git_dir_path.name != ".git":
+        git_path = git_dir_path / ".git"
+
+    if not git_path.exists():
+        return result
+
+    git_dir = git_path
+    if not is_git_repo(git_dir_path):
+        result["source_type"] = "git_dir_only"
+        git_objects_dir = git_dir / "objects"
+        if git_objects_dir.exists():
+            try:
+                for obj in git_objects_dir.rglob("*"):
+                    if obj.is_file() and obj.stat().st_size > 0:
+                        result["git_objects"].append(str(obj.relative_to(git_dir)))
+            except Exception:
+                pass
+
+        git_logs = git_dir / "logs" / "HEAD"
+        if git_logs.exists():
+            try:
+                result["git_logs"].append(git_logs.read_text(errors="replace")[:3000])
+            except Exception:
+                pass
+
+        lost_found = git_dir / "lost-found"
+        if lost_found.exists():
+            try:
+                for lf in lost_found.rglob("*"):
+                    if lf.is_file():
+                        content = lf.read_text(errors="replace")[:500]
+                        result["lost_found"].append({
+                            "path": str(lf.relative_to(git_dir)),
+                            "content": content,
+                        })
+            except Exception:
+                pass
+        return result
+
+    result["is_git_repo"] = True
+
+    try:
+        rev_list = _run_git(git_dir_path, ["rev-list", "--all"], timeout=60)
+        if rev_list.returncode == 0:
+            commits = [c.strip() for c in rev_list.stdout.splitlines() if c.strip()]
+            result["commits"] = commits[:100]
+    except Exception:
+        pass
+
+    try:
+        for pattern in SUSPICIOUS_KEYWORDS:
+            grep_result = _run_git(git_dir_path, ["grep", "-n", pattern, "--all"], timeout=60)
+            if grep_result.returncode == 0 and grep_result.stdout.strip():
+                for line in grep_result.stdout.splitlines()[:20]:
+                    result["flag_search"].append(f"[{pattern}] {line}")
+
+        grep_pico = _run_git(git_dir_path, ["grep", "-n", "picoCTF\\|flag", "--all"], timeout=60)
+        if grep_pico.returncode == 0 and grep_pico.stdout.strip():
+            for line in grep_pico.stdout.splitlines()[:50]:
+                result["flag_search"].append(line)
+    except Exception:
+        pass
+
+    try:
+        log_status = _run_git(git_dir_path, ["log", "--all", "--name-status"], timeout=60)
+        if log_status.returncode == 0 and log_status.stdout.strip():
+            result["log_name_status"].append(log_status.stdout[:5000])
+    except Exception:
+        pass
+
+    try:
+        show_all = _run_git(git_dir_path, ["show", "--all"], timeout=120)
+        if show_all.returncode == 0 and show_all.stdout.strip():
+            result["show_all"].append(show_all.stdout[:10000])
+            verified, candidates, leads = _classify_flag_content(show_all.stdout, "git_show")
+            result["verified_flags"].extend(verified)
+            result["flag_candidates"].extend(candidates)
+            result["forensic_leads"].extend(leads)
+    except Exception:
+        pass
+
+    try:
+        fsck1 = _run_git(git_dir_path, ["fsck", "--lost-found"], timeout=60)
+        if fsck1.returncode == 0 and fsck1.stdout.strip():
+            result["fsck_lost_found"].append(fsck1.stdout[:2000])
+    except Exception:
+        pass
+
+    try:
+        fsck2 = _run_git(git_dir_path, ["fsck", "--no-reflogs", "--lost-found"], timeout=60)
+        if fsck2.returncode == 0 and fsck2.stdout.strip():
+            result["fsck_lost_found"].append(fsck2.stdout[:2000])
+    except Exception:
+        pass
+
+    git_logs = git_dir / "logs" / "HEAD"
+    if git_logs.exists():
+        try:
+            result["git_logs"].append(git_logs.read_text(errors="replace")[:3000])
+        except Exception:
+            pass
+
+    lost_found = git_dir / "lost-found"
+    if lost_found.exists():
+        try:
+            for lf in lost_found.rglob("*"):
+                if lf.is_file():
+                    content = lf.read_text(errors="replace")[:500]
+                    result["lost_found"].append({
+                        "path": str(lf.relative_to(git_dir)),
+                        "content": content,
+                    })
+                    verified, candidates, leads = _classify_flag_content(content, "lost_found")
+                    result["verified_flags"].extend(verified)
+                    result["flag_candidates"].extend(candidates)
+                    result["forensic_leads"].extend(leads)
+        except Exception:
+            pass
+
+    result["verified_flags"] = list(dict.fromkeys([x for x in result["verified_flags"] if x]))[:20]
+    result["flag_candidates"] = list(dict.fromkeys([x for x in result["flag_candidates"] if x]))[:20]
+    result["forensic_leads"] = list(dict.fromkeys([x for x in result["forensic_leads"] if x]))[:20]
+
+    return result
+
+
+def recover_dangling_commits(git_dir_path: Path) -> Dict[str, object]:
+    result = {
+        "dangling_commits": [],
+        "recovered_content": [],
+        "verified_flags": [],
+        "flag_candidates": [],
+        "forensic_leads": [],
+    }
+
+    if not git_dir_path.exists():
+        return result
+
+    git_path = git_dir_path
+    if git_dir_path.name != ".git":
+        git_path = git_dir_path / ".git"
+
+    if not git_path.exists():
+        return result
+
+    if not is_git_repo(git_dir_path):
+        import zlib as zlib_module
+
+        objects_dir = git_path / "objects"
+        if not objects_dir.exists():
+            return result
+
+        for obj_dir in objects_dir.iterdir():
+            if not obj_dir.is_dir() or len(obj_dir.name) != 2:
+                continue
+            try:
+                for obj_file in obj_dir.iterdir():
+                    if not obj_file.is_file():
+                        continue
+                    try:
+                        raw = obj_file.read_bytes()
+                        try:
+                            decompressed = zlib_module.decompress(raw)
+                            content = decompressed.decode("utf-8", errors="ignore")
+                            verified, candidates, leads = _classify_flag_content(
+                                content, "dangling_object"
+                            )
+                            result["verified_flags"].extend(verified)
+                            result["flag_candidates"].extend(candidates)
+                            result["forensic_leads"].extend(leads)
+                        except Exception:
+                            pass
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+        return result
+
+    try:
+        fsck_proc = _run_git(git_dir_path, ["fsck", "--no-reflogs", "--lost-found"], timeout=60)
+        if fsck_proc.returncode == 0 and fsck_proc.stdout.strip():
+            output = fsck_proc.stdout
+            verified, candidates, leads = _classify_flag_content(output, "fsck_output")
+            result["verified_flags"].extend(verified)
+            result["flag_candidates"].extend(candidates)
+            result["forensic_leads"].extend(leads)
+    except Exception:
+        pass
+
+    if not result.get("verified_flags") and not result.get("flag_candidates"):
+        import zlib as zlib_module
+        objects_dir = (git_path / "objects")
+        if objects_dir.exists():
+            for obj_dir in objects_dir.iterdir():
+                if not obj_dir.is_dir() or len(obj_dir.name) != 2:
+                    continue
+                try:
+                    for obj_file in obj_dir.iterdir():
+                        if not obj_file.is_file():
+                            continue
+                        try:
+                            raw = obj_file.read_bytes()
+                            try:
+                                decompressed = zlib_module.decompress(raw)
+                                content = decompressed.decode("utf-8", errors="ignore")
+                                verified, candidates, leads = _classify_flag_content(
+                                    content, "dangling_object"
+                                )
+                                result["verified_flags"].extend(verified)
+                                result["flag_candidates"].extend(candidates)
+                                result["forensic_leads"].extend(leads)
+                            except Exception:
+                                pass
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+
+    try:
+        reflog = _run_git(git_dir_path, ["reflog", "show", "--all"], timeout=30)
+        if reflog.returncode == 0:
+            result["dangling_commits"].append(reflog.stdout[:2000])
+    except Exception:
+        pass
+
+    return result
+
+
+# --- Compatibility wrapper for analyzer.py imports ---
+
+def git_deep_recovery_chain(file_path: str, partitions, output_root: str):
+    """
+    Compatibility wrapper used by analyzer.py.
+    Runs the available git recovery routines and merges their outputs.
+    """
+    result = {"mode": "git_deep_recovery_chain", "forensic_leads": [], "flag_candidates": [], "verified_flags": []}
+    for fn in (full_git_recovery, analyze_git_history, recover_dangling_commits):
+        try:
+            out = fn(file_path) if fn is not recover_dangling_commits else fn(file_path)
+        except TypeError:
+            # Some versions expect repo path and may not apply here.
+            continue
+        except Exception:
+            continue
+        if not isinstance(out, dict):
+            continue
+        for k in ("forensic_leads", "flag_candidates", "verified_flags"):
+            for item in out.get(k, []):
+                if item not in result[k]:
+                    result[k].append(item)
+    return result
