@@ -83,25 +83,26 @@ def _apply_reverse_penalty(result: DecodeResult) -> DecodeResult:
 
 
 def _suppress_noise_family(all_results: list[DecodeResult]) -> list[DecodeResult]:
-    """Suppress repetitive low-value shift families while keeping a small representative sample."""
+    """Suppress repetitive low-value shift families while keeping a tiny representative sample."""
     noise_groups = {}
     for r in all_results:
         if not r.chain or len(r.chain) < 2:
             continue
         if r.chain[-1].startswith("CAESAR_SHIFT_") and not r.flags:
             parent_key = tuple(r.chain[:-1])
-            if parent_key not in noise_groups:
-                noise_groups[parent_key] = []
-            noise_groups[parent_key].append(r)
+            noise_groups.setdefault(parent_key, []).append(r)
 
-    for parent_key, group in noise_groups.items():
+    for _parent_key, group in noise_groups.items():
         if len(group) < 2:
             continue
         group.sort(key=lambda x: x.score, reverse=True)
         keep_count = 1
         for i, r in enumerate(group):
             if i >= keep_count:
-                r.score = max(r.score - 120, 1)
+                # Push repeated same-family shift noise well below meaningful
+                # intermediate results so top-N stays readable.
+                r.score = -50 - i
+                r.confidence = "NOISE"
 
     return all_results
 

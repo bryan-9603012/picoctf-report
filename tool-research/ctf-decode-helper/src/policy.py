@@ -419,8 +419,8 @@ def get_transition_policy(text: str) -> list[tuple[str, int, str]]:
         if a.decoder_name == "BYTES_LITERAL_EXTRACT":
             if bytes_lit_boost:
                 score = max(score, 90)
-            if strong_base64_boost:
-                score = max(score, 85)
+            else:
+                score = 0
         elif a.decoder_name == "BASE64":
             if strong_base64_boost:
                 score = max(score, 95)
